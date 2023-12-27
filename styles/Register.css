@@ -1,0 +1,86 @@
+.outer-register-main-container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.register-main-container {
+    height: 300px;
+    width: 450px;
+    background-color: grey;
+}
+
+.register-main-container > div {
+    border: 1px solid;
+}
+
+.register-container {
+    height: 90px;
+    width: 100%;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.all-options > div {
+    height: 50px;
+    border: 1px solid black;
+}
+
+.register-option {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.username-container {
+    height: 20px;
+    width: 260px;
+   
+    /* margin-right:10px; */
+    border-radius:7px;
+}
+
+.outer-username-option {
+    display: flex;
+    justify-content: space-around;
+}
+.outer-password-option {
+    display: flex;
+    justify-content: space-around;
+}
+
+.outer-confirmPassword-option {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.password-container {
+    height: 20px;
+    width: 260px;
+    border-radius:7px;
+}
+
+.confirmPassword-container {
+    height: 20px;
+    width: 260px;
+    border-radius:7px;
+}
+
+.username{
+
+    width : 100px;
+}
+
+.password{
+
+    width : 100px;
+}
+
+.confirmPassword{
+
+    width : 125px;
+}
