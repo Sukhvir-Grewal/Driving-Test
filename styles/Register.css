@@ -7,12 +7,9 @@
 
 .register-main-container {
     height: 300px;
-    width: 450px;
+    width: 550px;
     background-color: grey;
-}
-
-.register-main-container > div {
-    border: 1px solid;
+    border-radius: 10px;
 }
 
 .register-container {
@@ -26,61 +23,51 @@
 
 .all-options > div {
     height: 50px;
-    border: 1px solid black;
 }
 
-.register-option {
+.register-button-container {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.username-container {
-    height: 20px;
-    width: 260px;
-   
-    /* margin-right:10px; */
-    border-radius:7px;
+.register-button {
+    font-size: 1.2rem;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
 }
 
-.outer-username-option {
-    display: flex;
-    justify-content: space-around;
-}
-.outer-password-option {
-    display: flex;
-    justify-content: space-around;
-}
-
+.outer-username-option,
+.outer-password-option,
 .outer-confirmPassword-option {
     display: flex;
-    justify-content: space-around;
 }
 
-
-.password-container {
-    height: 20px;
-    width: 260px;
-    border-radius:7px;
+.register-username,
+.register-password,
+.register-confirmPassword {
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.confirmPassword-container {
-    height: 20px;
-    width: 260px;
-    border-radius:7px;
+.input-username-container,
+.input-password-container,
+.input-confirmPassword-container {
+    align-items: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.username{
-
-    width : 100px;
-}
-
-.password{
-
-    width : 100px;
-}
-
-.confirmPassword{
-
-    width : 125px;
+.input-username,
+.input-password,
+.input-confirmPassword {
+    width: 300px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
 }

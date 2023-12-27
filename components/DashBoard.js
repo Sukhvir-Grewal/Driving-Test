@@ -8,7 +8,7 @@ export default function DashBoard() {
                     <Link className="link" href="/Login">
                         Login
                     </Link>
-                    &nbsp;|&nbsp;
+                    &nbsp;&nbsp;|&nbsp;&nbsp;
                     <Link className="link" href="/Register">
                         Register
                     </Link>

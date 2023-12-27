@@ -1,0 +1,26 @@
+{
+    "sourceFile": "pages/index.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1703649236876,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1703687989148,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,8 +8,8 @@\n export default function Home() {\r\n   return (\r\n     <>\r\n       ds fgsddfsd\r\n-      sdfjsdfh\r\n+      \r\n     </>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1703688016738,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,15 @@\n+import Head from 'next/head'\r\n+import Image from 'next/image'\r\n+import { Inter } from 'next/font/google'\r\n+import styles from '@/styles/Home.module.css'\r\n+\r\n+const inter = Inter({ subsets: ['latin'] })\r\n+\r\n+export default function Home() {\r\n+  return (\r\n+    <>\r\n+      ds fgsddfsd\r\n+        \r\n+    </>\r\n+  )\r\n+}\r\n"
+                }
+            ],
+            "date": 1703649236876,
+            "name": "Commit-0",
+            "content": "import Head from 'next/head'\r\nimport Image from 'next/image'\r\nimport { Inter } from 'next/font/google'\r\nimport styles from '@/styles/Home.module.css'\r\n\r\nconst inter = Inter({ subsets: ['latin'] })\r\n\r\nexport default function Home() {\r\n  return (\r\n    <>\r\n      ds fgsddfsd\r\n      sdfjsdfh\r\n    </>\r\n  )\r\n}\r\n"
+        }
+    ]
+}

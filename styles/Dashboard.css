@@ -7,31 +7,40 @@
     position: fixed;
 }
 .login-register-container {
-    background-color: rgb(35, 34, 34);
     color: white;
     height: 100%;
-    width: 120px;
+    width: 140px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .main-container {
-    height: 450px;
+    height: 350px;
     width: 550px;
     background-color: rgb(106, 104, 104);
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 .main-container > div {
-    border: 1px solid;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+.main-container > div:not(.heading-container) {
+    color: white;
+    transition: transform 0.3s ease;
+}
+
+.main-container > div:not(.heading-container):hover {
+    color: rgb(218, 218, 218);
+    transform: scale(1.2);
+}
+
 .outer-main-container {
     height: 100vh;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -39,18 +48,17 @@
 .heading-container {
     height: 90px;
     width: 550px;
-    background-color: grey;
     font-size: 3rem;
+    font-weight: 900;
 }
 .option-container {
     height: 80px;
     width: 550px;
-    background-color: rgb(80, 62, 62);
     font-size: 2rem;
     cursor: pointer;
 }
 
-.link{
+.link {
     color: white;
     text-decoration: none;
 }

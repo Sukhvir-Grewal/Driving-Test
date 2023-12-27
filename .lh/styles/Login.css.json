@@ -1,0 +1,22 @@
+{
+    "sourceFile": "styles/Login.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1703688543325,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1703688590152,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n }\r\n \r\n .login-main-container {\r\n     height: 250px;\r\n-    width: 450px;\r\n+    width: 550px;\r\n     background-color: grey;\r\n     border-radius: 10px;\r\n }\r\n \r\n@@ -51,16 +51,16 @@\n }\r\n \r\n .input-boxes {\r\n     width: 300px;\r\n-    height:30px;\r\n+    height: 30px;\r\n     border: none;\r\n     border-radius: 5px;\r\n }\r\n \r\n-.login-button{\r\n+.login-button {\r\n     font-size: 1.2rem;\r\n     padding: 5px;\r\n     border-radius: 5px;\r\n     border: none;\r\n\\ No newline at end of file\n     cursor: pointer;\r\n-}\n+}\r\n"
+                }
+            ],
+            "date": 1703688543325,
+            "name": "Commit-0",
+            "content": ".outer-login-main-container {\r\n    height: 100vh;\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: center;\r\n}\r\n\r\n.login-main-container {\r\n    height: 250px;\r\n    width: 450px;\r\n    background-color: grey;\r\n    border-radius: 10px;\r\n}\r\n\r\n.login-container {\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: center;\r\n    height: 100px;\r\n    width: 100%;\r\n    font-size: 2rem;\r\n}\r\n\r\n.username-main-container,\r\n.password-main-container,\r\n.login-button-container {\r\n    height: 50px;\r\n    display: flex;\r\n}\r\n.login-button-container {\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: center;\r\n}\r\n\r\n.login-password-container,\r\n.login-username-container {\r\n    width: 100px;\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: center;\r\n}\r\n\r\n.input-username-main-container,\r\n.input-password-main-container {\r\n    height: 100%;\r\n    width: 100%;\r\n    display: flex;\r\n    align-items: center;\r\n    margin-left: 10px;\r\n}\r\n\r\n.input-boxes {\r\n    width: 300px;\r\n    height:30px;\r\n    border: none;\r\n    border-radius: 5px;\r\n}\r\n\r\n.login-button{\r\n    font-size: 1.2rem;\r\n    padding: 5px;\r\n    border-radius: 5px;\r\n    border: none;\r\n    cursor: pointer;\r\n}"
+        }
+    ]
+}
