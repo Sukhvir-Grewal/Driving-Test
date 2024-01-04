@@ -1,0 +1,18 @@
+{
+    "sourceFile": "pages/fontawesome.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1703952598196,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1703952598196,
+            "name": "Commit-0",
+            "content": "// fontawesome.js\r\nimport { library } from '@fortawesome/fontawesome-svg-core';\r\nimport { faClock } from '@fortawesome/free-solid-svg-icons';\r\n\r\nlibrary.add(faClock);\r\n"
+        }
+    ]
+}

@@ -1,0 +1,70 @@
+{
+    "sourceFile": "pages/api/auth/register.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 13,
+            "patches": [
+                {
+                    "date": 1703810781493,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1703810792775,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,3 @@\n const mongoose = require(\"mongoose\");\r\n \r\n+const addUser \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1703810854129,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,1 @@\n-const mongoose = require(\"mongoose\");\r\n \r\n-const addUser \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1703811056150,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +0,0 @@\n-\r\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1703811061547,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,3 @@\n-\n+const { connect } = require(\"http2\");\r\n+\r\n+connect\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1703811080860,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,3 @@\n-const { connect } = require(\"http2\");\r\n+const connectDB = require(\"./mongo\");\r\n \r\n\\ No newline at end of file\n-connect\n+connectDB\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1703811087335,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,5 @@\n+const connectDB = require(\"./mongo\");\r\n+\r\n+connectDB()\r\n+\r\n+export default\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1703811095195,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,5 @@\n+const connectDB = require(\"./mongo\");\r\n+\r\n+connectDB()\r\n+\r\n+export default async function \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1703811100620,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,5 @@\n+const connectDB = require(\"./mongo\");\r\n+\r\n+connectDB()\r\n+\r\n+export default async function handler(req, res)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1703811117943,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,7 @@\n+const connectDB = require(\"./mongo\");\r\n+\r\n+connectDB()\r\n+\r\n+export default async function handler(req, res){\r\n+    cons\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1703811123826,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,9 @@\n+import { METHODS } from \"http\";\r\n+\r\n+const connectDB = require(\"./mongo\");\r\n+\r\n+connectDB()\r\n+\r\n+export default async function handler(req, res){\r\n+    if(METHODS)\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1703811129070,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,7 @@\n+const connectDB = require(\"./mongo\");\r\n+\r\n+connectDB()\r\n+\r\n+export default async function handler(req, res){\r\n+    if\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1703811136042,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,6 +2,6 @@\n \r\n connectDB()\r\n \r\n export default async function handler(req, res){\r\n-    if(req.)\r\n+    if(req.method)\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1703811143325,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,7 @@\n+const connectDB = require(\"./mongo\");\r\n+\r\n+connectDB()\r\n+\r\n+export default async function handler(req, res){\r\n+    if(req.method == 'POST')\r\n+}\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1703810781493,
+            "name": "Commit-0",
+            "content": "const mongoose = require(\"mongoose\");\r\n\r\n"
+        }
+    ]
+}

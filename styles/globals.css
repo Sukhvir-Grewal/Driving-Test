@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Kanit&display=swap");
+@import "~@fortawesome/fontawesome-free/css/all.css";
+
 * {
     padding: 0;
     margin: 0;
@@ -7,6 +9,6 @@
 html,
 body {
     max-width: 100vw;
-    overflow-x: hidden;
+    overflow: hidden;
     font-family: "Kanit", sans-serif;
 }

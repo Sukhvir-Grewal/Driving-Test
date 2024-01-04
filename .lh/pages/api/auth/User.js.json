@@ -1,0 +1,34 @@
+{
+    "sourceFile": "pages/api/auth/User.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 4,
+            "patches": [
+                {
+                    "date": 1703810711565,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1703810718751,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,9 @@\n const mongoose = require(\"mongoose\");\r\n \r\n+let userSchema = new Schema({\r\n+    username: {\r\n+        type: String,\r\n+        unique: true,\r\n+    },\r\n+    password: String,\r\n+});\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1703810729795,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,11 @@\n+const mongoose = require(\"mongoose\");\r\n+\r\n+let userSchema = new Schema({\r\n+    username: {\r\n+        type: String,\r\n+        unique: true,\r\n+    },\r\n+    password: String,\r\n+});\r\n+\r\n+let User = mongoose.model(\"users\", userSchema);\r\n"
+                },
+                {
+                    "date": 1703810768542,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,4 +9,5 @@\n });\r\n \r\n let User = mongoose.model(\"users\", userSchema);\r\n \r\n+module.exports = User\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1703811035450,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,13 @@\n+const mongoose = require(\"mongoose\");\r\n+\r\n+let userSchema = new mongoose.Schema({\r\n+    username: {\r\n+        type: String,\r\n+        unique: true,\r\n+    },\r\n+    password: String,\r\n+});\r\n+\r\n+let User = mongoose.model(\"users\", userSchema);\r\n+\r\n+module.exports = User;\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1703810711565,
+            "name": "Commit-0",
+            "content": "const mongoose = require(\"mongoose\");\r\n\r\n"
+        }
+    ]
+}

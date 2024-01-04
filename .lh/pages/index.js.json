@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 2,
+            "activePatchIndex": 64,
             "patches": [
                 {
                     "date": 1703649236876,
@@ -16,6 +16,254 @@
                 {
                     "date": 1703688016738,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,15 @@\n+import Head from 'next/head'\r\n+import Image from 'next/image'\r\n+import { Inter } from 'next/font/google'\r\n+import styles from '@/styles/Home.module.css'\r\n+\r\n+const inter = Inter({ subsets: ['latin'] })\r\n+\r\n+export default function Home() {\r\n+  return (\r\n+    <>\r\n+      ds fgsddfsd\r\n+        \r\n+    </>\r\n+  )\r\n+}\r\n"
+                },
+                {
+                    "date": 1703693303496,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,30 +1,9 @@\n-import Head from 'next/head'\r\n-import Image from 'next/image'\r\n-import { Inter } from 'next/font/google'\r\n-import styles from '@/styles/Home.module.css'\r\n+import DashBoard from \"@/components/DashBoard\";\r\n \r\n-const inter = Inter({ subsets: ['latin'] })\r\n-\r\n export default function Home() {\r\n   return (\r\n     <>\r\n-      ds fgsddfsd\r\n-        \r\n+      {/* <DashBoard /> */}\r\n     </>\r\n-  )\r\n+  );\r\n }\r\n-import Head from 'next/head'\r\n-import Image from 'next/image'\r\n-import { Inter } from 'next/font/google'\r\n-import styles from '@/styles/Home.module.css'\r\n-\r\n-const inter = Inter({ subsets: ['latin'] })\r\n-\r\n-export default function Home() {\r\n-  return (\r\n-    <>\r\n-      ds fgsddfsd\r\n-      \r\n-    </>\r\n-  )\r\n-}\r\n"
+                },
+                {
+                    "date": 1703693358144,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,7 +3,8 @@\n export default function Home() {\r\n   return (\r\n     <>\r\n       {/* <DashBoard /> */}\r\n+      \r\n     </>\r\n   );\r\n }\r\n"
+                },
+                {
+                    "date": 1703693391963,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,5 @@\n import DashBoard from \"@/components/DashBoard\";\r\n \r\n export default function Home() {\r\n-  return (\r\n-    <>\r\n-      {/* <DashBoard /> */}\r\n-      \r\n-    </>\r\n-  );\r\n+    return <>{/* <DashBoard /> */}</>;\r\n }\r\n"
+                },
+                {
+                    "date": 1703693400372,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,11 @@\n import DashBoard from \"@/components/DashBoard\";\r\n+import { Form } from \"react-hook-form\";\r\n \r\n export default function Home() {\r\n-    return <>{/* <DashBoard /> */}</>;\r\n+  return (\r\n+    <>\r\n+      {/* <DashBoard /> */}\r\n+      <Form\r\n+    </>\r\n+  );\r\n }\r\n"
+                },
+                {
+                    "date": 1703693419807,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,10 @@\n export default function Home() {\r\n   return (\r\n     <>\r\n       {/* <DashBoard /> */}\r\n-      <Form\r\n+      <Form>\r\n+\r\n+      </Form>\r\n     </>\r\n   );\r\n }\r\n"
+                },
+                {
+                    "date": 1703693428980,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n import DashBoard from \"@/components/DashBoard\";\r\n import { Form } from \"react-hook-form\";\r\n \r\n export default function Home() {\r\n+    const \r\n   return (\r\n     <>\r\n       {/* <DashBoard /> */}\r\n       <Form>\r\n"
+                },
+                {
+                    "date": 1703693442320,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import DashBoard from \"@/components/DashBoard\";\r\n import { Form } from \"react-hook-form\";\r\n \r\n export default function Home() {\r\n-    const \r\n+    const {}\r\n   return (\r\n     <>\r\n       {/* <DashBoard /> */}\r\n       <Form>\r\n"
+                },
+                {
+                    "date": 1703693454428,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import DashBoard from \"@/components/DashBoard\";\r\n import { Form } from \"react-hook-form\";\r\n \r\n export default function Home() {\r\n-    const {}\r\n+    const {onSubmit, register}\r\n   return (\r\n     <>\r\n       {/* <DashBoard /> */}\r\n       <Form>\r\n"
+                },
+                {
+                    "date": 1703693461124,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import DashBoard from \"@/components/DashBoard\";\r\n import { Form } from \"react-hook-form\";\r\n \r\n export default function Home() {\r\n-    const {onSubmit, register}\r\n+    const {onSubmit, register\r\n   return (\r\n     <>\r\n       {/* <DashBoard /> */}\r\n       <Form>\r\n"
+                },
+                {
+                    "date": 1703693468025,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,11 @@\n import DashBoard from \"@/components/DashBoard\";\r\n import { Form } from \"react-hook-form\";\r\n \r\n export default function Home() {\r\n-    const {onSubmit, register\r\n+    const [onSubmit, register] = {\r\n+        \r\n+    }\r\n   return (\r\n     <>\r\n       {/* <DashBoard /> */}\r\n       <Form>\r\n"
+                },
+                {
+                    "date": 1703693474603,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,9 @@\n import DashBoard from \"@/components/DashBoard\";\r\n-import { Form } from \"react-hook-form\";\r\n+import { Form, useForm } from \"react-hook-form\";\r\n \r\n export default function Home() {\r\n-    const [onSubmit, register] = {\r\n-        \r\n-    }\r\n+    const [onSubmit, register] = useForm\r\n   return (\r\n     <>\r\n       {/* <DashBoard /> */}\r\n       <Form>\r\n"
+                },
+                {
+                    "date": 1703693513975,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,11 @@\n import DashBoard from \"@/components/DashBoard\";\r\n import { Form, useForm } from \"react-hook-form\";\r\n \r\n export default function Home() {\r\n-    const [onSubmit, register] = useForm\r\n+    const {register} = useForm({\r\n+\r\n+    })\r\n   return (\r\n     <>\r\n       {/* <DashBoard /> */}\r\n       <Form>\r\n"
+                },
+                {
+                    "date": 1703693520892,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,10 @@\n import DashBoard from \"@/components/DashBoard\";\r\n import { Form, useForm } from \"react-hook-form\";\r\n \r\n export default function Home() {\r\n-    const {register} = useForm({\r\n-\r\n+    const {register, handleSubmit} = useForm({\r\n+        \r\n     })\r\n   return (\r\n     <>\r\n       {/* <DashBoard /> */}\r\n"
+                },
+                {
+                    "date": 1703693530417,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import { Form, useForm } from \"react-hook-form\";\r\n \r\n export default function Home() {\r\n     const {register, handleSubmit} = useForm({\r\n-        \r\n+        de\r\n     })\r\n   return (\r\n     <>\r\n       {/* <DashBoard /> */}\r\n"
+                },
+                {
+                    "date": 1703693554426,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import { Form, useForm } from \"react-hook-form\";\r\n \r\n export default function Home() {\r\n     const {register, handleSubmit} = useForm({\r\n-        de\r\n+        defaultValues:\r\n     })\r\n   return (\r\n     <>\r\n       {/* <DashBoard /> */}\r\n"
+                },
+                {
+                    "date": 1703693559718,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,18 @@\n+import DashBoard from \"@/components/DashBoard\";\r\n+import { Form, useForm } from \"react-hook-form\";\r\n+\r\n+export default function Home() {\r\n+    const {register, handleSubmit} = useForm({\r\n+        defaultValues:{\r\n+            user\r\n+        }\r\n+    })\r\n+  return (\r\n+    <>\r\n+      {/* <DashBoard /> */}\r\n+      <Form>\r\n+\r\n+      </Form>\r\n+    </>\r\n+  );\r\n+}\r\n"
+                },
+                {
+                    "date": 1703693573068,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,10 @@\n \r\n export default function Home() {\r\n     const {register, handleSubmit} = useForm({\r\n         defaultValues:{\r\n-            user\r\n+            username: \"\",\r\n+            password: \"\"\r\n         }\r\n     })\r\n   return (\r\n     <>\r\n@@ -15,20 +16,4 @@\n       </Form>\r\n     </>\r\n   );\r\n }\r\n-import DashBoard from \"@/components/DashBoard\";\r\n-import { Form, useForm } from \"react-hook-form\";\r\n-\r\n-export default function Home() {\r\n-    const {register, handleSubmit} = useForm({\r\n-        defaultValues:\r\n-    })\r\n-  return (\r\n-    <>\r\n-      {/* <DashBoard /> */}\r\n-      <Form>\r\n-\r\n-      </Form>\r\n-    </>\r\n-  );\r\n-}\r\n"
+                },
+                {
+                    "date": 1703693582104,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,19 +1,17 @@\n import DashBoard from \"@/components/DashBoard\";\r\n import { Form, useForm } from \"react-hook-form\";\r\n \r\n export default function Home() {\r\n-    const {register, handleSubmit} = useForm({\r\n-        defaultValues:{\r\n+    const { register, handleSubmit } = useForm({\r\n+        defaultValues: {\r\n             username: \"\",\r\n-            password: \"\"\r\n-        }\r\n-    })\r\n-  return (\r\n-    <>\r\n-      {/* <DashBoard /> */}\r\n-      <Form>\r\n-\r\n-      </Form>\r\n-    </>\r\n-  );\r\n+            password: \"\",\r\n+        },\r\n+    });\r\n+    return (\r\n+        <>\r\n+            {/* <DashBoard /> */}\r\n+            <Form></Form>\r\n+        </>\r\n+    );\r\n }\r\n"
+                },
+                {
+                    "date": 1703693590730,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,8 +10,8 @@\n     });\r\n     return (\r\n         <>\r\n             {/* <DashBoard /> */}\r\n-            <Form></Form>\r\n+            <Form ></Form>\r\n         </>\r\n     );\r\n }\r\n"
+                },
+                {
+                    "date": 1703693596602,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,8 +10,10 @@\n     });\r\n     return (\r\n         <>\r\n             {/* <DashBoard /> */}\r\n-            <Form ></Form>\r\n+            <Form >\r\n+                \r\n+            </Form>\r\n         </>\r\n     );\r\n }\r\n"
+                },
+                {
+                    "date": 1703693626783,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n         },\r\n     });\r\n     return (\r\n         <>\r\n-            {/* <DashBoard /> */}\r\n+            <DashBoard />\r\n             <Form >\r\n                 \r\n             </Form>\r\n         </>\r\n"
+                },
+                {
+                    "date": 1703693636768,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n         },\r\n     });\r\n     return (\r\n         <>\r\n-            <DashBoard />\r\n+            {/* <DashBoard /> */}\r\n             <Form >\r\n                 \r\n             </Form>\r\n         </>\r\n"
+                },
+                {
+                    "date": 1703693645403,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n     return (\r\n         <>\r\n             {/* <DashBoard /> */}\r\n             <Form >\r\n-                \r\n+                Username\r\n             </Form>\r\n         </>\r\n     );\r\n }\r\n"
+                },
+                {
+                    "date": 1703693653224,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n     return (\r\n         <>\r\n             {/* <DashBoard /> */}\r\n             <Form >\r\n-                Username\r\n+                Username <input type=\"text\"></input>\r\n             </Form>\r\n         </>\r\n     );\r\n }\r\n"
+                },
+                {
+                    "date": 1703693665920,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n     });\r\n     return (\r\n         <>\r\n             {/* <DashBoard /> */}\r\n-            <Form >\r\n+            <Form onc>\r\n                 Username <input type=\"text\"></input>\r\n             </Form>\r\n         </>\r\n     );\r\n"
+                },
+                {
+                    "date": 1703693671661,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n     });\r\n     return (\r\n         <>\r\n             {/* <DashBoard /> */}\r\n-            <Form onc>\r\n+            <Form oncS>\r\n                 Username <input type=\"text\"></input>\r\n             </Form>\r\n         </>\r\n     );\r\n"
+                },
+                {
+                    "date": 1703693679106,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n     });\r\n     return (\r\n         <>\r\n             {/* <DashBoard /> */}\r\n-            <Form oncS>\r\n+            <Form onSubmit={}>\r\n                 Username <input type=\"text\"></input>\r\n             </Form>\r\n         </>\r\n     );\r\n"
+                },
+                {
+                    "date": 1703693689138,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n     });\r\n     return (\r\n         <>\r\n             {/* <DashBoard /> */}\r\n-            <Form onSubmit={}>\r\n+            <Form onSubmit={handleSubmit()}>\r\n                 Username <input type=\"text\"></input>\r\n             </Form>\r\n         </>\r\n     );\r\n"
+                },
+                {
+                    "date": 1703693697122,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n     });\r\n     return (\r\n         <>\r\n             {/* <DashBoard /> */}\r\n-            <Form onSubmit={handleSubmit()}>\r\n+            <Form onSubmit={handleSubmit(submitForm)}>\r\n                 Username <input type=\"text\"></input>\r\n             </Form>\r\n         </>\r\n     );\r\n"
+                },
+                {
+                    "date": 1703693705184,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,8 +7,12 @@\n             username: \"\",\r\n             password: \"\",\r\n         },\r\n     });\r\n+\r\n+    function submitForm(){\r\n+        \r\n+    }\r\n     return (\r\n         <>\r\n             {/* <DashBoard /> */}\r\n             <Form onSubmit={handleSubmit(submitForm)}>\r\n"
+                },
+                {
+                    "date": 1703693719077,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,16 +8,17 @@\n             password: \"\",\r\n         },\r\n     });\r\n \r\n-    function submitForm(){\r\n-        \r\n+    function submitForm(data){\r\n+\r\n     }\r\n     return (\r\n         <>\r\n             {/* <DashBoard /> */}\r\n             <Form onSubmit={handleSubmit(submitForm)}>\r\n                 Username <input type=\"text\"></input>\r\n+                \r\n             </Form>\r\n         </>\r\n     );\r\n }\r\n"
+                },
+                {
+                    "date": 1703693724560,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n         <>\r\n             {/* <DashBoard /> */}\r\n             <Form onSubmit={handleSubmit(submitForm)}>\r\n                 Username <input type=\"text\"></input>\r\n-                \r\n+                <button>submit</button>\r\n             </Form>\r\n         </>\r\n     );\r\n }\r\n"
+                },
+                {
+                    "date": 1703693731114,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n         <>\r\n             {/* <DashBoard /> */}\r\n             <Form onSubmit={handleSubmit(submitForm)}>\r\n                 Username <input type=\"text\"></input>\r\n-                <button>submit</button>\r\n+                <button type=\"submit\">submit</button>\r\n             </Form>\r\n         </>\r\n     );\r\n }\r\n"
+                },
+                {
+                    "date": 1703693825987,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,24 +1,22 @@\n-import DashBoard from \"@/components/DashBoard\";\r\n-import { Form, useForm } from \"react-hook-form\";\r\n+import { useForm } from 'react-hook-form';\r\n \r\n-export default function Home() {\r\n-    const { register, handleSubmit } = useForm({\r\n-        defaultValues: {\r\n-            username: \"\",\r\n-            password: \"\",\r\n-        },\r\n-    });\r\n+export default function UserForm() {\r\n+  const { register, handleSubmit } = useForm({\r\n+    defaultValues: {\r\n+      userName: 'Homer Simpson',\r\n+    },\r\n+  });\r\n \r\n-    function submitForm(data){\r\n+  function submitForm(data) {\r\n+    console.log(`form submitted - userName: ${data.userName}`);\r\n+  }\r\n \r\n-    }\r\n-    return (\r\n-        <>\r\n-            {/* <DashBoard /> */}\r\n-            <Form onSubmit={handleSubmit(submitForm)}>\r\n-                Username <input type=\"text\"></input>\r\n-                <button type=\"submit\">submit</button>\r\n-            </Form>\r\n-        </>\r\n-    );\r\n-}\r\n+  return (\r\n+    <form onSubmit={handleSubmit(submitForm)}>\r\n+      User Name: <input {...register('userName')} />\r\n+      <br />\r\n+      <br />\r\n+      <button type=\"submit\">Update User Name</button>\r\n+    </form>\r\n+  );\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1703693873286,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,22 +1,22 @@\n-import { useForm } from 'react-hook-form';\r\n+import DashBoard from \"@/components/DashBoard\";\r\n+import { Form, useForm } from \"react-hook-form\";\r\n \r\n-export default function UserForm() {\r\n-  const { register, handleSubmit } = useForm({\r\n-    defaultValues: {\r\n-      userName: 'Homer Simpson',\r\n-    },\r\n-  });\r\n+export default function Home() {\r\n+    const { register, handleSubmit } = useForm({\r\n+        defaultValues: {\r\n+            username: \"\",\r\n+            password: \"\",\r\n+        },\r\n+    });\r\n \r\n-  function submitForm(data) {\r\n-    console.log(`form submitted - userName: ${data.userName}`);\r\n-  }\r\n-\r\n\\ No newline at end of file\n-  return (\r\n-    <form onSubmit={handleSubmit(submitForm)}>\r\n-      User Name: <input {...register('userName')} />\r\n-      <br />\r\n-      <br />\r\n-      <button type=\"submit\">Update User Name</button>\r\n-    </form>\r\n-  );\r\n-}\n+    function submitForm(data) {}\r\n+    return (\r\n+        <>\r\n+            {/* <DashBoard /> */}\r\n+            <orm onSubmit={handleSubmit(submitForm)}>\r\n+                Username <input type=\"text\"></input>\r\n+                <button type=\"submit\">submit</button>\r\n+            </Form>\r\n+        </>\r\n+    );\r\n+}\r\n"
+                },
+                {
+                    "date": 1703693891844,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import DashBoard from \"@/components/DashBoard\";\r\n-import { Form, useForm } from \"react-hook-form\";\r\n+import {useForm } from \"react-hook-form\";\r\n \r\n export default function Home() {\r\n     const { register, handleSubmit } = useForm({\r\n         defaultValues: {\r\n@@ -12,11 +12,11 @@\n     function submitForm(data) {}\r\n     return (\r\n         <>\r\n             {/* <DashBoard /> */}\r\n-            <orm onSubmit={handleSubmit(submitForm)}>\r\n+            <form onSubmit={handleSubmit(submitForm)}>\r\n                 Username <input type=\"text\"></input>\r\n                 <button type=\"submit\">submit</button>\r\n-            </Form>\r\n+            </form>\r\n         </>\r\n     );\r\n }\r\n"
+                },
+                {
+                    "date": 1703693942248,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n     return (\r\n         <>\r\n             {/* <DashBoard /> */}\r\n             <form onSubmit={handleSubmit(submitForm)}>\r\n-                Username <input type=\"text\"></input>\r\n+                Username <input  type=\"text\"></input>\r\n                 <button type=\"submit\">submit</button>\r\n             </form>\r\n         </>\r\n     );\r\n"
+                },
+                {
+                    "date": 1703693949029,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n     return (\r\n         <>\r\n             {/* <DashBoard /> */}\r\n             <form onSubmit={handleSubmit(submitForm)}>\r\n-                Username <input  type=\"text\"></input>\r\n+                Username <input {...register} type=\"text\"></input>\r\n                 <button type=\"submit\">submit</button>\r\n             </form>\r\n         </>\r\n     );\r\n"
+                },
+                {
+                    "date": 1703693958813,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n     return (\r\n         <>\r\n             {/* <DashBoard /> */}\r\n             <form onSubmit={handleSubmit(submitForm)}>\r\n-                Username <input {...register} type=\"text\"></input>\r\n+                Username <input {...register('username')} type=\"text\"></input>\r\n                 <button type=\"submit\">submit</button>\r\n             </form>\r\n         </>\r\n     );\r\n"
+                },
+                {
+                    "date": 1703694019096,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,11 @@\n             password: \"\",\r\n         },\r\n     });\r\n \r\n-    function submitForm(data) {}\r\n+    function submitForm(data) {\r\n+        console.log(data)\r\n+    }\r\n     return (\r\n         <>\r\n             {/* <DashBoard /> */}\r\n             <form onSubmit={handleSubmit(submitForm)}>\r\n"
+                },
+                {
+                    "date": 1703694067635,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n         console.log(data)\r\n     }\r\n     return (\r\n         <>\r\n-            {/* <DashBoard /> */}\r\n+            <DashBoard />\r\n             <form onSubmit={handleSubmit(submitForm)}>\r\n                 Username <input {...register('username')} type=\"text\"></input>\r\n                 <button type=\"submit\">submit</button>\r\n             </form>\r\n"
+                },
+                {
+                    "date": 1703907215109,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import DashBoard from \"@/components/DashBoard\";\r\n-import {useForm } from \"react-hook-form\";\r\n+import { useForm } from \"react-hook-form\";\r\n \r\n export default function Home() {\r\n     const { register, handleSubmit } = useForm({\r\n         defaultValues: {\r\n@@ -9,16 +9,16 @@\n         },\r\n     });\r\n \r\n     function submitForm(data) {\r\n-        console.log(data)\r\n+        console.log(data);\r\n     }\r\n     return (\r\n         <>\r\n             <DashBoard />\r\n-            <form onSubmit={handleSubmit(submitForm)}>\r\n+            {/* <form onSubmit={handleSubmit(submitForm)}>\r\n                 Username <input {...register('username')} type=\"text\"></input>\r\n                 <button type=\"submit\">submit</button>\r\n-            </form>\r\n+            </form> */}\r\n         </>\r\n     );\r\n }\r\n"
+                },
+                {
+                    "date": 1703907220777,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,18 +1,8 @@\n import DashBoard from \"@/components/DashBoard\";\r\n import { useForm } from \"react-hook-form\";\r\n \r\n export default function Home() {\r\n-    const { register, handleSubmit } = useForm({\r\n-        defaultValues: {\r\n-            username: \"\",\r\n-            password: \"\",\r\n-        },\r\n-    });\r\n-\r\n-    function submitForm(data) {\r\n-        console.log(data);\r\n-    }\r\n     return (\r\n         <>\r\n             <DashBoard />\r\n             {/* <form onSubmit={handleSubmit(submitForm)}>\r\n"
+                },
+                {
+                    "date": 1703907226804,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,11 @@\n import DashBoard from \"@/components/DashBoard\";\r\n import { useForm } from \"react-hook-form\";\r\n \r\n export default function Home() {\r\n+    \r\n     return (\r\n         <>\r\n             <DashBoard />\r\n-            {/* <form onSubmit={handleSubmit(submitForm)}>\r\n-                Username <input {...register('username')} type=\"text\"></input>\r\n-                <button type=\"submit\">submit</button>\r\n-            </form> */}\r\n         </>\r\n     );\r\n }\r\n"
+                },
+                {
+                    "date": 1703907238166,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import DashBoard from \"@/components/DashBoard\";\r\n-import { useForm } from \"react-hook-form\";\r\n \r\n export default function Home() {\r\n-    \r\n+\r\n+    const render\r\n     return (\r\n         <>\r\n             <DashBoard />\r\n         </>\r\n"
+                },
+                {
+                    "date": 1703907244210,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,11 @@\n import DashBoard from \"@/components/DashBoard\";\r\n \r\n export default function Home() {\r\n \r\n-    const render\r\n+    const renderView(){\r\n+        \r\n+    }\r\n     return (\r\n         <>\r\n             <DashBoard />\r\n         </>\r\n"
+                },
+                {
+                    "date": 1703907252841,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,11 @@\n import DashBoard from \"@/components/DashBoard\";\r\n \r\n export default function Home() {\r\n \r\n+    const view\r\n     const renderView(){\r\n-        \r\n+\r\n     }\r\n     return (\r\n         <>\r\n             <DashBoard />\r\n"
+                },
+                {
+                    "date": 1703907259525,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import DashBoard from \"@/components/DashBoard\";\r\n \r\n export default function Home() {\r\n \r\n-    const view\r\n+    const [view, setView]\r\n     const renderView(){\r\n \r\n     }\r\n     return (\r\n"
+                },
+                {
+                    "date": 1703907586390,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,10 @@\n import DashBoard from \"@/components/DashBoard\";\r\n+import { useState } from \"react\";\r\n \r\n export default function Home() {\r\n \r\n-    const [view, setView]\r\n+    const [view, setView] = useState()\r\n     const renderView(){\r\n \r\n     }\r\n     return (\r\n"
+                },
+                {
+                    "date": 1703907600428,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,11 +2,11 @@\n import { useState } from \"react\";\r\n \r\n export default function Home() {\r\n \r\n-    const [view, setView] = useState()\r\n+    const [view, setView] = useState('dashboard')\r\n     const renderView(){\r\n-\r\n+        switc\r\n     }\r\n     return (\r\n         <>\r\n             <DashBoard />\r\n"
+                },
+                {
+                    "date": 1703907609276,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,16 @@\n export default function Home() {\r\n \r\n     const [view, setView] = useState('dashboard')\r\n     const renderView(){\r\n-        switc\r\n+        switch (view) {\r\n+            case 'dashboard':\r\n+                \r\n+                break;\r\n+        \r\n+            default:\r\n+                break;\r\n+        }\r\n     }\r\n     return (\r\n         <>\r\n             <DashBoard />\r\n"
+                },
+                {
+                    "date": 1703907617899,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,17 +6,17 @@\n     const [view, setView] = useState('dashboard')\r\n     const renderView(){\r\n         switch (view) {\r\n             case 'dashboard':\r\n-                \r\n+                return \r\n                 break;\r\n         \r\n             default:\r\n                 break;\r\n         }\r\n     }\r\n     return (\r\n         <>\r\n-            <DashBoard />\r\n+            \r\n         </>\r\n     );\r\n }\r\n"
+                },
+                {
+                    "date": 1703907624805,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,17 +6,15 @@\n     const [view, setView] = useState('dashboard')\r\n     const renderView(){\r\n         switch (view) {\r\n             case 'dashboard':\r\n-                return \r\n-                break;\r\n-        \r\n+                return <DashBoard />\r\n             default:\r\n                 break;\r\n         }\r\n     }\r\n     return (\r\n         <>\r\n-            \r\n+            re\r\n         </>\r\n     );\r\n }\r\n"
+                },
+                {
+                    "date": 1703907630987,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,8 +13,8 @@\n         }\r\n     }\r\n     return (\r\n         <>\r\n-            re\r\n+            {renderView()}\r\n         </>\r\n     );\r\n }\r\n"
+                },
+                {
+                    "date": 1703907650779,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n \r\n export default function Home() {\r\n \r\n     const [view, setView] = useState('dashboard')\r\n-    const renderView(){\r\n+    const renderView = (){\r\n         switch (view) {\r\n             case 'dashboard':\r\n                 return <DashBoard />\r\n             default:\r\n"
+                },
+                {
+                    "date": 1703907656295,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,20 +1,15 @@\n import DashBoard from \"@/components/DashBoard\";\r\n import { useState } from \"react\";\r\n \r\n export default function Home() {\r\n-\r\n-    const [view, setView] = useState('dashboard')\r\n-    const renderView = (){\r\n+    const [view, setView] = useState(\"dashboard\");\r\n+    const renderView = () => {\r\n         switch (view) {\r\n-            case 'dashboard':\r\n-                return <DashBoard />\r\n+            case \"dashboard\":\r\n+                return <DashBoard />;\r\n             default:\r\n                 break;\r\n         }\r\n-    }\r\n-    return (\r\n-        <>\r\n-            {renderView()}\r\n-        </>\r\n-    );\r\n+    };\r\n+    return <>{renderView()}</>;\r\n }\r\n"
+                },
+                {
+                    "date": 1703908940547,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,10 @@\n     const renderView = () => {\r\n         switch (view) {\r\n             case \"dashboard\":\r\n                 return <DashBoard />;\r\n+            case \"dashboard\":\r\n+                return <DashBoard />;\r\n             default:\r\n                 break;\r\n         }\r\n     };\r\n"
+                },
+                {
+                    "date": 1703908952006,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,17 @@\n+import DashBoard from \"@/components/DashBoard\";\r\n+import { useState } from \"react\";\r\n+\r\n+export default function Home() {\r\n+    const [view, setView] = useState(\"dashboard\");\r\n+    const renderView = () => {\r\n+        switch (view) {\r\n+            case \"dashboard\":\r\n+                return <DashBoard />;\r\n+            case \"dashboard\":\r\n+                return <Quiz />;\r\n+            default:\r\n+                break;\r\n+        }\r\n+    };\r\n+    return <>{renderView()}</>;\r\n+}\r\n"
+                },
+                {
+                    "date": 1703909010678,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,30 +5,13 @@\n     const [view, setView] = useState(\"dashboard\");\r\n     const renderView = () => {\r\n         switch (view) {\r\n             case \"dashboard\":\r\n-                return <DashBoard />;\r\n+                return <DashBoard setView={setView/>;\r\n             case \"dashboard\":\r\n                 return <Quiz />;\r\n             default:\r\n                 break;\r\n         }\r\n     };\r\n     return <>{renderView()}</>;\r\n }\r\n-import DashBoard from \"@/components/DashBoard\";\r\n-import { useState } from \"react\";\r\n-\r\n-export default function Home() {\r\n-    const [view, setView] = useState(\"dashboard\");\r\n-    const renderView = () => {\r\n-        switch (view) {\r\n-            case \"dashboard\":\r\n-                return <DashBoard />;\r\n-            case \"dashboard\":\r\n-                return <DashBoard />;\r\n-            default:\r\n-                break;\r\n-        }\r\n-    };\r\n-    return <>{renderView()}</>;\r\n-}\r\n"
+                },
+                {
+                    "date": 1703909068211,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,10 +5,10 @@\n     const [view, setView] = useState(\"dashboard\");\r\n     const renderView = () => {\r\n         switch (view) {\r\n             case \"dashboard\":\r\n-                return <DashBoard setView={setView/>;\r\n-            case \"dashboard\":\r\n+                return <DashBoard setView={setView} />;\r\n+            case \"quiz\":\r\n                 return <Quiz />;\r\n             default:\r\n                 break;\r\n         }\r\n"
+                },
+                {
+                    "date": 1703909078085,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n         switch (view) {\r\n             case \"dashboard\":\r\n                 return <DashBoard setView={setView} />;\r\n             case \"quiz\":\r\n-                return <Quiz />;\r\n+                return <Qu />;\r\n             default:\r\n                 break;\r\n         }\r\n     };\r\n"
+                },
+                {
+                    "date": 1703913986985,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,11 @@\n+import DashBoard from \"@/components/DashBoard\";\r\n+import { useForm } from \"react-hook-form\";\r\n+\r\n+export default function Home() {\r\n+    \r\n+    return (\r\n+        <>\r\n+            <DashBoard />\r\n+        </>\r\n+    );\r\n+}\r\n"
                 }
             ],
             "date": 1703649236876,

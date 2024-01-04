@@ -1,0 +1,30 @@
+{
+    "sourceFile": "styles/Quiz.scss",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1703952989744,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1703953004048,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n     height: 100%;\r\n     width: 70%;\r\n }\r\n .clock-container {\r\n-    @extend: --center-div;\r\n+    @extend --center-div;\r\n     background-color: green;\r\n     height: 100%;\r\n     width: 30%;\r\n }\r\n"
+                },
+                {
+                    "date": 1703959040797,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n     height: 100%;\r\n     width: 70%;\r\n }\r\n .clock-container {\r\n-    @extend --center-div;\r\n+    @extend .center-div;\r\n     background-color: green;\r\n     height: 100%;\r\n     width: 30%;\r\n }\r\n"
+                },
+                {
+                    "date": 1703959053857,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n     height: 100%;\r\n     width: 70%;\r\n }\r\n .clock-container {\r\n-    @extend .center-div;\r\n+    @extend .center-div !optional;\r\n     background-color: green;\r\n     height: 100%;\r\n     width: 30%;\r\n }\r\n"
+                }
+            ],
+            "date": 1703952989744,
+            "name": "Commit-0",
+            "content": ".time-main-container {\r\n    color: white;\r\n    height: 100%;\r\n    width: 140px;\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: center;\r\n    background-color: rgb(112, 111, 111);\r\n}\r\n\r\n.time-container {\r\n    background-color: red;\r\n    height: 100%;\r\n    width: 70%;\r\n}\r\n.clock-container {\r\n    @extend: --center-div;\r\n    background-color: green;\r\n    height: 100%;\r\n    width: 30%;\r\n}\r\n"
+        }
+    ]
+}

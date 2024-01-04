@@ -1,0 +1,58 @@
+{
+    "sourceFile": "styles/Results.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 10,
+            "patches": [
+                {
+                    "date": 1704268923725,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1704268929450,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,4 @@\n .result-heading-container{\r\n-    \r\n+    background-color: red;\r\n+    height: inherit;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1704268938885,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,4 @@\n .result-heading-container{\r\n     background-color: red;\r\n-    height: inherit;\r\n+    height: 50px;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1704271410875,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,4 @@\n-.result-heading-container{\r\n+.heading-container{\r\n     background-color: red;\r\n     height: 50px;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1704271416273,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,8 @@\n+.heading-container{\r\n+    background-color: red;\r\n+    height: 50px;\r\n+}\r\n+\r\n+.result-heading-container{\r\n+    \r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1704271435363,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,11 +2,7 @@\n     background-color: red;\r\n     height: 50px;\r\n }\r\n \r\n-.result-heading-container{\r\n+.heading{\r\n     \r\n-}\n-.heading-container{\r\n-    background-color: red;\r\n-    height: 50px;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1704271440978,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,6 +3,8 @@\n     height: 50px;\r\n }\r\n \r\n .heading{\r\n+    background-color: red;\r\n+    height: 50px;\r\n     \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1704271453541,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,7 @@\n     height: 50px;\r\n }\r\n \r\n .heading{\r\n-    background-color: red;\r\n-    height: 50px;\r\n-    \r\n+    background-color: green;\r\n+    width: ;    \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1704271461349,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,6 +4,7 @@\n }\r\n \r\n .heading{\r\n     background-color: green;\r\n-    width: ;    \r\n+    width: 80px;    \r\n+    \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1704271468643,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,6 +5,6 @@\n \r\n .heading{\r\n     background-color: green;\r\n     width: 80px;    \r\n-    height: auto;\r\n+    height: inherit;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1704271526958,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,13 @@\n+.heading-container{\r\n+    background-color: red;\r\n+    height: 50px;\r\n+    display: grid;\r\n+    place-content: center;\r\n+}\r\n+\r\n+.heading{\r\n+    background-color: green;\r\n+    width: 150px;    \r\n+    height: inherit;\r\n+    font-size: x-large;\r\n+}\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1704268923725,
+            "name": "Commit-0",
+            "content": ".result-heading-container{\r\n    \r\n}"
+        }
+    ]
+}

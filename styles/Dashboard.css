@@ -50,6 +50,7 @@
     width: 550px;
     font-size: 3rem;
     font-weight: 900;
+    margin-top: 15px;
 }
 .option-container {
     height: 80px;
@@ -61,4 +62,13 @@
 .link {
     color: white;
     text-decoration: none;
+}
+
+@media (max-width: 600px) {
+    .main-container,
+    .heading-container,
+    .option-container {
+        width: 100%;
+    }
+
 }

@@ -1,0 +1,156 @@
+
+.result-outer-main-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.heading-container {
+    height: 50px;
+    display: grid;
+    place-content: center;
+}
+
+.heading {
+    width: 150px;
+    height: inherit;
+    display: grid;
+    place-content: center;
+    font-size: xx-large;
+}
+
+.results-main-container {
+    height: 30px;
+    margin: 5px 10px;
+    border: 1px solid;
+    display: flex;
+}
+
+.result-name {
+    height: inherit;
+    width: 120px;
+    border-right: 1px solid;
+    display: flex;
+    align-items: center;
+    padding-left: 5px;
+    font-size: large;
+}
+
+.result {
+    font-size: large;
+    padding-left: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.wrong-ans-main-container {
+    height: 250px;
+    overflow: auto;
+    padding: 10px;
+    z-index: 10;
+    margin-bottom: 20px;
+}
+
+::-webkit-scrollbar {
+    width: 2px;
+}
+
+.result-main-container {
+    min-height: 500px;
+    width: 550px;
+    background-color: rgb(106, 104, 104);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.result-main-container > div {
+    animation: fadeIn 2s ease;
+}
+
+.wrong-ans-container {
+    min-height: 200px;
+    display: flex;
+    margin: 0 5px 10px 5px;
+}
+
+.wrong-ans-image-main-container {
+    height: 100%;
+    width: 200px;
+    display: grid;
+    place-content: center;
+}
+
+.wrong-ans-image-container {
+    height: 150px;
+    width: 150px;
+}
+
+.wrong-ans-option-main-container {
+    height: 100%;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.wrong-ans-option-container {
+    min-height: 40px;
+    width: 95%;
+    border: 1px solid;
+    display: flex;
+    align-items: center;
+    padding-left: 5px;
+    margin: 5px;
+}
+
+@keyframes popUp {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 600px) {
+    .wrong-ans-option-container {
+        font-size: small;
+        min-height: 40px;
+        width: initial;
+        border: 1px solid;
+        display: flex;
+        align-items: center;
+        padding-left: 5px;
+        margin: 0px;
+    }
+
+    .wrong-ans-option-main-container {
+        height: 100%;
+        width: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    
+    .result-main-container {
+        height: 100dvh;
+        width: 550px;
+        background-color: rgb(106, 104, 104);
+        border-radius: 0;
+        overflow: hidden;
+    }
+    
+    .result-outer-main-container {
+        height: 100vh;
+        display: flex;
+        justify-content: initial;
+        align-items: initial;
+    }
+    .wrong-ans-main-container {
+        height: 100%;
+        overflow: auto;
+        padding: 10px;
+        z-index: 10;
+        margin-bottom: 20px;
+    }
+    
+}

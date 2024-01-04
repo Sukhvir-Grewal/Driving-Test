@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function DashBoard() {
+export default function DashBoard({ setView }) {
     return (
         <>
             <div className="nav-container">
@@ -17,9 +17,21 @@ export default function DashBoard() {
             <div className="outer-main-container">
                 <div className="main-container">
                     <div className="heading-container">Driving Test</div>
-                    <div className="option-container">Traffic Signs</div>
-                    <div className="option-container">Rules of Road</div>
-                    <div className="option-container">Both</div>
+                    <div className="option-container">
+                        <Link className="link" href="/Quiz">
+                            Traffic Signs
+                        </Link>
+                    </div>
+                    <div className="option-container">
+                        <Link className="link" href="/Quiz">
+                            Rules of Road
+                        </Link>
+                    </div>
+                    <div className="option-container">
+                        <Link className="link" href="/Quiz">
+                            Both
+                        </Link>
+                    </div>
                     <div></div>
                 </div>
             </div>

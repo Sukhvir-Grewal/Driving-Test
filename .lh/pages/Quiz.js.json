@@ -1,0 +1,30 @@
+{
+    "sourceFile": "pages/Quiz.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1703951957277,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1703951962343,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,7 @@\n export default function Quiz(){\r\n     return (\r\n-        <></>\r\n+        <>\r\n+            \r\n+        </>\r\n     )\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1703952010341,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n export default function Quiz(){\r\n     return (\r\n         <>\r\n-            <\r\n+            <d\r\n         </>\r\n     )\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1703964508431,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n export default function Quiz() {\r\n     return (\r\n         <>\r\n             <div className=\"nav-container\">\r\n-                <div  className=\"time-main-container\">\r\n+                <div             className=\"time-main-container\">\r\n                     <div className=\"time-container\">00:00</div>\r\n                     <div className=\"clock-container\">\r\n                         <i class=\"fa-solid fa-clock\"></i>\r\n                     </div>\r\n"
+                }
+            ],
+            "date": 1703951957276,
+            "name": "Commit-0",
+            "content": "export default function Quiz(){\r\n    return (\r\n        <></>\r\n    )\r\n}"
+        }
+    ]
+}
