@@ -1,0 +1,34 @@
+{
+    "sourceFile": "components/Options.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 4,
+            "patches": [
+                {
+                    "date": 1704391650687,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1704391656070,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,1 @@\n-export default function \n\\ No newline at end of file\n+export default function Options()\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1704391661620,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,3 @@\n+export default function Options(){\r\n+    return\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1704391677343,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,24 @@\n export default function Options(){\r\n     return(\r\n         <>\r\n-            \r\n+            {renderOptions()}\r\n+                        <div className=\"confirm-main-container\">\r\n+                            <div\r\n+                                ref={confirmContainerRef}\r\n+                                onClick={() => {\r\n+                                    checkAnswer();\r\n+                                    if (questionCount !== MAX_QUESTIONS) {\r\n+                                        timeoutRef.current = setTimeout(() => {\r\n+                                            getRandomQuestion();\r\n+                                        }, 1000);\r\n+                                        doTheAnimation();\r\n+                                    } else setShowResults(true);\r\n+                                }}\r\n+                                className=\"confirm-container\"\r\n+                            >\r\n+                                <i className=\"fa-solid fa-check\"></i>\r\n+                            </div>\r\n+                        </div>\r\n         </>\r\n     )\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1704391714280,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,26 @@\n+export default function Options() {\r\n+\r\n+    const confirmContainerRef = usered\r\n+    return (\r\n+        <>\r\n+            {renderOptions()}\r\n+            <div className=\"confirm-main-container\">\r\n+                <div\r\n+                    ref={confirmContainerRef}\r\n+                    onClick={() => {\r\n+                        checkAnswer();\r\n+                        if (questionCount !== MAX_QUESTIONS) {\r\n+                            timeoutRef.current = setTimeout(() => {\r\n+                                getRandomQuestion();\r\n+                            }, 1000);\r\n+                            doTheAnimation();\r\n+                        } else setShowResults(true);\r\n+                    }}\r\n+                    className=\"confirm-container\"\r\n+                >\r\n+                    <i className=\"fa-solid fa-check\"></i>\r\n+                </div>\r\n+            </div>\r\n+        </>\r\n+    );\r\n+}\r\n"
+                }
+            ],
+            "date": 1704391650687,
+            "name": "Commit-0",
+            "content": "export default function "
+        }
+    ]
+}

@@ -1,0 +1,46 @@
+{
+    "sourceFile": "components/RulesOfRoadQuiz.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 7,
+            "patches": [
+                {
+                    "date": 1704388433184,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1704388439218,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,1 @@\n+export default function RulesOfRoadQui\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1704388458424,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,7 @@\n-export default function RulesOfRoadQui\n-export default function \n\\ No newline at end of file\n+export default function RulesOfRoadQuiz(){\r\n+    return(\r\n+        <>\r\n+            Hello wrold\r\n+        </>\r\n+    )\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1704389542614,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,9 @@\n+import NavTimer from \"./NavTimer\";\r\n+\r\n export default function RulesOfRoadQuiz(){\r\n     return(\r\n         <>\r\n-            Hello wrold\r\n+            <NavTimer />\r\n         </>\r\n     )\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1704389568920,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,12 @@\n import NavTimer from \"./NavTimer\";\r\n \r\n export default function RulesOfRoadQuiz(){\r\n+    const [resultData, setResultData] = useState({\r\n+        time: { minutes: 0, seconds: 0 },\r\n+        totalQuestions: MAX_QUESTIONS,\r\n+        storedWrongAnswers: [],\r\n+    });\r\n     return(\r\n         <>\r\n             <NavTimer />\r\n         </>\r\n"
+                },
+                {
+                    "date": 1704389576897,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,5 @@\n+import { useState } from \"react\";\r\n import NavTimer from \"./NavTimer\";\r\n \r\n export default function RulesOfRoadQuiz(){\r\n     const [resultData, setResultData] = useState({\r\n@@ -7,8 +8,8 @@\n         storedWrongAnswers: [],\r\n     });\r\n     return(\r\n         <>\r\n-            <NavTimer />\r\n+            <NavTimer setResultData={}/>\r\n         </>\r\n     )\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1704389595712,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import NavTimer from \"./NavTimer\";\r\n \r\n export default function RulesOfRoadQuiz(){\r\n \r\n-    const MAX_QUESTIONS = \r\n+    const MAX_QUESTIONS = 5\r\n     const [resultData, setResultData] = useState({\r\n         time: { minutes: 0, seconds: 0 },\r\n         totalQuestions: MAX_QUESTIONS,\r\n         storedWrongAnswers: [],\r\n"
+                },
+                {
+                    "date": 1704391358342,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,7 +10,9 @@\n     });\r\n     return (\r\n         <>\r\n             <NavTimer setResultData={setResultData} />\r\n+\r\n+            \r\n         </>\r\n     );\r\n }\r\n"
+                }
+            ],
+            "date": 1704388433184,
+            "name": "Commit-0",
+            "content": "export default function "
+        }
+    ]
+}

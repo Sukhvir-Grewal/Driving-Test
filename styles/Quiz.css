@@ -5,38 +5,6 @@
     align-items: center;
 }
 
-.quiz-nav-container {
-    background-color: grey;
-    height: 50px;
-    width: 100vw;
-    display: flex;
-    justify-content: flex-end;
-    position: fixed;
-}
-.time-main-container {
-    color: white;
-    height: 100%;
-    width: 130px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-right: 2px;
-}
-
-.time-container {
-    height: 100%;
-    width: 70%;
-    font-size: xx-large;
-}
-.clock-container {
-    height: 100%;
-    width: 30%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: xx-large;
-}
-
 .quiz-main-container {
     min-height: 500px;
     width: 550px;
@@ -179,6 +147,28 @@
     }
 }
 
+/* Rules of Road css */
+.ror-question-main-container {
+    height: 200px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.ror-question-sign-container {
+    height: 180px;
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ror-question-container {
+    height: 130px;
+    width: 60%;
+    margin-top: 10px;
+    margin-left: 10px;
+}
 @media (max-width: 600px) {
     .quiz-main-container {
         border-radius: 0px;
@@ -196,13 +186,5 @@
         display: flex;
         justify-content: initial;
         align-items: initial;
-    }
-    .quiz-nav-container {
-        background-color: grey;
-        height: 50px;
-        width: 100vw;
-        display: flex;
-        justify-content: flex-end;
-        position: sticky;
     }
 }

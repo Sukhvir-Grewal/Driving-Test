@@ -1,0 +1,34 @@
+{
+    "sourceFile": "components/NavTimer.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 4,
+            "patches": [
+                {
+                    "date": 1704388633689,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1704388651008,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,7 @@\n+export default function NavTimer(){\r\n+    return(\r\n+        <>\r\n+            \r\n+        </>\r\n+    )\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1704388709942,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,40 @@\n+export default function NavTimer() {\r\n+    useEffect(() => {\r\n+        runningTimeoutRef.current = setInterval(() => {\r\n+            setTime((prevTime) => prevTime + 1);\r\n+        }, 1000);\r\n+    }, []);\r\n+\r\n+    useEffect(() => {\r\n+        const minutes = Math.floor(time / 60);\r\n+        const seconds = time % 60;\r\n+\r\n+        const formattedTime = `${minutes.toString().padStart(2, \"0\")}:${seconds\r\n+            .toString()\r\n+            .padStart(2, \"0\")}`;\r\n+\r\n+        if (timeTickRef.current) {\r\n+            timeTickRef.current.innerHTML = formattedTime;\r\n+        }\r\n+\r\n+        setResultData((prevData) => ({\r\n+            ...prevData,\r\n+            time: {\r\n+                minutes: minutes,\r\n+                seconds: seconds,\r\n+            },\r\n+        }));\r\n+    }, [time]);\r\n+    return (\r\n+        <>\r\n+            <div className=\"quiz-nav-container\">\r\n+                <div className=\"time-main-container\">\r\n+                    <div ref={timeTickRef} className=\"time-container\"></div>\r\n+                    <div className=\"clock-container\">\r\n+                        <i className=\"fa-solid fa-clock\"></i>\r\n+                    </div>\r\n+                </div>\r\n+            </div>\r\n+        </>\r\n+    );\r\n+}\r\n"
+                },
+                {
+                    "date": 1704388718087,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,5 @@\n+import { useEffect } from \"react\";\r\n \r\n export default function NavTimer() {\r\n     useEffect(() => {\r\n         runningTimeoutRef.current = setInterval(() => {\r\n"
+                },
+                {
+                    "date": 1704388750425,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,9 @@\n import { useEffect } from \"react\";\r\n \r\n export default function NavTimer() {\r\n+    const timeTickRef = useRef(null);\r\n+    \r\n     useEffect(() => {\r\n         runningTimeoutRef.current = setInterval(() => {\r\n             setTime((prevTime) => prevTime + 1);\r\n         }, 1000);\r\n"
+                }
+            ],
+            "date": 1704388633689,
+            "name": "Commit-0",
+            "content": "export default fucntion "
+        }
+    ]
+}
