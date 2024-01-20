@@ -2,13 +2,11 @@ import { rorData } from "@/storage/rorData";
 import { signData } from "@/storage/signsData";
 import { useEffect, useRef } from "react";
 
-export default function Results({ resultData, data, trackIndexForRorQuiz, trackIndexForSignQuiz }) {
-    const totalWrongAnswers = resultData.storedWrongAnswers.length;
-    useEffect(() => {
-        console.log("Ror :", trackIndexForRorQuiz.length) 
-        console.log("sign :", trackIndexForSignQuiz.length) 
+export default function Results({ resultData, data }) {
+    const RED_COLOR = "rgb(255, 0, 0)";
+    const GREEN_COLOR = "rgb(27, 148, 27)";
 
-    }, []);
+    const totalWrongAnswers = resultData.storedWrongAnswers.length;
 
     const getBackgroundColor = (index, optionIndex) => {
         const storedWrongAnswer = resultData.storedWrongAnswers[index];
@@ -16,8 +14,8 @@ export default function Results({ resultData, data, trackIndexForRorQuiz, trackI
             data[storedWrongAnswer.question].correctAns - 1;
 
         if (storedWrongAnswer.wrongAnswerIndex === optionIndex)
-            return "rgb(255, 0, 0)"; // Red
-        if (optionIndex === correctOptionIndex) return "rgb(27, 148, 27)"; // Green
+            return RED_COLOR;
+        if (optionIndex === correctOptionIndex) return GREEN_COLOR;
 
         return ""; // Default background color (no match)
     };
@@ -26,35 +24,32 @@ export default function Results({ resultData, data, trackIndexForRorQuiz, trackI
         return resultData.storedWrongAnswers.map((_, index) => (
             <div key={index} className="wrong-ans-container">
                 <div className="wrong-ans-counter">{index + 1}</div>
-                {resultData.resultDataType[index] === "signData" ? (
-                    <div className="wrong-ans-image-main-container">
-                        <div className="wrong-ans-image-container">
-                            <img
-                                className="sign-image"
-                                src={
-                                    signData[
-                                        resultData.storedWrongAnswers[index]
-                                            .question
-                                    ].imageUrl
-                                }
-                                alt="Sign Image"
-                            />
-                        </div>
-                    </div>
-                ) : (
-                    <div className="wrong-ans-question-container">
-                        {
-                            rorData[resultData.storedWrongAnswers[index].question]
-                                .question
-                        }
-                    </div>
-                )}
+                {resultData.resultDataType[index] === "signData"
+                    ? renderSign(index)
+                    : renderQuestion(index)}
                 <div className="wrong-ans-option-main-container">
                     {renderOptions(index)}
                 </div>
             </div>
         ));
     };
+
+    const renderSign = (index) => (
+        <div className="wrong-ans-image-main-container">
+            <div className="wrong-ans-image-container">
+                <img
+                    className="sign-image"
+                    src={getImageURL(index)}
+                    alt="Sign Image"
+                />
+            </div>
+        </div>
+    );
+    const renderQuestion = (index) => (
+        <div className="wrong-ans-question-container">
+            {getQuestionText(index)}
+        </div>
+    );
 
     const renderOptions = (index) => {
         return Array.from({ length: 4 }, (_, optionIndex) => (
@@ -65,20 +60,20 @@ export default function Results({ resultData, data, trackIndexForRorQuiz, trackI
                 className="wrong-ans-option-container"
                 key={optionIndex}
             >
-                {
-                    resultData.resultDataType[index] === "signData" ? (
-                        signData[resultData.storedWrongAnswers[index].question].options[
-                            optionIndex
-                        ]
-                    ):(
-                        rorData[resultData.storedWrongAnswers[index].question].options[
-                            optionIndex
-                        ]
-                    )
-                }
+                {resultData.resultDataType[index] === "signData"
+                    ? signData[resultData.storedWrongAnswers[index].question]
+                          .options[optionIndex]
+                    : rorData[resultData.storedWrongAnswers[index].question]
+                          .options[optionIndex]}
             </div>
         ));
     };
+
+    const getImageURL = (index) =>
+        signData[resultData.storedWrongAnswers[index].question].imageUrl;
+
+    const getQuestionText = (index) =>
+        rorData[resultData.storedWrongAnswers[index].question].question;
 
     return (
         <>

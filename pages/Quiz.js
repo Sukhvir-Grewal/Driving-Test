@@ -6,7 +6,10 @@ import { useRouter } from "next/router";
 import { useEffect, useRef, useState } from "react";
 
 export default function TrafficSignQuiz() {
-    const MAX_QUESTIONS = 20;
+    const MAX_QUESTIONS = 2;
+    const RED_COLOR = "rgb(255, 0, 0)";
+    const GREEN_COLOR = "rgb(27, 148, 27)";
+
     const router = useRouter();
     const dataType = router.query.dataType;
     const [data, setData] = useState(
@@ -52,13 +55,23 @@ export default function TrafficSignQuiz() {
         if (!isSignDiv && currentQuestionRef.current) {
             // Set the ror question when isSignDiv becomes false
             if (currentQuestionRef.current) {
-                currentQuestionRef.current.classList.add("slideRight");
-                setTimeout(() => {
-                    if (currentQuestionRef.current)
-                        currentQuestionRef.current.classList.remove(
-                            "slideRight"
-                        );
-                }, 1000);
+                if (!initialized) {
+                    currentQuestionRef.current.classList.add("fadeIn");
+                    setTimeout(() => {
+                        if (currentQuestionRef.current)
+                            currentQuestionRef.current.classList.remove(
+                                "fadeIn"
+                            );
+                    }, 1000);
+                } else {
+                    currentQuestionRef.current.classList.add("slideRight");
+                    setTimeout(() => {
+                        if (currentQuestionRef.current)
+                            currentQuestionRef.current.classList.remove(
+                                "slideRight"
+                            );
+                    }, 1000);
+                }
             }
             currentQuestionRef.current.innerHTML =
                 rorData[currentOptionSet].question;
@@ -103,7 +116,7 @@ export default function TrafficSignQuiz() {
             setSelectedOption(index);
             setCurrentAnswer(index + 1);
             optionContainerRef[index].current.style.backgroundColor =
-                "rgb(27, 148, 27)";
+                GREEN_COLOR;
         }
     };
 
@@ -225,7 +238,7 @@ export default function TrafficSignQuiz() {
     };
 
     const doTheAnimation = () => {
-        confirmContainerRef.current.style.backgroundColor = "rgb(27, 148, 27)";
+        confirmContainerRef.current.style.backgroundColor = GREEN_COLOR;
         currentSignRef.current.classList.add("slideLeft");
         optionContainerRef.forEach((option) => {
             option.current.classList.add("slideLeft");
@@ -256,11 +269,6 @@ export default function TrafficSignQuiz() {
         });
         confirmContainerRef.current.classList.add("slideRight");
 
-        // if (currentQuestionRef.current) {
-        //     console.log("We are running the question going right animation");
-        //     currentQuestionRef.current.classList.add("slideRight");
-        // }
-
         setConfirmDisplay(false);
         optionContainerRef.forEach((option) => {
             option.current.style.backgroundColor = "";
@@ -278,8 +286,6 @@ export default function TrafficSignQuiz() {
                 option.current.classList.remove("slideRight");
             });
             confirmContainerRef.current.classList.remove("slideRight");
-            // if (currentQuestionRef.current)
-            //     currentQuestionRef.current.classList.remove("slideRight");
         }, 1000);
     };
 
@@ -287,19 +293,13 @@ export default function TrafficSignQuiz() {
         const correctAnswerIndex = data[currentOptionSet].correctAns;
 
         // Check if the selected answer is correct
-        if (currentAnswer === correctAnswerIndex) {
-            optionContainerRef[
-                currentAnswer - 1
-            ].current.style.backgroundColor = "rgb(27, 148, 27)";
-        } else {
-            // Set the selected option to red
-            optionContainerRef[
-                currentAnswer - 1
-            ].current.style.backgroundColor = "rgb(255, 0, 0)";
-            // Set the correct answer to green
-            optionContainerRef[
-                correctAnswerIndex - 1
-            ].current.style.backgroundColor = "rgb(27, 148, 27)";
+        if (currentAnswer === correctAnswerIndex)
+            highlightOption(currentAnswer - 1, GREEN_COLOR);
+        else {
+            //Wrong answer
+            highlightOption(currentAnswer - 1, RED_COLOR);
+            // Right One
+            highlightOption(correctAnswerIndex - 1, GREEN_COLOR);
 
             const newWrongAnswer = {
                 question: currentOptionSet,
@@ -317,6 +317,10 @@ export default function TrafficSignQuiz() {
         }
     };
 
+    const highlightOption = (index, color) => {
+        optionContainerRef[index].current.style.backgroundColor = color;
+    };
+
     const continueQuiz = () => {
         return (
             <>
@@ -326,36 +330,7 @@ export default function TrafficSignQuiz() {
                 />
 
                 <div className="quiz-outer-main-container">
-                    {isTryingToGoBack && (
-                        <>
-                            <div className="backDrop">
-                                <div className="confirm-go-back-main-container">
-                                    <div className="go-back-warning">
-                                        Going back will erase your quiz
-                                        progress. Are you sure?
-                                    </div>
-                                    <div className="go-back-options-container">
-                                        <div
-                                            onClick={() =>
-                                                setIsTryingToGoBack(false)
-                                            }
-                                            className="go-back-option-cancel"
-                                        >
-                                            <i className="fa-solid fa-xmark"></i>
-                                        </div>
-                                        <div
-                                            onClick={() => {
-                                                router.push("/");
-                                            }}
-                                            className="go-back-option-confirm"
-                                        >
-                                            <i className="fa-solid fa-check"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </>
-                    )}
+                    {isTryingToGoBack && renderGoBack()}
 
                     <div className="quiz-main-container">
                         {renderQuestions()}
@@ -363,15 +338,7 @@ export default function TrafficSignQuiz() {
                         <div className="confirm-main-container">
                             <div
                                 ref={confirmContainerRef}
-                                onClick={() => {
-                                    checkAnswer();
-                                    if (questionCount !== MAX_QUESTIONS) {
-                                        timeoutRef.current = setTimeout(() => {
-                                            getRandomQuestion();
-                                        }, 1000);
-                                        doTheAnimation();
-                                    } else setShowResults(true);
-                                }}
+                                onClick={() => handleConfirm()}
                                 className="confirm-container"
                             >
                                 <i className="fa-solid fa-check"></i>
@@ -383,21 +350,48 @@ export default function TrafficSignQuiz() {
         );
     };
 
+    const handleConfirm = () => {
+        checkAnswer();
+        if (questionCount !== MAX_QUESTIONS) {
+            timeoutRef.current = setTimeout(() => {
+                getRandomQuestion();
+            }, 1000);
+            doTheAnimation();
+        } else setShowResults(true);
+    };
+
+    // This function is doing what it suppose to even thought it looks quite ugly
+    // Purpose :: It's main responsibility is to get a unique number based on Quiz type
+    //      1. It will check the Quiz type if it's just a Sign Quiz or Rules of Road quiz
+    //         the logic is quite simple just get a random number when is not repeated
+    //      2. But when we have Full Test we are suppose to get a random quiz type first,
+    //         After that we need to check if the index which is tracking how many questions
+    //         we have already asked in this case we are suppose to get 20 unique questions for
+    //         Sign as well we  as Rules of Road
     const getRandomQuestion = () => {
         let randomOptionSet;
 
-        if (dataType !== "FullTest") {
-            setResultDataType(dataType);
+        const getUniqueNumber = (tracker, setTracker, limit) => {
+            var randomNumber;
             while (true) {
-                randomOptionSet = Math.floor(Math.random() * 77);
-                if (trackIndexForBoth.includes(randomOptionSet)) continue;
+                randomNumber = Math.floor(Math.random() * limit);
+                if (tracker.includes(randomNumber)) continue;
                 else {
-                    const newData = [...trackIndexForBoth, randomOptionSet];
-                    setTrackIndexForBoth(newData);
+                    const newData = [...tracker, randomNumber];
+                    setTracker(newData);
                     break;
                 }
             }
-            
+            return randomNumber;
+        };
+
+        if (dataType !== "FullTest") {
+            setResultDataType(dataType);
+            randomOptionSet = getUniqueNumber(
+                trackIndexForBoth,
+                setTrackIndexForBoth,
+                data.length
+            );
         } else {
             const randomDataType = getZeroOne();
 
@@ -405,64 +399,80 @@ export default function TrafficSignQuiz() {
                 const newData = [...signData];
                 setResultDataType("signData");
 
-                while (true) {
-                    randomOptionSet = Math.floor(Math.random() * 77);
-                    if (trackIndexForSignQuiz.includes(randomOptionSet))
-                        continue;
-                    else {
-                        const newData = [
-                            ...trackIndexForSignQuiz,
-                            randomOptionSet,
-                        ];
-                        setTrackIndexForSignQuiz(newData);
-                        break;
-                    }
-                }
-                if (currentSignRef.current) {
-                    currentSignRef.current.src = data[randomOptionSet].imageUrl;
-                }
-                if (currentQuestionRef.current) {
-                    currentQuestionRef.current.innerHTML =
-                        data[randomOptionSet].question;
-                }
+                if (trackIndexForSignQuiz.length < 10)
+                    randomOptionSet = getUniqueNumber(
+                        trackIndexForSignQuiz,
+                        setTrackIndexForSignQuiz,
+                        newData.length
+                    );
+                else
+                    randomOptionSet = getUniqueNumber(
+                        trackIndexForRorQuiz,
+                        setTrackIndexForRorQuiz,
+                        newData.length
+                    );
+
                 setIsSignDiv(true);
                 setData(newData);
             } else {
                 const newData = [...rorData];
                 setResultDataType("rorData");
 
-                while (true) {
-                    randomOptionSet = Math.floor(Math.random() * 77);
-                    if (trackIndexForRorQuiz.includes(randomOptionSet))
-                        continue;
-                    else {
-                        const newData = [
-                            ...trackIndexForRorQuiz,
-                            randomOptionSet,
-                        ];
-                        setTrackIndexForRorQuiz(newData);
-                        break;
-                    }
-                }
-                if (currentSignRef.current) {
-                    currentSignRef.current.src = data[randomOptionSet].imageUrl;
-                }
-                if (currentQuestionRef.current) {
-                    currentQuestionRef.current.innerHTML =
-                        data[randomOptionSet].question;
-                }
+                if (trackIndexForRorQuiz.length < 10)
+                    randomOptionSet = getUniqueNumber(
+                        trackIndexForRorQuiz,
+                        setTrackIndexForRorQuiz,
+                        newData.length
+                    );
+                else
+                    randomOptionSet = getUniqueNumber(
+                        trackIndexForSignQuiz,
+                        setTrackIndexForSignQuiz,
+                        newData.length
+                    );
                 setIsSignDiv(false);
                 setData(newData);
             }
         }
-        console.log("Ror tracker length:", trackIndexForRorQuiz.length) 
-        console.log("sign tracker length:", trackIndexForSignQuiz.length) 
+        if (currentSignRef.current) {
+            currentSignRef.current.src = data[randomOptionSet].imageUrl;
+        }
+        if (currentQuestionRef.current) {
+            currentQuestionRef.current.innerHTML =
+                data[randomOptionSet].question;
+        }
         setCurrentOptionSet(randomOptionSet);
     };
 
     const getZeroOne = () => {
         return Math.floor(Math.random() * 2);
     };
+
+    const renderGoBack = () => (
+        <div className="backDrop">
+            <div className="confirm-go-back-main-container">
+                <div className="go-back-warning">
+                    Going back will erase your quiz progress. Are you sure?
+                </div>
+                <div className="go-back-options-container">
+                    <div
+                        onClick={() => setIsTryingToGoBack(false)}
+                        className="go-back-option-cancel"
+                    >
+                        <i className="fa-solid fa-xmark"></i>
+                    </div>
+                    <div
+                        onClick={() => {
+                            router.push("/");
+                        }}
+                        className="go-back-option-confirm"
+                    >
+                        <i className="fa-solid fa-check"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
 
     return (
         <>
