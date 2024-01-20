@@ -13,7 +13,7 @@
 }
 
 .register-container {
-    height: 90px;
+    height: 70px;
     width: 100%;
     font-size: 2rem;
     display: flex;
@@ -61,12 +61,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 300px;
+    position: relative;
 }
 
 .input-username,
 .input-password,
 .input-confirmPassword {
-    width: 300px;
+    width: 100%;
     height: 30px;
     border: none;
     border-radius: 5px;
@@ -82,4 +84,21 @@
     border-radius: 5px;
     outline: none;
     box-shadow: inset 0 0 0 2px red;
+}
+
+.register-warning-container {
+    /* background-color: red; */
+    width: 100%;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    color: rgb(184, 3, 3);
+    padding-left: 100px;
+}
+
+.eye {
+    position: absolute;
+    right: 0;
+    margin-right: 5px;
+    cursor: pointer;
 }

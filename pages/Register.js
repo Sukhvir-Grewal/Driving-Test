@@ -1,12 +1,18 @@
 import axios from "axios";
 import { useRouter } from "next/router";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 
 export default function Register() {
     const router = useRouter();
     const [doesMatch, setDoesMatch] = useState(true);
     const [nameDoesMatch, setNameDoesMatch] = useState(false);
+    const [hideWarning, setHideWarning] = useState(true);
+    const [showPassword, setShowPassword] = useState(false);
+    const [showPasswordConfirm, setShowPasswordConfirm] = useState(false);
+    const [loading, setLoading] = useState(false);   
+
+    const warningRef = useRef(null);
 
     const { register, handleSubmit } = useForm({
         defaultValues: {
@@ -16,25 +22,72 @@ export default function Register() {
         },
     });
 
+    useEffect(() => {
+        hideWarning
+            ? (warningRef.current.style.visibility = "hidden")
+            : (warningRef.current.style.visibility = "visible");
+    }, [hideWarning]);
+
+    const registerUser = async (username, password) => {
+        try {
+            setLoading(true);
+            await axios.post("/api/auth/register", { username, password });
+            router.push("/Login");
+            console.log("User Added");
+        } catch (error) {
+            setNameDoesMatch(true);
+            setHideWarning(() => {
+                warningRef.current.innerHTML = "User name already exists";
+                return false;
+            });
+        } finally {
+            setLoading(false);
+        }
+    };
+
     const submitForm = async (data) => {
         if (data.password !== data.confirmPass) {
             setDoesMatch(false);
-            console.log("password does not match");
+            setHideWarning(() => {
+                warningRef.current.innerHTML = "Password does not match";
+                return false;
+            });
         } else {
             setDoesMatch(true);
-            try {
-                await axios.post("/api/auth/register", {
-                    username: data.username,
-                    password: data.password,
-                });
-                router.push("/Login");
-                console.log("User Added");
-            } catch (error) {
-                setNameDoesMatch(true);
-                console.log("already there");
-            }
+            await registerUser(data.username, data.password);
         }
     };
+
+    const renderInput = (type, showPasswordState) => (
+        <>
+            <input
+                type={showPasswordState ? "text" : "password"}
+                onFocus={() => {
+                    setDoesMatch(true);
+                    setHideWarning(true);
+                }}
+                {...register(type)}
+                className={
+                    doesMatch ? `input-password` : `input-password red-border`
+                }
+                required
+            />
+            <i
+                className={
+                    showPasswordState
+                        ? "fa-regular fa-eye-slash eye"
+                        : "fa-regular fa-eye eye"
+                }
+                onClick={() => {
+                    if (type === "password") {
+                        setShowPassword(!showPassword);
+                    } else if (type === "confirmPass") {
+                        setShowPasswordConfirm(!showPasswordConfirm);
+                    }
+                }}
+            ></i>
+        </>
+    );
 
     return (
         <>
@@ -44,28 +97,33 @@ export default function Register() {
                     className="register-main-container"
                 >
                     <div className="register-container">Register New User</div>
+                    <div
+                        ref={warningRef}
+                        className="register-warning-container"
+                    ></div>
                     <div className="all-options">
                         <div className="outer-username-option">
                             <div className="register-username">username</div>
                             <div className="input-username-container">
                                 <input
-                                    onFocus={() => setNameDoesMatch(false)}
+                                    onFocus={() => {
+                                        setNameDoesMatch(false);
+                                        setHideWarning(true);
+                                    }}
                                     {...register("username")}
                                     className={
                                         nameDoesMatch
                                             ? `input-username red-border`
                                             : `input-username `
                                     }
+                                    required
                                 ></input>
                             </div>
                         </div>
                         <div className="outer-password-option">
                             <div className="register-password">password</div>
                             <div className="input-password-container">
-                                <input
-                                    {...register("password")}
-                                    className="input-password"
-                                ></input>
+                                {renderInput("password", showPassword)}
                             </div>
                         </div>
                         <div className="outer-confirmPassword-option">
@@ -73,21 +131,19 @@ export default function Register() {
                                 confirm
                             </div>
                             <div className="input-confirmPassword-container">
-                                <input
-                                    onFocus={() => setDoesMatch(true)}
-                                    type="text"
-                                    {...register("confirmPass")}
-                                    className={
-                                        doesMatch
-                                            ? `input-confirmPassword`
-                                            : `input-confirmPassword red-border`
-                                    }
-                                ></input>
+                                {renderInput(
+                                    "confirmPass",
+                                    showPasswordConfirm
+                                )}
                             </div>
                         </div>
                         <div className="register-button-container">
-                            <button type="submit" className="register-button">
-                                Register
+                            <button
+                                type="submit"
+                                className="register-button"
+                                disabled={loading}
+                            >
+                                {loading ? "Registering..." : "Register"}
                             </button>
                         </div>
                     </div>

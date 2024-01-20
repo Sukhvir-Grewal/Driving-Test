@@ -1,0 +1,38 @@
+{
+    "sourceFile": "jotaiStorage.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 5,
+            "patches": [
+                {
+                    "date": 1705776523249,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1705776530050,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,4 @@\n+import exp from \"constants\";\r\n+import { atom } from \"jotai\";\r\n+\r\n+exp\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1705776537151,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,3 @@\n+import { atom } from \"jotai\";\r\n+\r\n+export const user\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1705776543559,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,3 @@\n+import { atom } from \"jotai\";\r\n+\r\n+export const userData =\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1705776549718,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,3 @@\n+import { atom } from \"jotai\";\r\n+\r\n+export const userData = atom\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1705776555687,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,3 @@\n+import { atom } from \"jotai\";\r\n+\r\n+export const userData = atom(null)\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1705776523249,
+            "name": "Commit-0",
+            "content": "import { Atom } from \"jotai\";"
+        }
+    ]
+}
