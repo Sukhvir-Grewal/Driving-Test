@@ -16,20 +16,20 @@ export default function DashBoard({ setView }) {
             </div>
             <div className="outer-main-container">
                 <div className="main-container">
-                    <div className="heading-container">Driving Test</div>
+                    <div className="heading-container">Canadian Driving Test</div>
                     <div className="option-container">
-                        <Link className="link" href={{pathname: '/Quiz', query: {QuizType:"trafficSigns"}}}>
+                        <Link className="link" href={{pathname: '/Quiz', query: {dataType:"signData"}}}>
                             Traffic Signs
                         </Link>
                     </div>
                     <div className="option-container">
-                        <Link className="link"  href={{pathname: '/Quiz', query: {QuizType:"rulesOfRoad"}}}>
+                        <Link className="link"  href={{pathname: '/Quiz', query: {dataType:"rorData"}}}>
                             Rules of Road
                         </Link>
                     </div>
                     <div className="option-container">
-                        <Link className="link" href="/Quiz">
-                            Both
+                        <Link className="link" href={{pathname: '/Quiz', query: {dataType:"FullTest"}}}>
+                            Full Test
                         </Link>
                     </div>
                     <div></div>

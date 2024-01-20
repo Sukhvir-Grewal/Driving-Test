@@ -2,14 +2,12 @@
     height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 
 .quiz-main-container {
-    min-height: 500px;
+    min-height: 200px;
     width: 550px;
     background-color: rgb(106, 104, 104);
-    border-radius: 10px;
     overflow: hidden;
 }
 
@@ -117,6 +115,72 @@
 .fadeIn {
     animation: fadeIn 2s ease;
 }
+.fadeOut {
+    animation: fadeOut 2s ease;
+    opacity: 0;
+}
+
+.backDrop {
+    backdrop-filter: blur(10px);
+    position: absolute;
+    height: 100%;
+    width: 550px;
+    margin: auto;
+    z-index: 10;
+    display: grid;
+    place-content: center;
+}
+
+.confirm-go-back-main-container {
+    background-color: rgb(71, 71, 71);
+    height: 150px;
+    width: 350px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.go-back-warning {
+    height: 100px;
+    display: grid;
+    place-content: center;
+    padding: 0 20px;
+    color: white;
+    white-space: wrap;
+}
+.go-back-options-container {
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.go-back-option-cancel,
+.go-back-option-confirm {
+    background-color: rgb(61, 60, 60);
+    height: 50px;
+    width: 100px;
+    border-radius: 0 10px 0 10px;
+    font-size: 35px;
+    display: grid;
+    place-content: center;
+    cursor: pointer;
+}
+
+.go-back-option-cancel {
+    color: rgb(172, 8, 8);
+}
+
+.go-back-option-confirm {
+    border-radius: 10px 0 10px 0;
+    color: green;
+}
+.go-back-option-cancel:hover {
+    color: red;
+}
+.go-back-option-confirm:hover {
+    border-radius: 10px 0 10px 0;
+    color: rgb(2, 192, 2);
+}
+
 @keyframes slideLeft {
     from {
         transform: translateX(0);
@@ -146,10 +210,18 @@
         opacity: 1;
     }
 }
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
 
 /* Rules of Road css */
 .ror-question-main-container {
-    height: 200px;
+    min-height: 200px;
     width: 100%;
     display: flex;
     align-items: center;
@@ -168,6 +240,8 @@
     width: 60%;
     margin-top: 10px;
     margin-left: 10px;
+    margin-right: 10px;
+    
 }
 @media (max-width: 600px) {
     .quiz-main-container {

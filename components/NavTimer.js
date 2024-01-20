@@ -1,9 +1,13 @@
 import { useEffect, useRef, useState } from "react";
 import Style from "@/styles/Home.module.css";
+import { useRouter } from "next/router";
 
-export default function NavTimer({ setResultData }) {
+export default function NavTimer({ setResultData, setIsTryingToGoBack }) {
+    const router = useRouter();
+
     const timeTickRef = useRef(null);
     const runningTimeoutRef = useRef(null);
+    const goBackContainerRef = useRef(null);
     const [time, setTime] = useState(0);
 
     useEffect(() => {
@@ -35,9 +39,21 @@ export default function NavTimer({ setResultData }) {
         }));
     }, [time]);
 
+    const handleClickForGoBack = () => {
+        // router.push("/");
+        setIsTryingToGoBack(true)
+    };
+
     return (
         <>
             <div className={Style.quizNavContainer}>
+                <div
+                    onClick={handleClickForGoBack}
+                    ref={goBackContainerRef}
+                    className={Style.goBackContainer}
+                >
+                    <i className="fa-solid fa-chevron-left"></i>
+                </div>
                 <div className={Style.timeMainContainer}>
                     <div
                         ref={timeTickRef}
