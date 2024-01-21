@@ -64,6 +64,10 @@
     color: white;
     text-decoration: none;
 }
+.link:hover{
+    color: rgb(201, 197, 197);
+}
+
 
 @media (max-width: 600px) {
     .main-container,

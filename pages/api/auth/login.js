@@ -1,5 +1,6 @@
 import User from "./User";
 import connectDB from "./mongo";
+const bcrypt = require("bcrypt");
 
 connectDB();
 
@@ -15,15 +16,17 @@ export default async function handler(req, res) {
                 return res.status(404).json({ message: "No such user exists" });
             }
 
-            if (user.password === password) {
+            const passwordMatch = await bcrypt.compare(password, user.password);
+
+            if (passwordMatch === password) {
                 // Successful login
                 res.status(200).json({
                     message: "Login successful",
-                    userData: user
+                    userData: user,
                 });
             } else {
                 console.log("Wrong password");
-                res.status(401).json({ message: "Wrong password" });
+                res.status(401).json({ message: "Wrong password", match: false });
             }
         } catch (error) {
             console.error("Error during login:", error);

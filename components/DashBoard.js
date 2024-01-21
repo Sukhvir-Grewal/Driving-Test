@@ -5,9 +5,6 @@ import { useEffect } from "react";
 
 export default function DashBoard({ setView }) {
     const [user, setUser] = useAtom(userData);
-    // useEffect(() => {
-    //     user
-    // }, []);
     return (
         <>
             <div className="nav-container">

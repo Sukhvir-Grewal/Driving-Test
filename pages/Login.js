@@ -13,6 +13,7 @@ export default function Login() {
     const [showPassword, setShowPassword] = useState(false);
     const [showPasswordConfirm, setShowPasswordConfirm] = useState(false);
     const [loading, setLoading] = useState(false);
+    const [doesPasswordMatch, setDoesPasswordMatch] = useState(true);
 
     const [user, setUser] = useAtom(userData);
 
@@ -31,6 +32,12 @@ export default function Login() {
             ? (warningRef.current.style.visibility = "hidden")
             : (warningRef.current.style.visibility = "visible");
     }, [hideWarning]);
+    useEffect(()=>{
+        if(warningRef.current){
+            warningRef.current.innerHTML = "Password Does not match"
+            console.log(doesPasswordMatch)
+        }
+    }, [doesPasswordMatch])
 
     const submitForm = async (data) => {
         setLoading(true);
@@ -40,14 +47,15 @@ export default function Login() {
                 username: data.username,
                 password: data.password,
             });
-
+            
             if (response.status === 200) {
-                // console.log("User Data: ", response.data.userData);
+                // Successful login
                 setUser(response.data.userData);
-
                 router.push("/");
             } else {
-                console.log("Login failed:", response.data.message);
+                setHideWarning(false);
+                setDoesPasswordMatch(response.data.match);
+                console.log("Login failed:", response.data.match);
             }
         } catch (error) {
             console.error("Error during login:", error);
@@ -97,7 +105,9 @@ export default function Login() {
                     <div className="register-container">WelcomeBack</div>
                     <div
                         ref={warningRef}
-                        className="register-warning-container"
+                        className={`register-warning-container ${
+                            doesPasswordMatch ? "hidden" : ""
+                        }`}
                     ></div>
                     <div className="all-options">
                         <div className="outer-username-option">
