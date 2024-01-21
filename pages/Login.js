@@ -4,6 +4,8 @@ import { useAtom } from "jotai";
 import { useRouter } from "next/router";
 import { useContext, useEffect, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
+import Cookies from "js-cookie";
+
 
 export default function Login() {
     const router = useRouter();
@@ -36,7 +38,9 @@ export default function Login() {
 
             if (response.status === 200) {
                 // Successful login
-                setUser(response.data.userData);
+                console.log(response.data.userData);
+                Cookies.set("user",JSON.stringify(response.data.userData), { expires: 7 });
+
                 router.push("/");
             } else {
                 console.log("Login failed:", response.data.match);
@@ -45,11 +49,11 @@ export default function Login() {
             console.error("Error during login:", error);
             if (error.response.status === 401) {
                 // Show the warning message
-                setDoesMatch(false)
+                setDoesMatch(false);
                 warningRef.current.innerText = "Wrong password";
                 warningRef.current.style.visibility = "visible";
             } else if (error.response.status === 404) {
-                setNameDoesMatch(true)
+                setNameDoesMatch(true);
                 warningRef.current.innerText = "User Not Found";
                 warningRef.current.style.visibility = "visible";
             }
@@ -108,7 +112,8 @@ export default function Login() {
                                 <input
                                     onFocus={() => {
                                         setNameDoesMatch(false);
-                                        warningRef.current.style.visibility = "hidden";
+                                        warningRef.current.style.visibility =
+                                            "hidden";
                                     }}
                                     {...register("username")}
                                     className={

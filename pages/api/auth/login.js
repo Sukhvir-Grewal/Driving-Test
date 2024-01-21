@@ -1,9 +1,9 @@
 import User from "./User";
 import connectDB from "./mongo";
+
 const bcrypt = require("bcrypt");
 
 connectDB();
-
 
 export default async function handler(req, res) {
     if (req.method === "POST") {
@@ -21,13 +21,17 @@ export default async function handler(req, res) {
 
             if (passwordMatch) {
                 // Successful login
+
                 res.status(200).json({
                     message: "Login successful",
                     userData: user,
                 });
             } else {
                 console.log("Wrong password");
-                res.status(401).json({ message: "Wrong username or password", match: false });
+                res.status(401).json({
+                    message: "Wrong username or password",
+                    match: false,
+                });
             }
         } catch (error) {
             console.error("Error during login:", error);

@@ -9,10 +9,37 @@
 .login-register-container {
     color: white;
     height: 100%;
-    width: 140px;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.user-name-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+.user-name {
+    font-size: large;
+    direction: rtl;
+    display: flex;
+    align-items: center;
+    padding-right: 10px;
+}
+.user-image-container {
+    background-color: gray;
+    display: grid;
+    place-content: center;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.user-image {
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
 }
 
 .main-container {
@@ -64,10 +91,9 @@
     color: white;
     text-decoration: none;
 }
-.link:hover{
+.link:hover {
     color: rgb(201, 197, 197);
 }
-
 
 @media (max-width: 600px) {
     .main-container,
@@ -75,5 +101,4 @@
     .option-container {
         width: 100%;
     }
-
 }

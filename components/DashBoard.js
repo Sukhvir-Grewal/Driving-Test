@@ -2,15 +2,33 @@ import { userData } from "@/jotaiStorage";
 import { useAtom } from "jotai";
 import Link from "next/link";
 import { useEffect } from "react";
+import Cookies from "js-cookie";
 
 export default function DashBoard({ setView }) {
     const [user, setUser] = useAtom(userData);
+
+    useEffect(() => {
+        const userCookie = Cookies.get("user");
+        if (userCookie) {
+            const userData = JSON.parse(userCookie);
+            setUser(userData);
+        }
+    }, []);
+
     return (
         <>
             <div className="nav-container">
                 <div className="login-register-container">
                     {user ? (
-                        user.username
+                        <div className="user-name-container">
+                            <div className="user-name">{user.username}</div>
+                            <div className="user-image-container">
+                                <img
+                                    className="user-image"
+                                    src="/images/defaultImage.webp"
+                                ></img>
+                            </div>
+                        </div>
                     ) : (
                         <>
                             <Link className="link" href="/Login">
