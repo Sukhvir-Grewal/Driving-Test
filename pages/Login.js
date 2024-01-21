@@ -9,11 +9,9 @@ export default function Login() {
     const router = useRouter();
     const [doesMatch, setDoesMatch] = useState(true);
     const [nameDoesMatch, setNameDoesMatch] = useState(false);
-    const [hideWarning, setHideWarning] = useState(true);
     const [showPassword, setShowPassword] = useState(false);
     const [showPasswordConfirm, setShowPasswordConfirm] = useState(false);
     const [loading, setLoading] = useState(false);
-    const [doesPasswordMatch, setDoesPasswordMatch] = useState(true);
 
     const [user, setUser] = useAtom(userData);
 
@@ -27,18 +25,6 @@ export default function Login() {
         },
     });
 
-    useEffect(() => {
-        hideWarning
-            ? (warningRef.current.style.visibility = "hidden")
-            : (warningRef.current.style.visibility = "visible");
-    }, [hideWarning]);
-    useEffect(()=>{
-        if(warningRef.current){
-            warningRef.current.innerHTML = "Password Does not match"
-            console.log(doesPasswordMatch)
-        }
-    }, [doesPasswordMatch])
-
     const submitForm = async (data) => {
         setLoading(true);
 
@@ -47,18 +33,26 @@ export default function Login() {
                 username: data.username,
                 password: data.password,
             });
-            
+
             if (response.status === 200) {
                 // Successful login
                 setUser(response.data.userData);
                 router.push("/");
             } else {
-                setHideWarning(false);
-                setDoesPasswordMatch(response.data.match);
                 console.log("Login failed:", response.data.match);
             }
         } catch (error) {
             console.error("Error during login:", error);
+            if (error.response.status === 401) {
+                // Show the warning message
+                setDoesMatch(false)
+                warningRef.current.innerText = "Wrong password";
+                warningRef.current.style.visibility = "visible";
+            } else if (error.response.status === 404) {
+                setNameDoesMatch(true)
+                warningRef.current.innerText = "User Not Found";
+                warningRef.current.style.visibility = "visible";
+            }
         } finally {
             setLoading(false);
         }
@@ -70,7 +64,7 @@ export default function Login() {
                 type={showPasswordState ? "text" : "password"}
                 onFocus={() => {
                     setDoesMatch(true);
-                    setHideWarning(true);
+                    warningRef.current.style.visibility = "hidden";
                 }}
                 {...register(type)}
                 className={
@@ -105,9 +99,7 @@ export default function Login() {
                     <div className="register-container">WelcomeBack</div>
                     <div
                         ref={warningRef}
-                        className={`register-warning-container ${
-                            doesPasswordMatch ? "hidden" : ""
-                        }`}
+                        className={`register-warning-container`}
                     ></div>
                     <div className="all-options">
                         <div className="outer-username-option">
@@ -116,7 +108,7 @@ export default function Login() {
                                 <input
                                     onFocus={() => {
                                         setNameDoesMatch(false);
-                                        setHideWarning(true);
+                                        warningRef.current.style.visibility = "hidden";
                                     }}
                                     {...register("username")}
                                     className={

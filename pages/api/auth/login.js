@@ -4,6 +4,7 @@ const bcrypt = require("bcrypt");
 
 connectDB();
 
+
 export default async function handler(req, res) {
     if (req.method === "POST") {
         const { username, password } = req.body;
@@ -18,7 +19,7 @@ export default async function handler(req, res) {
 
             const passwordMatch = await bcrypt.compare(password, user.password);
 
-            if (passwordMatch === password) {
+            if (passwordMatch) {
                 // Successful login
                 res.status(200).json({
                     message: "Login successful",
@@ -26,7 +27,7 @@ export default async function handler(req, res) {
                 });
             } else {
                 console.log("Wrong password");
-                res.status(401).json({ message: "Wrong password", match: false });
+                res.status(401).json({ message: "Wrong username or password", match: false });
             }
         } catch (error) {
             console.error("Error during login:", error);
