@@ -1,11 +1,12 @@
 import { userData } from "@/jotaiStorage";
 import { useAtom } from "jotai";
 import Link from "next/link";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Cookies from "js-cookie";
 
 export default function DashBoard({ setView }) {
     const [user, setUser] = useAtom(userData);
+    const [showSettings, setShowSettings] = useState(false);
 
     useEffect(() => {
         const userCookie = Cookies.get("user");
@@ -15,7 +16,7 @@ export default function DashBoard({ setView }) {
         }
     }, []);
 
-    return (
+    const renderNavBar = () => (
         <>
             <div className="nav-container">
                 <div className="login-register-container">
@@ -26,6 +27,9 @@ export default function DashBoard({ setView }) {
                                 <img
                                     className="user-image"
                                     src="/images/defaultImage.webp"
+                                    onClick={() =>
+                                        setShowSettings(!showSettings)
+                                    }
                                 ></img>
                             </div>
                         </div>
@@ -42,7 +46,28 @@ export default function DashBoard({ setView }) {
                     )}
                 </div>
             </div>
+        </>
+    );
+
+    const renderSetting = () => (
+        <div className="setting-main-container">
+            <div className="setting-option">
+                <span>Dark Mode</span>
+            </div>
+            <div className="setting-option">
+                <span>Setting</span>
+            </div>
+            <div className="setting-option">
+                <span>Log Out</span>
+            </div>
+        </div>
+    );
+
+    return (
+        <>
+            {renderNavBar()}
             <div className="outer-main-container">
+                {showSettings && renderSetting()}
                 <div className="main-container">
                     <div className="heading-container">
                         Canadian Driving Test

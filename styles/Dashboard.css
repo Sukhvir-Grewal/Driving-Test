@@ -12,6 +12,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-right: 10px;
 }
 
 .user-name-container {
@@ -95,10 +96,54 @@
     color: rgb(201, 197, 197);
 }
 
+.setting-main-container {
+    height: 140px;
+    width: 130px;
+    background-color: gray;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+.setting-option {
+    width: 80%;
+    height: 30px;
+    margin: 5px;
+    display: grid;
+    place-content: center;
+    font-size: large;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 1px solid black;
+    color: rgb(192, 191, 191);
+}
+
+.setting-option > span:hover {
+    transform: scale(1.05);
+    color: white;
+}
+
 @media (max-width: 600px) {
     .main-container,
     .heading-container,
     .option-container {
         width: 100%;
+    }
+    .heading-container {
+        font-size: 40px;
+    }
+    .nav-container {
+        height: 60px;
+    }
+    .main-container {
+        border-radius: 0%;
+    }
+    .login-register-container,
+    .user-name {
+        font-size: larger;
     }
 }
