@@ -1,0 +1,78 @@
+{
+    "sourceFile": "styles/Settings.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 15,
+            "patches": [
+                {
+                    "date": 1705899870644,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1705899876249,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,4 @@\n-\r\n-.setting-image-main-container{}\n\\ No newline at end of file\n+.setting-image-main-container {\r\n+    background-color: red;\r\n+    \r\n+}\r\n"
+                },
+                {
+                    "date": 1705899886088,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,5 @@\n .setting-image-main-container {\r\n     background-color: red;\r\n-    \r\n+    width: 100%;\r\n+    height: ;\r\n }\r\n"
+                },
+                {
+                    "date": 1705899891722,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n .setting-image-main-container {\r\n     background-color: red;\r\n     width: 100%;\r\n-    height: ;\r\n+    height: 50px;\r\n }\r\n"
+                },
+                {
+                    "date": 1705899897393,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n .setting-image-main-container {\r\n     background-color: red;\r\n     width: 100%;\r\n-    height: 50px;\r\n+    height: 150px;\r\n }\r\n"
+                },
+                {
+                    "date": 1705899927225,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,5 @@\n+.setting-image-main-container {\r\n+    background-color: red;\r\n+    width: 100%;\r\n+    height: 100px;\r\n+}\r\n"
+                },
+                {
+                    "date": 1705899933371,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,5 @@\n .setting-image-main-container {\r\n     background-color: red;\r\n     width: 100%;\r\n-    height: 100px;\r\n+    max-height: 100px;\r\n }\r\n-.setting-image-main-container {\r\n-    background-color: red;\r\n-    width: 100%;\r\n-    height: 150px;\r\n-}\r\n"
+                },
+                {
+                    "date": 1705899939432,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n .setting-image-main-container {\r\n     background-color: red;\r\n     width: 100%;\r\n-    max-height: 100px;\r\n+    min-height: 100px;\r\n }\r\n"
+                },
+                {
+                    "date": 1705899960732,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,5 @@\n+.setting-image-main-container {\r\n+    background-color: red;\r\n+    width: 100px;\r\n+    min-height: 100px;\r\n+}\r\n"
+                },
+                {
+                    "date": 1705900061080,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,5 @@\n+.st {\r\n+    background-color: red;\r\n+    width: 100px;\r\n+    min-height: 100px;\r\n+}\r\n"
+                },
+                {
+                    "date": 1705900068054,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,15 +1,5 @@\n-.st {\r\n-    background-color: red;\r\n-    width: 100px;\r\n-    min-height: 100px;\r\n-}\r\n .setting-image-main-container {\r\n     background-color: red;\r\n     width: 100px;\r\n     min-height: 100px;\r\n }\r\n-.setting-image-main-container {\r\n-    background-color: red;\r\n-    width: 100%;\r\n-    min-height: 100px;\r\n-}\r\n"
+                },
+                {
+                    "date": 1705900237025,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n .setting-image-main-container {\r\n     background-color: red;\r\n-    width: 100px;\r\n+    width: 100;\r\n     min-height: 100px;\r\n }\r\n"
+                },
+                {
+                    "date": 1705900250272,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n .setting-image-main-container {\r\n-    background-color: red;\r\n-    width: 100;\r\n+    background-color: rgb(247, 68, 68);\r\n+    width: 100%;\r\n     min-height: 100px;\r\n }\r\n"
+                },
+                {
+                    "date": 1705900293102,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n .setting-image-main-container {\r\n-    background-color: rgb(247, 68, 68);\r\n+    background-color: rgb(173, 50, 50);\r\n     width: 100%;\r\n     min-height: 100px;\r\n+    display: ;\r\n }\r\n"
+                },
+                {
+                    "date": 1705900301300,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,6 +2,6 @@\n     background-color: rgb(173, 50, 50);\r\n     width: 100%;\r\n     min-height: 100px;\r\n     display: grid;\r\n-    p\r\n+    place-content: center;\r\n }\r\n"
+                },
+                {
+                    "date": 1705900357500,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,13 @@\n+.setting-image-main-container {\r\n+    background-color: rgb(173, 50, 50);\r\n+    width: 100%;\r\n+    min-height: 100px;\r\n+    display: grid;\r\n+    place-content: center;\r\n+}\r\n+\r\n+.setting-image-container{\r\n+    background-color: green;\r\n+    height: 100%;\r\n+    width: 150px;\r\n+}\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1705899870644,
+            "name": "Commit-0",
+            "content": "\r\n.setting-image-main-container{}"
+        }
+    ]
+}

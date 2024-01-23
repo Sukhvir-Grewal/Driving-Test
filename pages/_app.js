@@ -4,6 +4,7 @@ import "@/styles/Register.css";
 import "@/styles/Login.css";
 import "@/styles/Quiz.css";
 import "@/styles/Results.css";
+import "@/styles/Settings.css";
 
 import "@fortawesome/fontawesome-svg-core/styles.css";
 

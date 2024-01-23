@@ -1,0 +1,172 @@
+.setting-image-main-container {
+    margin-top: 8px;
+    width: 100%;
+    min-height: 100px;
+    display: grid;
+    place-content: center;
+}
+.setting-image-container {
+    height: 100%;
+    width: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+}
+.setting-user-image:hover {
+    transform: scale(1.1);
+}
+.image-edit-button {
+    cursor: pointer;
+    font-size: small;
+    max-width: 10px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+.setting-user-image {
+    height: inherit;
+    width: 100%;
+    transition: transform 0.2s ease;
+}
+
+.setting-user-name-main-container {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.setting-user-name-container {
+    height: 100%;
+    position: relative;
+    direction: rtl;
+    display: flex;
+}
+
+.setting-user-name {
+    font-size: larger;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 8px;
+}
+.setting-user-name-input {
+    text-align: left;
+    width: 100px;
+    font-size: larger;
+    margin-top: 8px;
+    height: 20px;
+    margin-bottom: 8px;
+    background-color: transparent;
+    border: 1px solid;
+    padding-left: 2px;
+}
+
+.line-break {
+    width: 80%;
+    height: 1px;
+    border-bottom: 1px solid black;
+}
+
+.stats-main-container {
+    height: inherit;
+}
+
+.status-container {
+    height: 70%;
+    width: 60%;
+}
+
+.stat {
+    height: 25%;
+    border-bottom: 1px solid;
+    display: flex;
+    align-items: center;
+}
+
+.data-type {
+    width: 50%;
+}
+.data {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    border-left: 1px solid;
+}
+.backdrop {
+    backdrop-filter: blur(5px);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 10;
+}
+.edit-name-main-container {
+    background-color: gray;
+    height: 110px;
+    width: 250px;
+    border-radius: 10px;
+    border: 1px solid white;
+}
+
+.change-name-heading {
+    height: 30px;
+    display: grid;
+    place-content: center;
+}
+
+.edit-name {
+    width: 100%;
+    border: none;
+    height: 30px;
+    background-color: transparent;
+    text-align: center;
+    font-size: larger;
+}
+
+.edit-name:focus {
+    border: none;
+    outline: none;
+}
+
+.confirm-cancel-container {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cancel,
+.confirm {
+    font-size: xx-large;
+    cursor: pointer;
+    background-color: rgb(61, 60, 60);
+    height: 50px;
+    width: 100px;
+    display: grid;
+    place-content: center;
+    cursor: pointer;
+}
+.cancel {
+    border-radius: 10px 0 0 0;
+    color: rgb(172, 8, 8);
+}
+
+.confirm {
+    border-radius: 0 10px 0 0;
+    color: green;
+}
+
+.cancel:hover {
+    color: red;
+}
+.confirm:hover {
+    color: rgb(2, 192, 2);
+}
+
+.confirm-name-btn{
+    outline: none;
+    background-color: transparent;
+    border: none;
+}

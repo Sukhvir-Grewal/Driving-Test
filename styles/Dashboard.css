@@ -3,7 +3,7 @@
     height: 50px;
     width: 100vw;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     position: fixed;
 }
 .login-register-container {
@@ -49,6 +49,9 @@
     background-color: rgb(106, 104, 104);
     border-radius: 10px;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    position: relative;
 }
 
 .main-container > div {
@@ -57,13 +60,14 @@
     align-items: center;
 }
 
-.main-container > div:not(.heading-container) {
+.link {
     color: white;
+    text-decoration: none;
     transition: transform 0.3s ease;
 }
+.link:hover {
+    color: rgb(201, 197, 197);
 
-.main-container > div:not(.heading-container):hover {
-    color: rgb(218, 218, 218);
     transform: scale(1.2);
 }
 
@@ -88,15 +92,7 @@
     cursor: pointer;
 }
 
-.link {
-    color: white;
-    text-decoration: none;
-}
-.link:hover {
-    color: rgb(201, 197, 197);
-}
-
-.setting-main-container {
+.dropDown-main-container {
     height: 140px;
     width: 130px;
     background-color: gray;
@@ -109,7 +105,7 @@
     align-items: center;
     border-radius: 10px;
 }
-.setting-option {
+.dropDown-option {
     width: 80%;
     height: 30px;
     margin: 5px;
@@ -122,7 +118,7 @@
     color: rgb(192, 191, 191);
 }
 
-.setting-option > span:hover {
+.dropDown-option > span:hover {
     transform: scale(1.05);
     color: white;
 }
