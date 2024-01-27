@@ -107,7 +107,7 @@ export default function Settings() {
                         <img
                             ref={profileImageRef}
                             className="setting-user-image"
-                            src="/images/defaultImage.webp"
+                            src={user.profileImage.imageUrl}
                         ></img>
                     </label>
                 </div>

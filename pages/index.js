@@ -44,7 +44,7 @@ export default function Home({ setView }) {
                             <div className="user-image-container">
                                 <img
                                     className="user-image"
-                                    src="/images/defaultImage.webp"
+                                    src={user.profileImage.imageUrl}
                                     onClick={() =>
                                         setShowDropDown(!showDropDown)
                                     }
