@@ -1,0 +1,58 @@
+{
+    "sourceFile": "pages/api/auth/uploadImage.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 10,
+            "patches": [
+                {
+                    "date": 1706200386884,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1706200408172,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n connectDB();\r\n \r\n export default async function handler(req, res) {\r\n     if (req.method === \"PUT\") {\r\n-        const { newName } = req.body;\r\n+        const { image } = req.body;\r\n         const { old } = req.body;\r\n         console.log(\"stored name\", old);\r\n         try {\r\n             const updatedUser = await User.findOneAndUpdate(\r\n"
+                },
+                {
+                    "date": 1706200418664,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,13 +8,9 @@\n         const { image } = req.body;\r\n         const { old } = req.body;\r\n         console.log(\"stored name\", old);\r\n         try {\r\n-            const updatedUser = await User.findOneAndUpdate(\r\n-                { username: old },\r\n-                { $set: { username: newName } },\r\n-                { new: true } // to get the updated document\r\n-            );\r\n+           \r\n \r\n             res.status(200).json({\r\n                 message: \"Update successful\",\r\n             });\r\n"
+                },
+                {
+                    "date": 1706200462141,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,26 @@\n+import User from \"./User\";\r\n+import connectDB from \"./mongo\";\r\n+\r\n+connectDB();\r\n+\r\n+export default async function handler(req, res) {\r\n+    if (req.method === \"PUT\") {\r\n+        const { image } = req.body;\r\n+        const { old } = req.body;\r\n+        console.log(\"stored name\", old);\r\n+        try {\r\n+            cloud\r\n+\r\n+            res.status(200).json({\r\n+                message: \"Update successful\",\r\n+            });\r\n+        } catch (error) {\r\n+            res.status(500).json({\r\n+                message: \"Internal Server Error during Updating\",\r\n+                error: error.message,\r\n+            });\r\n+        }\r\n+    } else {\r\n+        res.status(405).json({ message: \"Method Not Allowed\" });\r\n+    }\r\n+}\r\n"
+                },
+                {
+                    "date": 1706200472796,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,26 @@\n+import { Cloudinary } from \"@cloudinary/url-gen\";\r\n+import User from \"./User\";\r\n+import connectDB from \"./mongo\";\r\n+\r\n+connectDB();\r\n+\r\n+export default async function handler(req, res) {\r\n+    if (req.method === \"PUT\") {\r\n+        const { image } = req.body;\r\n+        const { old } = req.body;\r\n+        console.log(\"stored name\", old);\r\n+        try {\r\n+\r\n+            res.status(200).json({\r\n+                message: \"Update successful\",\r\n+            });\r\n+        } catch (error) {\r\n+            res.status(500).json({\r\n+                message: \"Internal Server Error during Updating\",\r\n+                error: error.message,\r\n+            });\r\n+        }\r\n+    } else {\r\n+        res.status(405).json({ message: \"Method Not Allowed\" });\r\n+    }\r\n+}\r\n"
+                },
+                {
+                    "date": 1706200479576,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,8 +9,9 @@\n         const { image } = req.body;\r\n         const { old } = req.body;\r\n         console.log(\"stored name\", old);\r\n         try {\r\n+            Cloudinary.u\r\n \r\n             res.status(200).json({\r\n                 message: \"Update successful\",\r\n             });\r\n@@ -23,56 +24,4 @@\n     } else {\r\n         res.status(405).json({ message: \"Method Not Allowed\" });\r\n     }\r\n }\r\n-import User from \"./User\";\r\n-import connectDB from \"./mongo\";\r\n-\r\n-connectDB();\r\n-\r\n-export default async function handler(req, res) {\r\n-    if (req.method === \"PUT\") {\r\n-        const { image } = req.body;\r\n-        const { old } = req.body;\r\n-        console.log(\"stored name\", old);\r\n-        try {\r\n-            cloud\r\n-\r\n-            res.status(200).json({\r\n-                message: \"Update successful\",\r\n-            });\r\n-        } catch (error) {\r\n-            res.status(500).json({\r\n-                message: \"Internal Server Error during Updating\",\r\n-                error: error.message,\r\n-            });\r\n-        }\r\n-    } else {\r\n-        res.status(405).json({ message: \"Method Not Allowed\" });\r\n-    }\r\n-}\r\n-import User from \"./User\";\r\n-import connectDB from \"./mongo\";\r\n-\r\n-connectDB();\r\n-\r\n-export default async function handler(req, res) {\r\n-    if (req.method === \"PUT\") {\r\n-        const { image } = req.body;\r\n-        const { old } = req.body;\r\n-        console.log(\"stored name\", old);\r\n-        try {\r\n-           \r\n-\r\n-            res.status(200).json({\r\n-                message: \"Update successful\",\r\n-            });\r\n-        } catch (error) {\r\n-            res.status(500).json({\r\n-                message: \"Internal Server Error during Updating\",\r\n-                error: error.message,\r\n-            });\r\n-        }\r\n-    } else {\r\n-        res.status(405).json({ message: \"Method Not Allowed\" });\r\n-    }\r\n-}\r\n"
+                },
+                {
+                    "date": 1706200486950,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,4 @@\n-import { Cloudinary } from \"@cloudinary/url-gen\";\r\n import User from \"./User\";\r\n import connectDB from \"./mongo\";\r\n \r\n connectDB();\r\n@@ -9,9 +8,9 @@\n         const { image } = req.body;\r\n         const { old } = req.body;\r\n         console.log(\"stored name\", old);\r\n         try {\r\n-            Cloudinary.u\r\n+            cloud\r\n \r\n             res.status(200).json({\r\n                 message: \"Update successful\",\r\n             });\r\n"
+                },
+                {
+                    "date": 1706200495549,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,25 @@\n+import User from \"./User\";\r\n+import connectDB from \"./mongo\";\r\n+\r\n+connectDB();\r\n+\r\n+export default async function handler(req, res) {\r\n+    if (req.method === \"PUT\") {\r\n+        const { image } = req.body;\r\n+        const { old } = req.body;\r\n+        console.log(\"stored name\", old);\r\n+        try {\r\n+\r\n+            res.status(200).json({\r\n+                message: \"Update successful\",\r\n+            });\r\n+        } catch (error) {\r\n+            res.status(500).json({\r\n+                message: \"Internal Server Error during Updating\",\r\n+                error: error.message,\r\n+            });\r\n+        }\r\n+    } else {\r\n+        res.status(405).json({ message: \"Method Not Allowed\" });\r\n+    }\r\n+}\r\n"
+                },
+                {
+                    "date": 1706200502115,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,41 +1,17 @@\n import User from \"./User\";\r\n import connectDB from \"./mongo\";\r\n \r\n-connectDB();\r\n+const clound\r\n \r\n-export default async function handler(req, res) {\r\n-    if (req.method === \"PUT\") {\r\n-        const { image } = req.body;\r\n-        const { old } = req.body;\r\n-        console.log(\"stored name\", old);\r\n-        try {\r\n-\r\n-            res.status(200).json({\r\n-                message: \"Update successful\",\r\n-            });\r\n-        } catch (error) {\r\n-            res.status(500).json({\r\n-                message: \"Internal Server Error during Updating\",\r\n-                error: error.message,\r\n-            });\r\n-        }\r\n-    } else {\r\n-        res.status(405).json({ message: \"Method Not Allowed\" });\r\n-    }\r\n-}\r\n-import User from \"./User\";\r\n-import connectDB from \"./mongo\";\r\n-\r\n connectDB();\r\n \r\n export default async function handler(req, res) {\r\n     if (req.method === \"PUT\") {\r\n         const { image } = req.body;\r\n         const { old } = req.body;\r\n         console.log(\"stored name\", old);\r\n         try {\r\n-            cloud\r\n \r\n             res.status(200).json({\r\n                 message: \"Update successful\",\r\n             });\r\n"
+                },
+                {
+                    "date": 1706200508235,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import User from \"./User\";\r\n import connectDB from \"./mongo\";\r\n \r\n-const cloudinary = \r\n+const cloudinary = require()\r\n \r\n connectDB();\r\n \r\n export default async function handler(req, res) {\r\n"
+                },
+                {
+                    "date": 1706200514066,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,27 @@\n+import User from \"./User\";\r\n+import connectDB from \"./mongo\";\r\n+\r\n+const cloudinary = require('cloud')\r\n+\r\n+connectDB();\r\n+\r\n+export default async function handler(req, res) {\r\n+    if (req.method === \"PUT\") {\r\n+        const { image } = req.body;\r\n+        const { old } = req.body;\r\n+        console.log(\"stored name\", old);\r\n+        try {\r\n+\r\n+            res.status(200).json({\r\n+                message: \"Update successful\",\r\n+            });\r\n+        } catch (error) {\r\n+            res.status(500).json({\r\n+                message: \"Internal Server Error during Updating\",\r\n+                error: error.message,\r\n+            });\r\n+        }\r\n+    } else {\r\n+        res.status(405).json({ message: \"Method Not Allowed\" });\r\n+    }\r\n+}\r\n"
+                }
+            ],
+            "date": 1706200386884,
+            "name": "Commit-0",
+            "content": "import User from \"./User\";\r\nimport connectDB from \"./mongo\";\r\n\r\nconnectDB();\r\n\r\nexport default async function handler(req, res) {\r\n    if (req.method === \"PUT\") {\r\n        const { newName } = req.body;\r\n        const { old } = req.body;\r\n        console.log(\"stored name\", old);\r\n        try {\r\n            const updatedUser = await User.findOneAndUpdate(\r\n                { username: old },\r\n                { $set: { username: newName } },\r\n                { new: true } // to get the updated document\r\n            );\r\n\r\n            res.status(200).json({\r\n                message: \"Update successful\",\r\n            });\r\n        } catch (error) {\r\n            res.status(500).json({\r\n                message: \"Internal Server Error during Updating\",\r\n                error: error.message,\r\n            });\r\n        }\r\n    } else {\r\n        res.status(405).json({ message: \"Method Not Allowed\" });\r\n    }\r\n}\r\n"
+        }
+    ]
+}

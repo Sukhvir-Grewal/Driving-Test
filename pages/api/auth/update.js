@@ -1,8 +1,5 @@
-import Cookies from "js-cookie";
 import User from "./User";
 import connectDB from "./mongo";
-import { useAtom } from "jotai";
-import { userData } from "@/jotaiStorage";
 
 connectDB();
 
@@ -10,7 +7,6 @@ export default async function handler(req, res) {
     if (req.method === "PUT") {
         const { newName } = req.body;
         const { old } = req.body;
-        console.log("stored name", old);
         try {
             const updatedUser = await User.findOneAndUpdate(
                 { username: old },

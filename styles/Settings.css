@@ -29,6 +29,7 @@
     height: inherit;
     width: 100%;
     transition: transform 0.2s ease;
+    cursor: pointer;
 }
 
 .setting-user-name-main-container {
@@ -165,8 +166,13 @@
     color: rgb(2, 192, 2);
 }
 
-.confirm-name-btn{
+.confirm-name-btn {
     outline: none;
     background-color: transparent;
     border: none;
+}
+
+#input-file {
+    visibility: hidden;
+    position: absolute;
 }

@@ -15,7 +15,7 @@ export default function Home({ setView }) {
     useEffect(() => {
         const userCookie = Cookies.get("user");
         if (userCookie) {
-            console.log((userCookie))
+            console.log(userCookie);
             const userData = JSON.parse(userCookie);
             setUser(userData);
         }
@@ -26,13 +26,13 @@ export default function Home({ setView }) {
             <div className="nav-container">
                 {showSetting && (
                     <div
-                    onClick={() => {
+                        onClick={() => {
                             setShowSetting(false);
-                            setShowDropDown(false)
+                            setShowDropDown(false);
                         }}
                         ref={goBackContainerRef}
                         className={Style.goBackContainer}
-                        >
+                    >
                         <i className="fa-solid fa-chevron-left"></i>
                     </div>
                 )}

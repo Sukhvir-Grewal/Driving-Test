@@ -11,6 +11,10 @@ const User = mongoose.models.User
                   unique: true,
               },
               password: String,
+              profileImage: {
+                publicID: String,
+                imageUrl: String 
+              }
           })
       );
 

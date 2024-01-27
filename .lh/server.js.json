@@ -1,0 +1,30 @@
+{
+    "sourceFile": "server.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1706278950907,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1706278970123,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,1 @@\n-const \n\\ No newline at end of file\n+const express = require('expres')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1706278980103,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n const express = require('express')\r\n \r\n const app = express()\r\n \r\n-app.listen\n\\ No newline at end of file\n+app.listen()\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1706278987786,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n const express = require('express')\r\n \r\n const app = express()\r\n \r\n-app.listen(())\n\\ No newline at end of file\n+app.listen(8080, ())\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1706278950907,
+            "name": "Commit-0",
+            "content": "const "
+        }
+    ]
+}

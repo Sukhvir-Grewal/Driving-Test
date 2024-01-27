@@ -9,23 +9,28 @@ export default function Settings() {
     const [user, setUser] = useAtom(userData);
 
     const nameRef = useRef(null);
+    const profileImageRef = useRef(null);
+    const inputFileRef = useRef(null);
 
     useEffect(() => {
         if (nameRef.current) nameRef.current.value = user.username;
     }, [isEditing]);
 
+    useEffect(() => {
+        Cookies.set("user", JSON.stringify(user), { expires: 7 });
+    }, [user]);
+
     const submitForm = async () => {
         try {
             const response = await axios.put("/api/auth/update", {
                 newName: nameRef.current.value,
-                old: user.username
+                old: user.username,
             });
             if (response.status === 200) {
-                setUser((prevData)=>({
+                setUser((prevData) => ({
                     ...prevData,
-                    username: nameRef.current.value
-                }))
-                Cookies.set("user", JSON.stringify(user), { expires: 7 });
+                    username: nameRef.current.value,
+                }));
                 console.log("name updated");
             }
         } catch (error) {
@@ -49,28 +54,75 @@ export default function Settings() {
                 <div className="confirm-cancel-container">
                     <i
                         onClick={() => setIsEditing(false)}
-                        class="fa-solid fa-xmark cancel"
+                        className="fa-solid fa-xmark cancel"
                     ></i>
                     <button
                         onClick={() => submitForm()}
                         className="confirm-name-btn"
                     >
-                        <i class="fa-solid fa-check confirm"></i>
+                        <i className="fa-solid fa-check confirm"></i>
                     </button>
                 </div>
             </div>
         </div>
     );
+
+    const handleImageUpload = async (file) => {
+        try {
+            const formData = new FormData();
+            formData.append("file", file);
+            formData.append("username", user.username);
+
+            const cloudinaryResponse = await axios.post(
+                "/api/uploadImage",
+                formData,
+                {
+                    headers: {
+                        "Content-Type": "multipart/form-data",
+                    },
+                }
+            );
+
+            if (cloudinaryResponse.status === 200) {
+                setUser((prevData) => ({
+                    ...prevData,
+                    profileImage: {
+                        publicID: cloudinaryResponse.data.publicID,
+                        imageUrl: cloudinaryResponse.data.imageUrl,
+                    },
+                }));
+                console.log("Photo uploaded on cloud");
+            }
+        } catch (error) {
+            console.error("Error during image upload:", error);
+        }
+    };
+
     return (
         <>
             {isEditing && renderEditName()}
             <div className="setting-image-main-container">
                 <div className="setting-image-container">
-                    <img
-                        className="setting-user-image"
-                        src="/images/defaultImage.webp"
-                    ></img>
+                    <label htmlFor="input-file">
+                        <img
+                            ref={profileImageRef}
+                            className="setting-user-image"
+                            src="/images/defaultImage.webp"
+                        ></img>
+                    </label>
                 </div>
+                <input
+                    onChange={(e) => {
+                        profileImageRef.current.src = URL.createObjectURL(
+                            e.target.files[0]
+                        );
+                        handleImageUpload(e.target.files[0]);
+                    }}
+                    ref={inputFileRef}
+                    id="input-file"
+                    type="file"
+                    accept="image/jpeg, image/png, image/jpg"
+                />
             </div>
 
             <div className="setting-user-name-main-container">
@@ -78,7 +130,7 @@ export default function Settings() {
                     <div className="image-edit-button">
                         <i
                             onClick={() => setIsEditing(true)}
-                            class="fa-solid fa-pen"
+                            className="fa-solid fa-pen"
                         ></i>
                     </div>
                     <div className="setting-user-name">{user.username}</div>
