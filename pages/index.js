@@ -15,7 +15,6 @@ export default function Home({ setView }) {
     useEffect(() => {
         const userCookie = Cookies.get("user");
         if (userCookie) {
-            console.log(userCookie);
             const userData = JSON.parse(userCookie);
             setUser(userData);
         }
@@ -44,7 +43,11 @@ export default function Home({ setView }) {
                             <div className="user-image-container">
                                 <img
                                     className="user-image"
-                                    src={user.profileImage.imageUrl}
+                                    src={
+                                        user.profileImage?.imageUrl
+                                            ? user.profileImage.imageUrl
+                                            : "/images/defaultImage.webp"
+                                    }
                                     onClick={() =>
                                         setShowDropDown(!showDropDown)
                                     }

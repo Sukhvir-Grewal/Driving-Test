@@ -12,9 +12,12 @@ const User = mongoose.models.User
               },
               password: String,
               profileImage: {
-                publicID: String,
-                imageUrl: String 
-              }
+                  publicID: String,
+                  imageUrl: String,
+              },
+              totalQuizTaken: Number,
+              totalQuizPassed: Number,
+              totalQuizFailed: Number,
           })
       );
 

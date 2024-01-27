@@ -107,7 +107,11 @@ export default function Settings() {
                         <img
                             ref={profileImageRef}
                             className="setting-user-image"
-                            src={user.profileImage.imageUrl}
+                            src={
+                                user.profileImage?.imageUrl
+                                    ? user.profileImage.imageUrl
+                                    : "/images/defaultImage.webp"
+                            }
                         ></img>
                     </label>
                 </div>
@@ -141,19 +145,22 @@ export default function Settings() {
                 <div className="status-container">
                     <div className="stat">
                         <div className="data-type">Total Quiz Taken</div>
-                        <div className="data">0</div>
+                        <div className="data">{user?.totalQuizTaken || 0}</div>
                     </div>
                     <div className="stat">
                         <div className="data-type">Total Quizzes Passed</div>
-                        <div className="data">0</div>
+                        <div className="data">{user?.totalQuizPassed || 0}</div>
                     </div>
                     <div className="stat">
                         <div className="data-type">Total Quizzes Failed</div>
-                        <div className="data">0</div>
+                        <div className="data">{user?.totalQuizFailed || 0}</div>
                     </div>
                     <div className="stat">
                         <div className="data-type">Pass Percentage</div>
-                        <div className="data">0%</div>
+                        <div className="data">
+                            {(user.totalQuizPassed / user.totalQuizTaken) * 100}
+                            %
+                        </div>
                     </div>
                 </div>
             </div>

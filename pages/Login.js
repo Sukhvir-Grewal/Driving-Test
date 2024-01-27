@@ -38,7 +38,7 @@ export default function Login() {
 
             if (response.status === 200) {
                 // Successful login
-                console.log(response.data.userData);
+                console.log("Login In Successful");
                 Cookies.set("user",JSON.stringify(response.data.userData), { expires: 7 });
 
                 router.push("/");

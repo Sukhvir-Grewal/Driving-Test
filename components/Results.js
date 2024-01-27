@@ -1,12 +1,50 @@
+import { userData } from "@/jotaiStorage";
 import { rorData } from "@/storage/rorData";
 import { signData } from "@/storage/signsData";
-import { useEffect, useRef } from "react";
+import { useContext, useEffect } from "react";
+import Cookies from "js-cookie";
+import axios from "axios";
+import { useAtom } from "jotai";
 
 export default function Results({ resultData, data }) {
+    const [user, setUser] = useAtom(userData);
+
     const RED_COLOR = "rgb(255, 0, 0)";
     const GREEN_COLOR = "rgb(27, 148, 27)";
 
     const totalWrongAnswers = resultData.storedWrongAnswers.length;
+    const finalResult = totalWrongAnswers > 4 ? "FAIL" : "PASS";
+
+    useEffect(() => {
+        const updateResults = async () => {
+            try {
+                const result = await axios.put("/api/updateResults", {
+                    isPass: finalResult === "PASS",
+                    username: user?.username,
+                });
+                if (result.status === 200) {
+                    setUser((prevData) => ({
+                        ...prevData,
+                        totalQuizTaken: result.data.totalQuizTaken,
+                        totalQuizPassed: result.data.totalQuizPassed,
+                        totalQuizFailed: result.data.totalQuizFailed
+                    }));
+                    console.log(
+                        "Result updated successfully:",
+                        result.data
+                    );
+                }
+            } catch (error) {
+                console.error("Error updating result:", error);
+            }
+        };
+
+        updateResults();
+    }, []);
+
+    useEffect(() => {
+        Cookies.set("user", JSON.stringify(user), { expires: 7 });
+    }, [user]);
 
     const getBackgroundColor = (index, optionIndex) => {
         const storedWrongAnswer = resultData.storedWrongAnswers[index];
@@ -106,9 +144,7 @@ export default function Results({ resultData, data }) {
                     </div>
                     <div className="results-main-container">
                         <div className="result-name">OverAll</div>
-                        <div className="result">
-                            {totalWrongAnswers > 4 ? "FAIL" : "PASS"}
-                        </div>
+                        <div className="result">{finalResult}</div>
                     </div>
 
                     {/* Second part */}

@@ -6,7 +6,7 @@ import { useRouter } from "next/router";
 import { useEffect, useRef, useState } from "react";
 
 export default function TrafficSignQuiz() {
-    const MAX_QUESTIONS = 2;
+    const MAX_QUESTIONS = 10;
     const RED_COLOR = "rgb(255, 0, 0)";
     const GREEN_COLOR = "rgb(27, 148, 27)";
 
@@ -283,9 +283,11 @@ export default function TrafficSignQuiz() {
             if (currentSignRef.current)
                 currentSignRef.current.classList.remove("slideRight");
             optionContainerRef.forEach((option) => {
-                option.current.classList.remove("slideRight");
+                if (option.current)
+                    option.current.classList.remove("slideRight");
             });
-            confirmContainerRef.current.classList.remove("slideRight");
+            if (confirmContainerRef.current)
+                confirmContainerRef.current.classList.remove("slideRight");
         }, 1000);
     };
 
