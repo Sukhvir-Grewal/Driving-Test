@@ -1,13 +1,25 @@
-import { Html, Head, Main, NextScript } from 'next/document'
+// pages/_document.js
 
-export default function Document() {
-  return (
-    <Html lang="en">
-      <Head />
-      <body>
-        <Main />
-        <NextScript />
-      </body>
-    </Html>
-  )
+import Document, { Html, Head, Main, NextScript } from "next/document";
+
+class MyDocument extends Document {
+    render() {
+        return (
+            <Html>
+                <Head>
+                    <meta
+                        name="viewport"
+                        content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+                    />
+                    {/* Add other head elements here */}
+                </Head>
+                <body>
+                    <Main />
+                    <NextScript />
+                </body>
+            </Html>
+        );
+    }
 }
+
+export default MyDocument;

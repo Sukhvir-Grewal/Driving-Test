@@ -1,10 +1,11 @@
 .nav-container {
-    background-color: grey;
+    background-color: var(--nav-bg);
     height: 50px;
     width: 100vw;
     display: flex;
     justify-content: space-between;
     position: fixed;
+    border-bottom: 1px solid;
 }
 .login-register-container {
     color: white;
@@ -27,7 +28,9 @@
     display: flex;
     align-items: center;
     padding-right: 10px;
+    color: var(--nav-user-name-color);
 }
+
 .user-image-container {
     background-color: gray;
     display: grid;
@@ -46,7 +49,8 @@
 .main-container {
     height: 350px;
     width: 550px;
-    background-color: rgb(106, 104, 104);
+    background-color: var(--container-bg);
+    border: 1px solid;
     border-radius: 10px;
     overflow: hidden;
     display: flex;
@@ -61,12 +65,12 @@
 }
 
 .link {
-    color: white;
+    color: var(--text-color-before-hover);
     text-decoration: none;
     transition: transform 0.3s ease;
 }
 .link:hover {
-    color: rgb(201, 197, 197);
+    color: var(--text-color-after-hover);
 
     transform: scale(1.2);
 }
@@ -84,6 +88,7 @@
     font-weight: 900;
     margin-top: 25px;
     margin-bottom: 15px;
+    color: black;
 }
 .option-container {
     height: 80px;
@@ -95,7 +100,8 @@
 .dropDown-main-container {
     height: 140px;
     width: 130px;
-    background-color: gray;
+    background-color: var(--drop-down-bg);
+    border: 1px solid;
     position: absolute;
     top: 60px;
     right: 10px;
@@ -115,12 +121,12 @@
     cursor: pointer;
     border-radius: 10px;
     border: 1px solid black;
-    color: rgb(192, 191, 191);
+    color: var(--text-color-before-hover);
 }
 
 .dropDown-option > span:hover {
     transform: scale(1.05);
-    color: white;
+    color: var(--text-color-after-hover);
 }
 
 @media (max-width: 600px) {

@@ -1,4 +1,5 @@
 import axios from "axios";
+import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
@@ -10,7 +11,7 @@ export default function Register() {
     const [hideWarning, setHideWarning] = useState(true);
     const [showPassword, setShowPassword] = useState(false);
     const [showPasswordConfirm, setShowPasswordConfirm] = useState(false);
-    const [loading, setLoading] = useState(false);   
+    const [loading, setLoading] = useState(false);
 
     const warningRef = useRef(null);
 
@@ -145,6 +146,9 @@ export default function Register() {
                             >
                                 {loading ? "Registering..." : "Register"}
                             </button>
+                            <Link className="transfer-link" href="/Login">
+                                Sign In
+                            </Link>
                         </div>
                     </div>
                 </form>

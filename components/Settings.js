@@ -36,6 +36,14 @@ export default function Settings() {
         } catch (error) {
             console.error("Error during Updating:", error);
         }
+        setIsEditing(false);
+    };
+
+    const handleEnterKeyPress = (event) => {
+        if (event.key === "Enter") {
+            event.preventDefault();
+            submitForm();
+        }
     };
 
     const renderEditName = () => (
@@ -49,6 +57,7 @@ export default function Settings() {
                     autoFocus
                     ref={nameRef}
                     className="edit-name"
+                    onKeyDown={handleEnterKeyPress}
                 />
 
                 <div className="confirm-cancel-container">
@@ -59,6 +68,7 @@ export default function Settings() {
                     <button
                         onClick={() => submitForm()}
                         className="confirm-name-btn"
+                        type="submit"
                     >
                         <i className="fa-solid fa-check confirm"></i>
                     </button>
@@ -158,7 +168,10 @@ export default function Settings() {
                     <div className="stat">
                         <div className="data-type">Pass Percentage</div>
                         <div className="data">
-                            {(user.totalQuizPassed / user.totalQuizTaken) * 100}
+                            {(
+                                (user.totalQuizPassed / user.totalQuizTaken) *
+                                100
+                            ).toFixed(2)}
                             %
                         </div>
                     </div>

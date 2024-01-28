@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 import { useContext, useEffect, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import Cookies from "js-cookie";
-
+import Link from "next/link";
 
 export default function Login() {
     const router = useRouter();
@@ -39,7 +39,9 @@ export default function Login() {
             if (response.status === 200) {
                 // Successful login
                 console.log("Login In Successful");
-                Cookies.set("user",JSON.stringify(response.data.userData), { expires: 7 });
+                Cookies.set("user", JSON.stringify(response.data.userData), {
+                    expires: 7,
+                });
 
                 router.push("/");
             } else {
@@ -140,6 +142,9 @@ export default function Login() {
                             >
                                 {loading ? "Logging..." : "Login"}
                             </button>
+                            <Link className="transfer-link" href="/Register">
+                                Sign up
+                            </Link>
                         </div>
                     </div>
                 </form>

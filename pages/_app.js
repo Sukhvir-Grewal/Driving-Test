@@ -7,9 +7,22 @@ import "@/styles/Results.css";
 import "@/styles/Settings.css";
 
 import "@fortawesome/fontawesome-svg-core/styles.css";
-
-
+import { useEffect } from "react";
+import { useRouter } from "next/router";
 export default function App({ Component, pageProps }) {
+    const router = useRouter();
+
+    useEffect(() => {
+        const pushToRoot = () => {
+            // Check if it's the client side
+            if (typeof window !== 'undefined') {
+                router.push("/");
+            }
+        };
+
+        pushToRoot();
+    }, []);
+
     return (
         <>
             <Component {...pageProps} />

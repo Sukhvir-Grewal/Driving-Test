@@ -1,0 +1,102 @@
+{
+    "sourceFile": "test.html",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 21,
+            "patches": [
+                {
+                    "date": 1706460414705,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1706460668437,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,7 +5,7 @@\n     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n     <title>Document</title>\r\n </head>\r\n <body>\r\n-    \r\n+    .\r\n </body>\r\n </html>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1706460674889,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,7 +5,8 @@\n     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n     <title>Document</title>\r\n </head>\r\n <body>\r\n-    .\r\n+    <div class=\"container1\"></div>\r\n+    <div class=\"container1\"></div>\r\n </body>\r\n </html>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1706460683220,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,11 @@\n     <meta charset=\"UTF-8\">\r\n     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n     <title>Document</title>\r\n </head>\r\n+\r\n <body>\r\n     <div class=\"container1\"></div>\r\n-    <div class=\"container1\"></div>\r\n+    <div class=\"container2\"></div>\r\n+    <div class=\"container3\"></div>\r\n </body>\r\n </html>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1706460691626,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,13 @@\n     <meta charset=\"UTF-8\">\r\n     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n     <title>Document</title>\r\n </head>\r\n-\r\n+<style>\r\n+    .container1{\r\n+        \r\n+    }\r\n+</style>\r\n <body>\r\n     <div class=\"container1\"></div>\r\n     <div class=\"container2\"></div>\r\n     <div class=\"container3\"></div>\r\n"
+                },
+                {
+                    "date": 1706460700252,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,10 @@\n     <title>Document</title>\r\n </head>\r\n <style>\r\n     .container1{\r\n-        \r\n+        height: 100vh;\r\n+        height: 100vh;\r\n     }\r\n </style>\r\n <body>\r\n     <div class=\"container1\"></div>\r\n"
+                },
+                {
+                    "date": 1706460710587,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,10 @@\n </head>\r\n <style>\r\n     .container1{\r\n         height: 100vh;\r\n-        height: 100vh;\r\n+        width: 100vw;\r\n+        background;\r\n     }\r\n </style>\r\n <body>\r\n     <div class=\"container1\"></div>\r\n"
+                },
+                {
+                    "date": 1706460724218,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,12 +5,12 @@\n     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n     <title>Document</title>\r\n </head>\r\n <style>\r\n-    .container1{\r\n+    .container1, .container1{\r\n         height: 100vh;\r\n         width: 100vw;\r\n-        background;\r\n+        background-color: red;\r\n     }\r\n </style>\r\n <body>\r\n     <div class=\"container1\"></div>\r\n"
+                },
+                {
+                    "date": 1706460731147,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n     <title>Document</title>\r\n </head>\r\n <style>\r\n-    .container1, .container1{\r\n+    .container1, .container2, .container3{\r\n         height: 100vh;\r\n         width: 100vw;\r\n         background-color: red;\r\n     }\r\n"
+                },
+                {
+                    "date": 1706460740887,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,8 +10,11 @@\n         height: 100vh;\r\n         width: 100vw;\r\n         background-color: red;\r\n     }\r\n+    .container2{\r\n+        \r\n+    }\r\n </style>\r\n <body>\r\n     <div class=\"container1\"></div>\r\n     <div class=\"container2\"></div>\r\n"
+                },
+                {
+                    "date": 1706460750169,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,10 +11,13 @@\n         width: 100vw;\r\n         background-color: red;\r\n     }\r\n     .container2{\r\n-        \r\n+        background-color: green;\r\n     }\r\n+    .container2{\r\n+        background-color: green;\r\n+    }\r\n </style>\r\n <body>\r\n     <div class=\"container1\"></div>\r\n     <div class=\"container2\"></div>\r\n"
+                },
+                {
+                    "date": 1706460768297,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,16 +7,16 @@\n </head>\r\n <style>\r\n     .container1, .container2, .container3{\r\n         height: 100vh;\r\n-        width: 100vw;\r\n+        width: 50vw;\r\n         background-color: red;\r\n     }\r\n     .container2{\r\n         background-color: green;\r\n     }\r\n     .container2{\r\n-        background-color: green;\r\n+        background-color: blue;\r\n     }\r\n </style>\r\n <body>\r\n     <div class=\"container1\"></div>\r\n"
+                },
+                {
+                    "date": 1706460776550,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n     }\r\n     .container2{\r\n         background-color: green;\r\n     }\r\n-    .container2{\r\n+    .container3{\r\n         background-color: blue;\r\n     }\r\n </style>\r\n <body>\r\n"
+                },
+                {
+                    "date": 1706460787278,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,11 @@\n     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n     <title>Document</title>\r\n </head>\r\n <style>\r\n+    body{\r\n+        background-color: ;\r\n+    }\r\n     .container1, .container2, .container3{\r\n         height: 100vh;\r\n         width: 50vw;\r\n         background-color: red;\r\n"
+                },
+                {
+                    "date": 1706460826843,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n     <title>Document</title>\r\n </head>\r\n <style>\r\n     body{\r\n-        background-color: ;\r\n+        background-color: black;\r\n     }\r\n     .container1, .container2, .container3{\r\n         height: 100vh;\r\n         width: 50vw;\r\n@@ -25,5 +25,6 @@\n     <div class=\"container1\"></div>\r\n     <div class=\"container2\"></div>\r\n     <div class=\"container3\"></div>\r\n </body>\r\n+<script></script>\r\n </html>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1706460842488,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,7 +24,9 @@\n <body>\r\n     <div class=\"container1\"></div>\r\n     <div class=\"container2\"></div>\r\n     <div class=\"container3\"></div>\r\n+    <script>\r\n+        const \r\n+    </script>\r\n </body>\r\n-<script></script>\r\n </html>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1706460854474,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,8 +25,8 @@\n     <div class=\"container1\"></div>\r\n     <div class=\"container2\"></div>\r\n     <div class=\"container3\"></div>\r\n     <script>\r\n-        const \r\n+        const c2 = document.querySelector('.container2')\r\n     </script>\r\n </body>\r\n </html>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1706460863316,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,11 @@\n     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n     <title>Document</title>\r\n </head>\r\n <style>\r\n+    :root{\r\n+        \r\n+    }\r\n     body{\r\n         background-color: black;\r\n     }\r\n     .container1, .container2, .container3{\r\n"
+                },
+                {
+                    "date": 1706460871601,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n     <title>Document</title>\r\n </head>\r\n <style>\r\n     :root{\r\n-        \r\n+        --bg: black\r\n     }\r\n     body{\r\n         background-color: black;\r\n     }\r\n"
+                },
+                {
+                    "date": 1706460882874,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,35 +1,38 @@\n <!DOCTYPE html>\r\n <html lang=\"en\">\r\n-<head>\r\n-    <meta charset=\"UTF-8\">\r\n-    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n-    <title>Document</title>\r\n-</head>\r\n-<style>\r\n-    :root{\r\n-        --bg: black\r\n-    }\r\n-    body{\r\n-        background-color: black;\r\n-    }\r\n-    .container1, .container2, .container3{\r\n-        height: 100vh;\r\n-        width: 50vw;\r\n-        background-color: red;\r\n-    }\r\n-    .container2{\r\n-        background-color: green;\r\n-    }\r\n-    .container3{\r\n-        background-color: blue;\r\n-    }\r\n-</style>\r\n-<body>\r\n-    <div class=\"container1\"></div>\r\n-    <div class=\"container2\"></div>\r\n-    <div class=\"container3\"></div>\r\n-    <script>\r\n-        const c2 = document.querySelector('.container2')\r\n-    </script>\r\n-</body>\r\n-</html>\n\\ No newline at end of file\n+    <head>\r\n+        <meta charset=\"UTF-8\" />\r\n+        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\r\n+        <title>Document</title>\r\n+    </head>\r\n+    <style>\r\n+        :root {\r\n+            --bg: black;\r\n+        }\r\n+        body {\r\n+            background-color: var(--bg);\r\n+        }\r\n+        .container1,\r\n+        .container2,\r\n+        .container3 {\r\n+            height: 100vh;\r\n+            width: 50vw;\r\n+            background-color: red;\r\n+        }\r\n+        .container2 {\r\n+            background-color: green;\r\n+        }\r\n+        .container3 {\r\n+            background-color: blue;\r\n+        }\r\n+    </style>\r\n+    <body>\r\n+        <div class=\"container1\"></div>\r\n+        <div class=\"container2\"></div>\r\n+        <div class=\"container3\"></div>\r\n+        <script>\r\n+            const c2 = document.querySelector(\".container2\");\r\n+            \r\n+        </script>\r\n+    </body>\r\n+</html>\r\n"
+                },
+                {
+                    "date": 1706460890539,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,8 +31,8 @@\n         <div class=\"container2\"></div>\r\n         <div class=\"container3\"></div>\r\n         <script>\r\n             const c2 = document.querySelector(\".container2\");\r\n-            //if conatiner \r\n+            //if conatiner 2\r\n         </script>\r\n     </body>\r\n </html>\r\n"
+                },
+                {
+                    "date": 1706461230244,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n         :root {\r\n             --bg: black;\r\n             transition: background-color .5s ease;\r\n         }\r\n-        \r\n+        *\r\n         body {\r\n             background-color: var(--bg);\r\n         }\r\n         .container1,\r\n"
+                }
+            ],
+            "date": 1706460414705,
+            "name": "Commit-0",
+            "content": "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n    <meta charset=\"UTF-8\">\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n    <title>Document</title>\r\n</head>\r\n<body>\r\n    \r\n</body>\r\n</html>"
+        }
+    ]
+}

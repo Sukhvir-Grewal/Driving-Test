@@ -1,9 +1,36 @@
 @import url("https://fonts.googleapis.com/css2?family=Kanit&display=swap");
 @import "~@fortawesome/fontawesome-free/css/all.css";
 
+:root {
+    /* DashBoard */
+    --bg: white;
+    --text-color: black;
+    --text-color-before-hover: rgb(94, 92, 92);
+    --text-color-after-hover: black;
+    --container-bg: white;
+    --nav-bg: white;
+    --nav-user-name-color: black;
+    --drop-down-bg: white;
+
+    /* Quiz */
+    --quiz-nav-bg: white;
+    --goBack-bg: white;
+
+    /* Result */
+    --wrong-ans-counter: white;
+    --wrong-ans-container: white;
+
+    --gray-1: #999999;
+    --gray-2: #777777;
+    --gray-3: #555555;
+    --gray-4: #474747;
+    --gray-5: #333333;
+}
+
 * {
     padding: 0;
     margin: 0;
+    transition: background-color 0.7s ease;
 }
 
 html,
@@ -11,4 +38,5 @@ body {
     max-width: 100vw;
     overflow: hidden;
     font-family: "Kanit", sans-serif;
+    background-color: var(--bg);
 }

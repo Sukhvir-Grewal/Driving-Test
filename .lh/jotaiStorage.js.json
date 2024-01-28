@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 5,
+            "activePatchIndex": 9,
             "patches": [
                 {
                     "date": 1705776523249,
@@ -28,6 +28,22 @@
                 {
                     "date": 1705776555687,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,3 @@\n+import { atom } from \"jotai\";\r\n+\r\n+export const userData = atom(null)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1706398533509,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,17 +1,4 @@\n import { atom } from \"jotai\";\r\n \r\n-export const userData = atom(null)\n-import { atom } from \"jotai\";\r\n-\r\n-export const userData = atom\n-import { atom } from \"jotai\";\r\n-\r\n-export const userData =\n-import { atom } from \"jotai\";\r\n-\r\n-export const user\n-import exp from \"constants\";\r\n-import { atom } from \"jotai\";\r\n-\r\n-exp\n-import { Atom } from \"jotai\";\n\\ No newline at end of file\n+export const userData = atom(null)\r\n+export const userData = atom(null)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1706398540693,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,4 @@\n import { atom } from \"jotai\";\r\n \r\n export const userData = atom(null)\r\n-export const userData = atom(null)\n\\ No newline at end of file\n+export const isDarkMode = atom(null)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1706398600648,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,4 @@\n import { atom } from \"jotai\";\r\n \r\n export const userData = atom(null)\r\n-export const isDarkMode = atom(null)\n\\ No newline at end of file\n+export const isDarkMode = atom(false)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1706398617575,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,4 @@\n import { atom } from \"jotai\";\r\n \r\n export const userData = atom(null)\r\n-export const isDarkMode = atom(false)\n\\ No newline at end of file\n+export const colorMode = atom(false)\n\\ No newline at end of file\n"
                 }
             ],
             "date": 1705776523249,

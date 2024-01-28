@@ -3,6 +3,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: var(--bg);
 }
 .heading-container {
     height: 50px;
@@ -16,6 +17,7 @@
     display: grid;
     place-content: center;
     font-size: xx-large;
+    color: black;
 }
 
 .results-main-container {
@@ -23,6 +25,7 @@
     margin: 5px 10px;
     border: 1px solid;
     display: flex;
+    border-color: black;
 }
 
 .result-name {
@@ -33,6 +36,7 @@
     align-items: center;
     padding-left: 5px;
     font-size: large;
+    color: black;
 }
 
 .result {
@@ -48,7 +52,6 @@
     padding: 10px;
     z-index: 10;
     margin-bottom: 20px;
-    
 }
 
 ::-webkit-scrollbar {
@@ -58,9 +61,11 @@
 .result-main-container {
     min-height: 500px;
     width: 550px;
-    background-color: rgb(106, 104, 104);
+    background-color: var(--container-bg);
+    border: 1px solid;
     border-radius: 10px;
     overflow: hidden;
+    color: var(--text-color);
 }
 
 .result-main-container > div {
@@ -71,19 +76,21 @@
     min-height: 200px;
     display: flex;
     margin: 0 5px 10px 5px;
-    background-color: gray;
-    
+    background-color: var(--wrong-ans-container);
+    border: 1px solid;
+    border-radius: 10px;
+    border-color: black;
 }
 
 .wrong-ans-counter {
     font-size: large;
-    background-color: rgb(83, 82, 82);
-    color: black;
+    background-color: var(--wrong-ans-counter);
+    color: var(--text-color);
     height: 100%;
     width: 30px;
     display: grid;
     place-content: center;
-
+    border-radius: 10px 0 0 0;
 }
 
 .wrong-ans-image-main-container {
@@ -92,8 +99,6 @@
     display: grid;
     place-content: center;
     margin-top: 5px;
-    
-    
 }
 
 .wrong-ans-image-container {
@@ -105,7 +110,6 @@
     border: 1px solid;
     padding: 5px;
     margin: 5px;
-    
 }
 
 .wrong-ans-option-main-container {
@@ -123,6 +127,7 @@
     align-items: center;
     padding-left: 5px;
     margin: 5px;
+    border-color: black;
 }
 
 @keyframes popUp {

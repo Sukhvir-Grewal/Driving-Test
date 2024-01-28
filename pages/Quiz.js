@@ -6,7 +6,7 @@ import { useRouter } from "next/router";
 import { useEffect, useRef, useState } from "react";
 
 export default function TrafficSignQuiz() {
-    const MAX_QUESTIONS = 10;
+    const MAX_QUESTIONS = 1;
     const RED_COLOR = "rgb(255, 0, 0)";
     const GREEN_COLOR = "rgb(27, 148, 27)";
 

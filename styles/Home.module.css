@@ -1,5 +1,5 @@
 .quizNavContainer {
-    background-color: grey;
+    background-color: var(--quiz-nav-bg);
     height: 50px;
     width: 100vw;
     display: flex;
@@ -8,7 +8,7 @@
 }
 
 .timeMainContainer {
-    color: white;
+    color: var(--text-color);
     height: 100%;
     width: 130px;
     display: flex;
@@ -32,19 +32,19 @@
     font-size: xx-large;
 }
 
-.goBackContainer{
+.goBackContainer {
     width: 50px;
     display: grid;
     place-content: center;
     font-size: 30px;
+    color: var(--text-color);
+
     cursor: pointer;
 }
-.goBackContainer:hover{
+.goBackContainer:hover {
     font-size: 35px;
-    color: rgb(37, 37, 37);
+    color: var(--text-color-after-hover);
 }
-
-
 
 @media (max-width: 600px) {
     .quizNavContainer {

@@ -1,0 +1,34 @@
+{
+    "sourceFile": "pages/_document.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 4,
+            "patches": [
+                {
+                    "date": 1706464995698,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1706465022557,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,13 @@\n import { Html, Head, Main, NextScript } from 'next/document'\n \n export default function Document() {\n   return (\n-    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no\">\n-\n+    \n     <Html lang=\"en\">\n       <Head />\n+      <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no\">\n+\n       <body>\n         <Main />\n         <NextScript />\n       </body>\n"
+                },
+                {
+                    "date": 1706465037563,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,10 +4,9 @@\n   return (\n     \n     <Html lang=\"en\">\n       <Head />\n-      <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no\">\n-\n+      \n       <body>\n         <Main />\n         <NextScript />\n       </body>\n"
+                },
+                {
+                    "date": 1706465052624,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,15 +1,25 @@\n-import { Html, Head, Main, NextScript } from 'next/document'\n+// pages/_document.js\n \n-export default function Document() {\n-  return (\n-    \n-    <Html lang=\"en\">\n-      <Head />\n-      \n-      <body>\n-        <Main />\n-        <NextScript />\n-      </body>\n-    </Html>\n-  )\n+import Document, { Html, Head, Main, NextScript } from \"next/document\";\n+\n+class MyDocument extends Document {\n+    render() {\n+        return (\n+            <Html>\n+                <Head>\n+                    <meta\n+                        name=\"viewport\"\n+                        content=\"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no\"\n+                    />\n+                    {/* Add other head elements here */}\n+                </Head>\n+                <body>\n+                    <Main />\n+                    <NextScript />\n+                </body>\n+            </Html>\n+        );\n+    }\n }\n+\n+export default MyDocument;\n"
+                },
+                {
+                    "date": 1706465076654,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,25 +1,15 @@\n-// pages/_document.js\n+import { Html, Head, Main, NextScript } from 'next/document'\n \n-import Document, { Html, Head, Main, NextScript } from \"next/document\";\n-\n-class MyDocument extends Document {\n-    render() {\n-        return (\n-            <Html>\n-                <Head>\n-                    <meta\n-                        name=\"viewport\"\n-                        content=\"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no\"\n-                    />\n-                    {/* Add other head elements here */}\n-                </Head>\n-                <body>\n-                    <Main />\n-                    <NextScript />\n-                </body>\n-            </Html>\n-        );\n-    }\n+export default function Document() {\n+  return (\n+    \n+    <Html lang=\"en\">\n+      <Head />\n+      \n+      <body>\n+        <Main />\n+        <NextScript />\n+      </body>\n+    </Html>\n+  )\n }\n-\n-export default MyDocument;\n"
+                }
+            ],
+            "date": 1706464995698,
+            "name": "Commit-0",
+            "content": "import { Html, Head, Main, NextScript } from 'next/document'\n\nexport default function Document() {\n  return (\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no\">\n\n    <Html lang=\"en\">\n      <Head />\n      <body>\n        <Main />\n        <NextScript />\n      </body>\n    </Html>\n  )\n}\n"
+        }
+    ]
+}
