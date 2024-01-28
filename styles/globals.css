@@ -20,6 +20,10 @@
     --wrong-ans-counter: white;
     --wrong-ans-container: white;
 
+    /* Setting */
+    --edit-name-container: white;
+    --button-bg: white;
+
     --gray-1: #999999;
     --gray-2: #777777;
     --gray-3: #555555;

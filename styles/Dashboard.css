@@ -136,7 +136,7 @@
         width: 100%;
     }
     .heading-container {
-        font-size: 40px;
+        font-size: 35px;
     }
     .nav-container {
         height: 60px;
@@ -147,5 +147,8 @@
     .login-register-container,
     .user-name {
         font-size: larger;
+    }
+    .dropDown-main-container {
+        top: 70px;
     }
 }

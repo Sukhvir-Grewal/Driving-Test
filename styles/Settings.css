@@ -104,11 +104,11 @@
     z-index: 10;
 }
 .edit-name-main-container {
-    background-color: gray;
+    background-color: var(--edit-name-container);
     height: 110px;
     width: 250px;
     border-radius: 10px;
-    border: 1px solid white;
+    border: 1px solid;
 }
 
 .change-name-heading {
@@ -142,12 +142,13 @@
 .confirm {
     font-size: xx-large;
     cursor: pointer;
-    background-color: rgb(61, 60, 60);
+    background-color: var(--button-bg);
     height: 50px;
     width: 100px;
     display: grid;
     place-content: center;
     cursor: pointer;
+    border: 1px solid black;
 }
 .cancel {
     border-radius: 10px 0 0 0;
@@ -175,4 +176,17 @@
 #input-file {
     visibility: hidden;
     position: absolute;
+}
+
+@media (max-width: 600px) {
+    .setting-image-main-container {
+        min-height: 70px;
+    }
+    .setting-image-container {
+        height: 100%;
+        width: 70px;
+        border-radius: 50%;
+        overflow: hidden;
+        cursor: pointer;
+    }
 }

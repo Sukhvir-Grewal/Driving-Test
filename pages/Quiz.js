@@ -451,7 +451,7 @@ export default function TrafficSignQuiz() {
     };
 
     const renderGoBack = () => (
-        <div className="backDrop">
+        <div className="quiz-backDrop">
             <div className="confirm-go-back-main-container">
                 <div className="go-back-warning">
                     Going back will erase your quiz progress. Are you sure?

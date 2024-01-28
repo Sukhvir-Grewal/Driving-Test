@@ -1,12 +1,16 @@
 import { userData } from "@/jotaiStorage";
 import { rorData } from "@/storage/rorData";
 import { signData } from "@/storage/signsData";
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useRef } from "react";
 import Cookies from "js-cookie";
 import axios from "axios";
 import { useAtom } from "jotai";
+import { useRouter } from "next/router";
 
 export default function Results({ resultData, data }) {
+    const router = useRouter();
+
+    const goBackRef = useRef(null);
     const [user, setUser] = useAtom(userData);
 
     const RED_COLOR = "rgb(255, 0, 0)";
@@ -27,12 +31,9 @@ export default function Results({ resultData, data }) {
                         ...prevData,
                         totalQuizTaken: result.data.totalQuizTaken,
                         totalQuizPassed: result.data.totalQuizPassed,
-                        totalQuizFailed: result.data.totalQuizFailed
+                        totalQuizFailed: result.data.totalQuizFailed,
                     }));
-                    console.log(
-                        "Result updated successfully:",
-                        result.data
-                    );
+                    console.log("Result updated successfully:", result.data);
                 }
             } catch (error) {
                 console.error("Error updating result:", error);
@@ -113,10 +114,21 @@ export default function Results({ resultData, data }) {
     const getQuestionText = (index) =>
         rorData[resultData.storedWrongAnswers[index].question].question;
 
+    const handleClickForGoBack = () => {
+        router.push("/");
+    };
+
     return (
         <>
             <div className="result-outer-main-container">
                 <div className="result-main-container">
+                    <div
+                        onClick={handleClickForGoBack}
+                        ref={goBackRef}
+                        className="result-go-back-container"
+                    >
+                        <i className="fa-solid fa-chevron-left"></i>
+                    </div>
                     {/* first part */}
                     <div className="heading-container">
                         <div className="heading">Results</div>

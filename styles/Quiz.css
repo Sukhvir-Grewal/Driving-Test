@@ -121,7 +121,7 @@
     opacity: 0;
 }
 
-.backDrop {
+.quiz-backDrop {
     backdrop-filter: blur(15px) ;
     position: absolute;
     height: 100%;
@@ -265,5 +265,8 @@
         display: flex;
         justify-content: initial;
         align-items: initial;
+    }
+    .quiz-backDrop {
+        width: 100vw;
     }
 }

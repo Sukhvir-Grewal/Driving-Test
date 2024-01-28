@@ -48,7 +48,7 @@
 
 @media (max-width: 600px) {
     .quizNavContainer {
-        background-color: grey;
+        background-color: var(--quiz-nav-bg);
         height: 50px;
         width: 100vw;
         display: flex;

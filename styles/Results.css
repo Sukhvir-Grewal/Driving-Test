@@ -66,6 +66,7 @@
     border-radius: 10px;
     overflow: hidden;
     color: var(--text-color);
+    position: relative;
 }
 
 .result-main-container > div {
@@ -130,6 +131,18 @@
     border-color: black;
 }
 
+.result-go-back-container {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    font-size: large;
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+    display: grid;
+    place-content: center;
+}
+
 @keyframes popUp {
     from {
         transform: scale(0);
@@ -144,11 +157,11 @@
         font-size: small;
         min-height: 40px;
         width: initial;
-        border: 1px solid;
+        border: 1px solid black;
         display: flex;
         align-items: center;
         padding-left: 5px;
-        margin: 0px;
+        margin: 2px;
     }
 
     .wrong-ans-option-main-container {
@@ -162,9 +175,10 @@
     .result-main-container {
         height: 100dvh;
         width: 550px;
-        background-color: rgb(106, 104, 104);
+        background-color: var(--container-bg);
         border-radius: 0;
         overflow: hidden;
+        border-color: transparent;
     }
 
     .result-outer-main-container {
@@ -179,5 +193,9 @@
         padding: 10px;
         z-index: 10;
         margin-bottom: 20px;
+    }
+    .wrong-ans-image-container {
+        height: 120px;
+        width: 120px;
     }
 }
