@@ -1,0 +1,50 @@
+{
+    "sourceFile": "pages/colorModes.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 8,
+            "patches": [
+                {
+                    "date": 1706471897727,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1706471903836,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,1 @@\n+export const darkMode = ()\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1706471916331,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,52 @@\n+export const darkMode = ()=>{\r\n+    document.documentElement.style.setProperty(\"--bg\", \"black\");\r\n+    document.documentElement.style.setProperty(\r\n+        \"--nav-bg\",\r\n+        \"var(--gray-3)\"\r\n+    );\r\n+    document.documentElement.style.setProperty(\r\n+        \"--container-bg\",\r\n+        \"var(--gray-2)\"\r\n+    );\r\n+    document.documentElement.style.setProperty(\r\n+        \"--text-color-before-hover\",\r\n+        \"rgb(207, 207, 207)\"\r\n+    );\r\n+    document.documentElement.style.setProperty(\r\n+        \"--text-color-after-hover\",\r\n+        \"white\"\r\n+    );\r\n+    document.documentElement.style.setProperty(\r\n+        \"--nav-user-name-color\",\r\n+        \"white\"\r\n+    );\r\n+    document.documentElement.style.setProperty(\r\n+        \"--drop-down-bg\",\r\n+        \"var(--gray-3)\"\r\n+    );\r\n+    document.documentElement.style.setProperty(\r\n+        \"--quiz-nav-bg\",\r\n+        \"var(--gray-3)\"\r\n+    );\r\n+    document.documentElement.style.setProperty(\"--text-color\", \"white\");\r\n+    document.documentElement.style.setProperty(\r\n+        \"--goBack-bg\",\r\n+        \"var(--gray-2)\"\r\n+    );\r\n+    document.documentElement.style.setProperty(\r\n+        \"--wrong-ans-counter\",\r\n+        \"var(--gray-2)\"\r\n+    );\r\n+    document.documentElement.style.setProperty(\r\n+        \"--wrong-ans-container\",\r\n+        \"var(--gray-3)\"\r\n+    );\r\n+    document.documentElement.style.setProperty(\r\n+        \"--edit-name-container\",\r\n+        \"var(--gray-3)\"\r\n+    );\r\n+    document.documentElement.style.setProperty(\r\n+        \"--button-bg\",\r\n+        \"var(--gray-3)\"\r\n+    );\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1706471945532,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,7 +48,7 @@\n     document.documentElement.style.setProperty(\r\n         \"--button-bg\",\r\n         \"var(--gray-3)\"\r\n     );\r\n-}\n-export const darkMode = ()\n-export const \n\\ No newline at end of file\n+}\r\n+\r\n+export lighMode\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1706471951842,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -50,5 +50,7 @@\n         \"var(--gray-3)\"\r\n     );\r\n }\r\n \r\n-export lighMode\n\\ No newline at end of file\n+export const lighMode= ()=>{\r\n+    \r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1706471964342,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -50,7 +50,47 @@\n         \"var(--gray-3)\"\r\n     );\r\n }\r\n \r\n-export const lighMode= ()=>{\r\n-    \r\n+export const lightMode= ()=>{\r\n+    document.documentElement.style.setProperty(\"--bg\", \"white\");\r\n+    document.documentElement.style.setProperty(\"--nav-bg\", \"white\");\r\n+    document.documentElement.style.setProperty(\r\n+        \"--container-bg\",\r\n+        \"white\"\r\n+    );\r\n+    document.documentElement.style.setProperty(\r\n+        \"--text-color-before-hover\",\r\n+        \"rgb(94, 92, 92)\"\r\n+    );\r\n+    document.documentElement.style.setProperty(\r\n+        \"--text-color-after-hover\",\r\n+        \"black\"\r\n+    );\r\n+    document.documentElement.style.setProperty(\r\n+        \"--nav-user-name-color\",\r\n+        \"black\"\r\n+    );\r\n+    document.documentElement.style.setProperty(\r\n+        \"--drop-down-bg\",\r\n+        \"white\"\r\n+    );\r\n+    document.documentElement.style.setProperty(\r\n+        \"--quiz-nav-bg\",\r\n+        \"white\"\r\n+    );\r\n+    document.documentElement.style.setProperty(\"--text-color\", \"black\");\r\n+    document.documentElement.style.setProperty(\"--goBack-bg\", \"white\");\r\n+    document.documentElement.style.setProperty(\r\n+        \"--wrong-ans-counter\",\r\n+        \"white\"\r\n+    );\r\n+    document.documentElement.style.setProperty(\r\n+        \"--wrong-ans-container\",\r\n+        \"white\"\r\n+    );\r\n+    document.documentElement.style.setProperty(\r\n+        \"--edit-name-container\",\r\n+        \"white\"\r\n+    );\r\n+    document.documentElement.style.setProperty(\"--button-bg\", \"white\");\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1706476178137,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -92,5 +92,6 @@\n         \"--edit-name-container\",\r\n         \"white\"\r\n     );\r\n     document.documentElement.style.setProperty(\"--button-bg\", \"white\");\r\n+    document.documentElement.style.setProperty(\"--button-bg\", \"white\");\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1706476185652,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,8 +48,10 @@\n     document.documentElement.style.setProperty(\r\n         \"--button-bg\",\r\n         \"var(--gray-3)\"\r\n     );\r\n+    document.documentElement.style.setProperty(\"--name-container-bg\", \"white\");\r\n+\r\n }\r\n \r\n export const lightMode= ()=>{\r\n     document.documentElement.style.setProperty(\"--bg\", \"white\");\r\n@@ -92,6 +94,6 @@\n         \"--edit-name-container\",\r\n         \"white\"\r\n     );\r\n     document.documentElement.style.setProperty(\"--button-bg\", \"white\");\r\n-    document.documentElement.style.setProperty(\"--button-bg\", \"white\");\r\n+    document.documentElement.style.setProperty(\"--name-container-bg\", \"white\");\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1706476206400,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,9 +48,9 @@\n     document.documentElement.style.setProperty(\r\n         \"--button-bg\",\r\n         \"var(--gray-3)\"\r\n     );\r\n-    document.documentElement.style.setProperty(\"--name-container-bg\", \"white\");\r\n+    document.documentElement.style.setProperty(\"--name-container-bg\", \"var()\");\r\n \r\n }\r\n \r\n export const lightMode= ()=>{\r\n"
+                }
+            ],
+            "date": 1706471897727,
+            "name": "Commit-0",
+            "content": "export const "
+        }
+    ]
+}

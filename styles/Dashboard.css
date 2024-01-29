@@ -7,6 +7,10 @@
     position: fixed;
     border-bottom: 1px solid;
 }
+.cartoon-car-container{
+    width: 100%;
+    position: relative;
+}
 .login-register-container {
     color: white;
     height: 100%;
@@ -14,6 +18,8 @@
     align-items: center;
     justify-content: center;
     margin-right: 10px;
+    background-color: var(--name-container-bg);
+    z-index: 10;
 }
 
 .user-name-container {
@@ -21,6 +27,8 @@
     display: flex;
     align-items: center;
     margin-right: 10px;
+    z-index: 10;
+    background-color: var(--name-container-bg);
 }
 .user-name {
     font-size: large;
@@ -128,6 +136,7 @@
     transform: scale(1.05);
     color: var(--text-color-after-hover);
 }
+
 
 @media (max-width: 600px) {
     .main-container,

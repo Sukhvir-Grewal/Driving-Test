@@ -17,7 +17,6 @@ export default async function handler(req, res) {
             let newValForTotal = user.totalQuizTaken + 1;
             let newValForPass = user.totalQuizPassed;
             let newValForFail = user.totalQuizFailed;
-            console.log("new value", newValForTotal);
 
             updatedUser = await User.findOneAndUpdate(
                 { username },

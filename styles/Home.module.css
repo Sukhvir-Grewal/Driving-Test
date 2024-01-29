@@ -46,6 +46,52 @@
     color: var(--text-color-after-hover);
 }
 
+.designTire {
+    position: absolute;
+    z-index: 9;
+    bottom: -100px;
+    left: -100px;
+    height: 300px;
+    width: 300px;
+    animation: moveTireBottom 1s ease;
+}
+.designTireSetting {
+    position: absolute;
+    z-index: 9;
+    top: -100px;
+    right: -100px;
+    height: 300px;
+    width: 300px;
+    animation: moveTireTop 1s ease;
+}
+
+.cartoonCar {
+    height: 50px;
+    width: 100px;
+    position: absolute;
+    bottom: 0;
+}
+@keyframes moveTireBottom {
+    from {
+        bottom: -600px;
+        left: -600px;
+    }
+    to {
+        bottom: -100px;
+        left: -100px;
+    }
+}
+
+@keyframes moveTireTop {
+    from {
+        top: -600px;
+        right: -600px;
+    }
+    to {
+        top: -100px;
+        right: -100px;
+    }
+}
 @media (max-width: 600px) {
     .quizNavContainer {
         background-color: var(--quiz-nav-bg);
@@ -53,5 +99,13 @@
         width: 100vw;
         display: flex;
         position: sticky;
+    }
+    .designTire {
+        height: 250px;
+        width: 250px;
+    }
+    .designTireSetting {
+        height: 250px;
+        width: 250px;
     }
 }
