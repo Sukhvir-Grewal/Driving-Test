@@ -11,11 +11,16 @@ export default function Home() {
     const goBackContainerRef = useRef(null);
     const cartoonCarRef = useRef(null);
     const cartoonContainerRef = useRef(null);
+    const menuOptionRef = Array.from({ length: 3 }, () => useRef());
+    const tireRef = useRef(null);
+    const goBackMainMenuRef = useRef(null);
 
     const [user, setUser] = useAtom(userData);
     const [showDropDown, setShowDropDown] = useState(false);
     const [showSetting, setShowSetting] = useState(false);
     const [colorMode, setColorMode] = useState(false);
+    const [showPracticeMenu, setShowPracticeMenu] = useState(false);
+    const [afterPracticeAnimation, setAfterPracticeAnimation] = useState(false);
 
     useEffect(() => {
         const userCookie = Cookies.get("user");
@@ -27,19 +32,18 @@ export default function Home() {
 
     useEffect(() => {
         let distance = 1;
-        let totalDistance = cartoonContainerRef.current.offsetWidth 
-        console.log(totalDistance)
+        let totalDistance = cartoonContainerRef.current.offsetWidth;
         const carTimer = setInterval(() => {
             if (distance > totalDistance) {
                 distance = -cartoonCarRef.current.offsetWidth; // Reset position instantly
-              }
-          if (cartoonCarRef.current)
-            cartoonCarRef.current.style.transform = `translateX(${distance}px)`;
-          distance += 1;
+            }
+            if (cartoonCarRef.current)
+                cartoonCarRef.current.style.transform = `translateX(${distance}px)`;
+            distance += 1;
         }, 10);
-    
+
         return () => clearInterval(carTimer);
-      }, []);
+    }, []);
 
     useEffect(() => {
         if (colorMode)
@@ -65,7 +69,10 @@ export default function Home() {
                         <i className="fa-solid fa-chevron-left"></i>
                     </div>
                 )}
-                <div ref={cartoonContainerRef} className="cartoon-car-container">
+                <div
+                    ref={cartoonContainerRef}
+                    className="cartoon-car-container"
+                >
                     <img
                         ref={cartoonCarRef}
                         className={Style.cartoonCar}
@@ -142,44 +149,122 @@ export default function Home() {
         window.location.reload();
     };
 
-    const renderMenu = () => (
-        <>
-            <div className="heading-container">Canadian Driving Test</div>
-            <div className="option-container">
-                <Link
-                    className="link"
-                    href={{
-                        pathname: "/Quiz",
-                        query: { dataType: "signData" },
-                    }}
-                >
-                    Traffic Signs
-                </Link>
-            </div>
-            <div className="option-container">
-                <Link
-                    className="link"
-                    href={{
-                        pathname: "/Quiz",
-                        query: { dataType: "rorData" },
-                    }}
-                >
-                    Rules of Road
-                </Link>
-            </div>
-            <div className="option-container">
-                <Link
-                    className="link"
-                    href={{
-                        pathname: "/Quiz",
-                        query: { dataType: "FullTest" },
-                    }}
-                >
-                    Full Test
-                </Link>
-            </div>
-        </>
-    );
+    const renderMenu = () => {
+        const MenuData = {
+            name: ["Traffic Signs", "Rules of Road", "Full Test"],
+            dataType: ["signData", "rorData", "FullTest"],
+        };
+        const PracticeMenuData = {
+            name: ["Traffic Signs", "Rules of Road"],
+            dataType: ["signData", "rorData"],
+            pathname: ["/signData", "/rorData"],
+        };
+        return (
+            <>
+                <div className="heading-container">Canadian Driving Test</div>
+                {!showPracticeMenu ? (
+                    <>
+                        {Array.from({ length: 3 }, (_, index) => (
+                            <div
+                                key={index}
+                                ref={menuOptionRef[index]}
+                                className={
+                                    afterPracticeAnimation
+                                        ? "option-container slideToLeft"
+                                        : "option-container"
+                                }
+                            >
+                                <Link
+                                    className="link"
+                                    href={{
+                                        pathname: "/Quiz",
+                                        query: {
+                                            dataType: MenuData.dataType[index],
+                                        },
+                                    }}
+                                >
+                                    {MenuData.name[index]}
+                                </Link>
+                            </div>
+                        ))}
+
+                        <div
+                            onClick={() => doLeftAnimation()}
+                            className={
+                                afterPracticeAnimation
+                                    ? "option-container link slideToLeft"
+                                    : "option-container link"
+                            }
+                        >
+                            Practice
+                        </div>
+                    </>
+                ) : (
+                    <>
+                        {Array.from({ length: 2 }, (_, index) => (
+                            <div key={index} className="option-container">
+                                <Link
+                                    className="link slideRight"
+                                    href={{
+                                        pathname: "/practice",
+                                        query: {
+                                            dataType:
+                                                PracticeMenuData.dataType[
+                                                    index
+                                                ],
+                                        },
+                                    }}
+                                >
+                                    {PracticeMenuData.name[index]}
+                                </Link>
+                            </div>
+                        ))}
+                        <div
+                            ref={goBackMainMenuRef}
+                            onClick={() => doRightAnimation()}
+                            className="go-back-to-main-menu"
+                        >
+                            Back
+                        </div>
+                    </>
+                )}
+            </>
+        );
+    };
+
+    const doLeftAnimation = () => {
+        const options = document.querySelectorAll(".option-container");
+        options.forEach((option) => {
+            option.classList.add("slideLeft");
+        });
+        tireRef.current.classList.add(Style.tireGoBottomLeft);
+        setTimeout(() => {
+            options.forEach((option) => {
+                option.classList.remove("slideLeft");
+            });
+            tireRef.current.classList.remove(Style.tireGoBottomLeft);
+            setShowPracticeMenu(true);
+        }, 600);
+    };
+    const doRightAnimation = () => {
+        const options = document.querySelectorAll(".option-container");
+        options.forEach((option) => {
+            option.classList.add(Style.slideToLeft);
+        });
+        tireRef.current.classList.add(Style.tireGoBottomRight);
+        goBackMainMenuRef.current.classList.add("fadeOut");
+        setTimeout(() => {
+            options.forEach((option) => {
+                option.classList.remove(Style.slideToLeft);
+            });
+            tireRef.current.classList.remove(Style.tireGoBottomRight);
+            setShowPracticeMenu(false);
+            setAfterPracticeAnimation(true);
+            setTimeout(() => {
+                setAfterPracticeAnimation(false);
+            }, 1000);
+        }, 1000);
+    };
 
     return (
         <>
@@ -188,8 +273,11 @@ export default function Home() {
                 {showDropDown && renderDropDown()}
                 <div className="main-container">
                     <img
+                        ref={tireRef}
                         className={
-                            showSetting
+                            showPracticeMenu
+                                ? `${Style.designTirePractice}`
+                                : showSetting
                                 ? `${Style.designTireSetting}`
                                 : `${Style.designTire}`
                         }

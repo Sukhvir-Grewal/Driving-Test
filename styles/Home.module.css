@@ -64,6 +64,29 @@
     width: 300px;
     animation: moveTireTop 1s ease;
 }
+.designTirePractice {
+    position: absolute;
+    z-index: 9;
+    bottom: -150px;
+    right: -100px;
+    height: 300px;
+    width: 300px;
+    animation: moveTireBottomRight 1s ease;
+}
+
+.tireGoBottomLeft {
+    animation: tireGoBottomLeft 1s ease;
+}
+.tireGoBottomRight {
+    animation: tireGoBottomRight 1s ease;
+}
+
+.slideToLeft {
+    animation: slideToLeft 1s ease;
+    position: relative;
+    transition: transform 1s ease;
+    opacity: 0;
+}
 
 .cartoonCar {
     height: 50px;
@@ -73,8 +96,8 @@
 }
 @keyframes moveTireBottom {
     from {
-        bottom: -600px;
-        left: -600px;
+        bottom: -300px;
+        left: -300px;
     }
     to {
         bottom: -100px;
@@ -90,6 +113,47 @@
     to {
         top: -100px;
         right: -100px;
+    }
+}
+@keyframes moveTireBottomRight {
+    from {
+        bottom: -300px;
+        right: -300px;
+    }
+    to {
+        bottom: -150px;
+        right: -100px;
+    }
+}
+@keyframes tireGoBottomLeft {
+    from {
+        bottom: -100px;
+        left: -100px;
+    }
+    to {
+        bottom: -300px;
+        left: -300px;
+    }
+}
+@keyframes tireGoBottomRight {
+    from {
+        bottom: -150px;
+        right: -100px;
+    }
+    to {
+        bottom: -300px;
+        right: -300px;
+    }
+}
+
+@keyframes slideToLeft {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(100px);
+        opacity: 0;
     }
 }
 @media (max-width: 600px) {

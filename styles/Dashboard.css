@@ -7,7 +7,7 @@
     position: fixed;
     border-bottom: 1px solid;
 }
-.cartoon-car-container{
+.cartoon-car-container {
     width: 100%;
     position: relative;
 }
@@ -137,6 +137,19 @@
     color: var(--text-color-after-hover);
 }
 
+.go-back-to-main-menu {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    cursor: pointer;
+    color: var(--text-color);
+    animation: fadeIn 3s ease;
+    transition: transform .2s ease;
+}
+
+.go-back-to-main-menu:hover{
+    transform: scale(1.2);
+}
 
 @media (max-width: 600px) {
     .main-container,
