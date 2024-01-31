@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 9,
+            "activePatchIndex": 12,
             "patches": [
                 {
                     "date": 1705776523249,
@@ -44,6 +44,18 @@
                 {
                     "date": 1706398617575,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,4 @@\n import { atom } from \"jotai\";\r\n \r\n export const userData = atom(null)\r\n-export const isDarkMode = atom(false)\n\\ No newline at end of file\n+export const colorMode = atom(false)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1706636152058,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,4 @@\n import { atom } from \"jotai\";\r\n \r\n export const userData = atom(null)\r\n-export const colorMode = atom(false)\n\\ No newline at end of file\n+export const colorMode = atom(false)\r\n"
+                },
+                {
+                    "date": 1706636157167,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,5 +2,5 @@\n \r\n export const userData = atom(null)\r\n export const colorMode = atom(false)\r\n \r\n-export const \n\\ No newline at end of file\n+export \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1706660159091,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n import { atom } from \"jotai\";\r\n \r\n export const userData = atom(null);\r\n export const colorMode = atom(false);\r\n+export const colorMode = atom(false);\r\n \r\n export const drivingTestInfo = {\r\n     visionTest:\r\n         \"Before taking your knowledge test, you will be required to take a vision test. You will be asked to look into a machine and a read out the numbers that appear as well as the location of a flashing red light (Left or right side)\",\r\n"
                 }
             ],
             "date": 1705776523249,

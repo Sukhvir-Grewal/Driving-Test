@@ -1,0 +1,22 @@
+{
+    "sourceFile": "styles/Keyframes.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1706659370800,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1706659462541,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,82 +0,0 @@\n-@keyframes moveTireBottom {\r\n-    from {\r\n-        bottom: -300px;\r\n-        left: -300px;\r\n-    }\r\n-    to {\r\n-        bottom: -100px;\r\n-        left: -100px;\r\n-    }\r\n-}\r\n-\r\n-@keyframes moveTireTop {\r\n-    from {\r\n-        top: -600px;\r\n-        right: -600px;\r\n-    }\r\n-    to {\r\n-        top: -100px;\r\n-        right: -100px;\r\n-    }\r\n-}\r\n-@keyframes moveTireBottomRight {\r\n-    from {\r\n-        bottom: -300px;\r\n-        right: -300px;\r\n-    }\r\n-    to {\r\n-        bottom: -150px;\r\n-        right: -100px;\r\n-    }\r\n-}\r\n-@keyframes tireGoBottomLeft {\r\n-    from {\r\n-        bottom: -100px;\r\n-        left: -100px;\r\n-    }\r\n-    to {\r\n-        bottom: -300px;\r\n-        left: -300px;\r\n-    }\r\n-}\r\n-@keyframes tireGoBottomRight {\r\n-    from {\r\n-        bottom: -150px;\r\n-        right: -100px;\r\n-    }\r\n-    to {\r\n-        bottom: -300px;\r\n-        right: -300px;\r\n-    }\r\n-}\r\n-@keyframes tireGoBottomRightForMobile {\r\n-    from {\r\n-        bottom: -120px;\r\n-        right: -180px;\r\n-    }\r\n-    to {\r\n-        bottom: -300px;\r\n-        right: -300px;\r\n-    }\r\n-}\r\n-\r\n-@keyframes slideToLeft {\r\n-    from {\r\n-        transform: translateX(0);\r\n-        opacity: 1;\r\n-    }\r\n-    to {\r\n-        transform: translateX(100px);\r\n-        opacity: 0;\r\n-    }\r\n-}\r\n-@keyframes moveTireBottomRightForMobile {\r\n-    from {\r\n-        bottom: -300px;\r\n-        right: -300px;\r\n-    }\r\n-    to {\r\n-        bottom: -120px;\r\n-        right: -180px;\r\n-    }\r\n-}\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1706659370800,
+            "name": "Commit-0",
+            "content": "@keyframes moveTireBottom {\r\n    from {\r\n        bottom: -300px;\r\n        left: -300px;\r\n    }\r\n    to {\r\n        bottom: -100px;\r\n        left: -100px;\r\n    }\r\n}\r\n\r\n@keyframes moveTireTop {\r\n    from {\r\n        top: -600px;\r\n        right: -600px;\r\n    }\r\n    to {\r\n        top: -100px;\r\n        right: -100px;\r\n    }\r\n}\r\n@keyframes moveTireBottomRight {\r\n    from {\r\n        bottom: -300px;\r\n        right: -300px;\r\n    }\r\n    to {\r\n        bottom: -150px;\r\n        right: -100px;\r\n    }\r\n}\r\n@keyframes tireGoBottomLeft {\r\n    from {\r\n        bottom: -100px;\r\n        left: -100px;\r\n    }\r\n    to {\r\n        bottom: -300px;\r\n        left: -300px;\r\n    }\r\n}\r\n@keyframes tireGoBottomRight {\r\n    from {\r\n        bottom: -150px;\r\n        right: -100px;\r\n    }\r\n    to {\r\n        bottom: -300px;\r\n        right: -300px;\r\n    }\r\n}\r\n@keyframes tireGoBottomRightForMobile {\r\n    from {\r\n        bottom: -120px;\r\n        right: -180px;\r\n    }\r\n    to {\r\n        bottom: -300px;\r\n        right: -300px;\r\n    }\r\n}\r\n\r\n@keyframes slideToLeft {\r\n    from {\r\n        transform: translateX(0);\r\n        opacity: 1;\r\n    }\r\n    to {\r\n        transform: translateX(100px);\r\n        opacity: 0;\r\n    }\r\n}\r\n@keyframes moveTireBottomRightForMobile {\r\n    from {\r\n        bottom: -300px;\r\n        right: -300px;\r\n    }\r\n    to {\r\n        bottom: -120px;\r\n        right: -180px;\r\n    }\r\n}"
+        }
+    ]
+}

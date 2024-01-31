@@ -5,6 +5,8 @@ import "@/styles/Login.css";
 import "@/styles/Quiz.css";
 import "@/styles/Results.css";
 import "@/styles/Settings.css";
+import "@/styles/TestInfo.css";
+import "@/styles/Practice.css";
 
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { useEffect } from "react";
@@ -15,7 +17,7 @@ export default function App({ Component, pageProps }) {
     useEffect(() => {
         const pushToRoot = () => {
             // Check if it's the client side
-            if (typeof window !== 'undefined') {
+            if (typeof window !== "undefined") {
                 router.push("/");
             }
         };

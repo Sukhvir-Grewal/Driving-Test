@@ -94,6 +94,34 @@
     position: absolute;
     bottom: 0;
 }
+
+@media (max-width: 600px) {
+    .quizNavContainer {
+        background-color: var(--quiz-nav-bg);
+        height: 50px;
+        width: 100vw;
+        display: flex;
+        position: sticky;
+    }
+    .designTire {
+        height: 250px;
+        width: 250px;
+    }
+    .designTireSetting {
+        height: 250px;
+        width: 250px;
+    }
+    .designTirePractice {
+        bottom: -120px;
+        right: -180px;
+        animation: moveTireBottomRightForMobile 1s ease;
+    }
+
+    .tireGoBottomRight {
+        animation: tireGoBottomRightForMobile 1s ease;
+    }
+}
+
 @keyframes moveTireBottom {
     from {
         bottom: -300px;
@@ -145,6 +173,16 @@
         right: -300px;
     }
 }
+@keyframes tireGoBottomRightForMobile {
+    from {
+        bottom: -120px;
+        right: -180px;
+    }
+    to {
+        bottom: -300px;
+        right: -300px;
+    }
+}
 
 @keyframes slideToLeft {
     from {
@@ -156,20 +194,13 @@
         opacity: 0;
     }
 }
-@media (max-width: 600px) {
-    .quizNavContainer {
-        background-color: var(--quiz-nav-bg);
-        height: 50px;
-        width: 100vw;
-        display: flex;
-        position: sticky;
+@keyframes moveTireBottomRightForMobile {
+    from {
+        bottom: -300px;
+        right: -300px;
     }
-    .designTire {
-        height: 250px;
-        width: 250px;
-    }
-    .designTireSetting {
-        height: 250px;
-        width: 250px;
+    to {
+        bottom: -120px;
+        right: -180px;
     }
 }

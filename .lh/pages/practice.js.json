@@ -1,0 +1,42 @@
+{
+    "sourceFile": "pages/practice.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 6,
+            "patches": [
+                {
+                    "date": 1706632867362,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1706632874365,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,1 @@\n-export defa\n\\ No newline at end of file\n+export default \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1706632884347,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,1 @@\n-export default \n\\ No newline at end of file\n+export default function \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1706632892071,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,1 @@\n-export default function \n\\ No newline at end of file\n+export default function Practice\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1706632900649,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,3 @@\n-export default function Practice\n\\ No newline at end of file\n+export default function Practice(){\r\n+    return \r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1706632908638,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n export default function Practice(){\r\n     return (\r\n         <>\r\n+            Hello wrold\r\n         </>\r\n     )\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1706633826828,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n export default function Practice(){\r\n \r\n     const testInfo = {\r\n-        visionTest:  \"Before taking your knowledge test, you will be required to take a vision test. You will be asked to look into a machine and a read out the numbers that appear as well as the location of a flashing red light ()\",\r\n+        visionTest:  \"Before taking your knowledge test, you will be required to take a vision test. You will be asked to look into a machine and a read out the numbers that appear as well as the location of a flashing red light (Left or right side)\",\r\n         TypesOfQuestions: \"\",\r\n         computerizedSystem: \"\"\r\n     }\r\n     return (\r\n"
+                }
+            ],
+            "date": 1706632867362,
+            "name": "Commit-0",
+            "content": "export defa"
+        }
+    ]
+}

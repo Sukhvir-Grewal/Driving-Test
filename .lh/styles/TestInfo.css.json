@@ -1,0 +1,58 @@
+{
+    "sourceFile": "styles/TestInfo.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 10,
+            "patches": [
+                {
+                    "date": 1706638634138,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1706638756425,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,3 @@\n-.top-heading{\r\n+.top{\r\n     background-color: red;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1706638766308,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,3 @@\n-.top{\r\n+.practice-nav-bar{\r\n     background-color: red;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1706638771984,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,4 @@\n .practice-nav-bar{\r\n     background-color: red;\r\n+    height: ;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1706638787532,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,5 @@\n .practice-nav-bar{\r\n     background-color: red;\r\n-    height: ;\r\n+    height: 50px;\r\n+    border: ;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1706638797575,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n .practice-nav-bar{\r\n     background-color: red;\r\n     height: 50px;\r\n-    border: ;\r\n+    border-bottom: 1px solid black;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1706638803752,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,4 @@\n .practice-nav-bar{\r\n-    background-color: red;\r\n     height: 50px;\r\n     border-bottom: 1px solid black;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1706659587738,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,5 @@\n-.practice-nav-bar{\r\n+.practice-nav-bar {\r\n     height: 50px;\r\n     border-bottom: 1px solid black;\r\n\\ No newline at end of file\n-}\n+    font-size: ;\r\n+}\r\n"
+                },
+                {
+                    "date": 1706659597492,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,7 @@\n .practice-nav-bar {\r\n     height: 50px;\r\n     border-bottom: 1px solid black;\r\n-    font-size: ;\r\n-}\n\\ No newline at end of file\n+    font-size: larger;\r\n+    \r\n+    display: grid;\r\n+}\r\n"
+                },
+                {
+                    "date": 1706659605094,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,6 +2,6 @@\n     height: 50px;\r\n     border-bottom: 1px solid black;\r\n     font-size: larger;\r\n     display: grid;\r\n-    place-content: cneter;\r\n+    place-content: ;\r\n }\r\n"
+                },
+                {
+                    "date": 1706659633792,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,6 +3,6 @@\n     border-bottom: 1px solid black;\r\n     font-size: larger;\r\n     display: grid;\r\n     place-content: center;\r\n-    color: var(--text-color);\r\n+    color: red;\r\n }\r\n"
+                }
+            ],
+            "date": 1706638634138,
+            "name": "Commit-0",
+            "content": ".top-heading{\r\n    background-color: red;\r\n}"
+        }
+    ]
+}

@@ -1,0 +1,27 @@
+.scrollable-container{
+    height: 100dvh;
+    width: 100vw;
+    overflow-x: hidden;
+}
+.practice-nav-bar {
+    height: 50px;
+    border-bottom: 1px solid var(--text-color);
+    display: flex;
+    align-items: center;
+    color: rgb(240, 15, 15);
+    width: 100vw;
+    position: fixed;
+    background-color: var(--bg);
+}
+
+.practice-go-back {
+    color: var(--text-color);
+    margin: 10px;
+    font-size: larger;
+    cursor: pointer;
+}
+
+.practice-go-back:hover{
+    transform: scale(1.1);
+}
+

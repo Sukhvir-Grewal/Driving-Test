@@ -1,0 +1,57 @@
+
+
+.practice-heading{
+    width: 100%;
+    display: grid;
+    place-content: center;
+    padding-right: 20px;
+    font-size: x-large;
+    columns: red;
+}
+
+.driving-test-store-container{
+    margin-top: 10px;
+    height: 200px;
+    width: 100vw;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+.driving-test-store{
+    height: 100%;
+}
+
+.data-heading-container{
+    width: 90vw;
+    height: 50px;
+    margin-left: 20px;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    border-left: 1px solid;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    font-size: larger;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+
+.data-container{
+    width: 90vw;
+    padding-left: 10px;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+.data-container > li{
+    margin-left: 20px;
+}
+
+@media (max-width: 600px) {
+    .practice-heading{
+        font-size: larger;
+    }
+}
