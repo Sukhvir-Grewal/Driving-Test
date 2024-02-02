@@ -4,14 +4,17 @@ import { rorData } from "@/storage/rorData";
 import { signData } from "@/storage/signsData";
 import { useRouter } from "next/router";
 import { useEffect, useRef, useState } from "react";
-
+import { darkMode, lightMode } from "./colorModes";
+import { useAtom } from "jotai";
+import { userData } from "@/jotaiStorage";
+import Cookies from "js-cookie";
 export default function TrafficSignQuiz() {
-    const MAX_QUESTIONS = 1;
+    const router = useRouter();
+    const dataType = router.query.dataType;
+    const MAX_QUESTIONS = dataType === "FullTest" ? 40 : 20;
     const RED_COLOR = "rgb(255, 0, 0)";
     const GREEN_COLOR = "rgb(27, 148, 27)";
 
-    const router = useRouter();
-    const dataType = router.query.dataType;
     const [data, setData] = useState(
         dataType === "signData" ? [...signData] : [...rorData]
     );
@@ -50,6 +53,7 @@ export default function TrafficSignQuiz() {
     });
 
     const [resultDataType, setResultDataType] = useState(null);
+    const [user, setUser] = useAtom(userData);
 
     useEffect(() => {
         if (!isSignDiv && currentQuestionRef.current) {
@@ -101,6 +105,16 @@ export default function TrafficSignQuiz() {
             ? "visible"
             : "hidden";
     }, [confirmDisplay]);
+
+    useEffect(() => {
+        const userCookie = Cookies.get("user");
+        if (userCookie) {
+            const userData = JSON.parse(userCookie);
+            setUser(userData);
+        }
+        console.log(user?.isDarkMode);
+        user?.isDarkMode ? darkMode() : lightMode();
+    }, [user?.isDarkMode]);
 
     const handleOptionClick = (index) => {
         if (selectedOption !== null) {

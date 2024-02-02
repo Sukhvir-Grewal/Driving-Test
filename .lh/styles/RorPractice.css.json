@@ -1,0 +1,198 @@
+{
+    "sourceFile": "styles/RorPractice.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 45,
+            "patches": [
+                {
+                    "date": 1706757949339,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1706757959810,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-.signPractice-main-container {\r\n+.rorData-main-container {\r\n     height: 100dvh;\r\n     width: 100vw;\r\n     padding-top: 60px;\r\n     display: flex;\r\n"
+                },
+                {
+                    "date": 1706758044836,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-.rorData-main-container {\r\n+.rorP-main-container {\r\n     height: 100dvh;\r\n     width: 100vw;\r\n     padding-top: 60px;\r\n     display: flex;\r\n"
+                },
+                {
+                    "date": 1706758077786,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,20 @@\n-.rorP-main-container {\r\n+.rorPractice-main-container {\r\n     height: 100dvh;\r\n     width: 100vw;\r\n     padding-top: 60px;\r\n     display: flex;\r\n     flex-wrap: wrap;\r\n     overflow: auto;\r\n }\r\n+\r\n+\r\n+.signData-main-container {\r\n+    min-height: 225px;\r\n+    width: 45%;\r\n+    position: relative;\r\n+    margin: 10px;\r\n+    display: flex;\r\n+    justify-content: space-between;\r\n+    border-top: 1px solid;\r\n+    border-bottom: 1px solid;\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1706758174546,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n     overflow: auto;\r\n }\r\n \r\n \r\n-.signData-main-container {\r\n+.rorData-main-container {\r\n     min-height: 225px;\r\n     width: 45%;\r\n     position: relative;\r\n     margin: 10px;\r\n"
+                },
+                {
+                    "date": 1706758185502,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,5 +15,6 @@\n     display: flex;\r\n     justify-content: space-between;\r\n     border-top: 1px solid;\r\n     border-bottom: 1px solid;\r\n+    background-color: red;\r\n }\r\n"
+                },
+                {
+                    "date": 1706758222474,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,21 @@\n+.rorPractice-main-container {\r\n+    height: 100dvh;\r\n+    width: 100vw;\r\n+    padding-top: 60px;\r\n+    display: flex;\r\n+    flex-wrap: wrap;\r\n+    overflow: auto;\r\n+    background-color: red;\r\n+}\r\n+\r\n+.rorData-main-container {\r\n+    min-height: 225px;\r\n+    width: 45%;\r\n+    position: relative;\r\n+    margin: 10px;\r\n+    display: flex;\r\n+    justify-content: space-between;\r\n+    border-top: 1px solid;\r\n+    border-bottom: 1px solid;\r\n+    background-color: red;\r\n+}\r\n"
+                },
+                {
+                    "date": 1706758358234,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,8 @@\n     padding-top: 60px;\r\n     display: flex;\r\n     flex-wrap: wrap;\r\n     overflow: auto;\r\n-    background-color: red;\r\n }\r\n \r\n .rorData-main-container {\r\n     min-height: 225px;\r\n@@ -18,25 +17,4 @@\n     border-top: 1px solid;\r\n     border-bottom: 1px solid;\r\n     background-color: red;\r\n }\r\n-.rorPractice-main-container {\r\n-    height: 100dvh;\r\n-    width: 100vw;\r\n-    padding-top: 60px;\r\n-    display: flex;\r\n-    flex-wrap: wrap;\r\n-    overflow: auto;\r\n-}\r\n-\r\n-\r\n-.rorData-main-container {\r\n-    min-height: 225px;\r\n-    width: 45%;\r\n-    position: relative;\r\n-    margin: 10px;\r\n-    display: flex;\r\n-    justify-content: space-between;\r\n-    border-top: 1px solid;\r\n-    border-bottom: 1px solid;\r\n-    background-color: red;\r\n-}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1706802980692,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,4 +17,10 @@\n     border-top: 1px solid;\r\n     border-bottom: 1px solid;\r\n     background-color: red;\r\n }\r\n+\r\n+@media (max-width: 600px) {\r\n+    .signData-main-container {\r\n+        width: 90%;\r\n+    }\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1706802987174,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,8 +19,8 @@\n     background-color: red;\r\n }\r\n \r\n @media (max-width: 600px) {\r\n-    .signData-main-container {\r\n+    .rirData-main-container {\r\n         width: 90%;\r\n     }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1706803012985,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,8 +19,8 @@\n     background-color: red;\r\n }\r\n \r\n @media (max-width: 600px) {\r\n-    .rirData-main-container {\r\n+    .rorData-main-container {\r\n         width: 90%;\r\n     }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1706803068953,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,8 +18,16 @@\n     border-bottom: 1px solid;\r\n     background-color: red;\r\n }\r\n \r\n+.image-main-container {\r\n+    height: 100%;\r\n+    width: 40%;\r\n+    display: flex;\r\n+    align-items: center;\r\n+    justify-content: center;\r\n+}\r\n+\r\n @media (max-width: 600px) {\r\n     .rorData-main-container {\r\n         width: 90%;\r\n     }\r\n"
+                },
+                {
+                    "date": 1706803080902,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,33 @@\n+.rorPractice-main-container {\r\n+    height: 100dvh;\r\n+    width: 100vw;\r\n+    padding-top: 60px;\r\n+    display: flex;\r\n+    flex-wrap: wrap;\r\n+    overflow: auto;\r\n+}\r\n+\r\n+.rorData-main-container {\r\n+    min-height: 225px;\r\n+    width: 45%;\r\n+    position: relative;\r\n+    margin: 10px;\r\n+    display: flex;\r\n+    justify-content: space-between;\r\n+    border-top: 1px solid;\r\n+    border-bottom: 1px solid;\r\n+}\r\n+\r\n+.image-main-container {\r\n+    height: 100%;\r\n+    width: 40%;\r\n+    display: flex;\r\n+    align-items: center;\r\n+    justify-content: center;\r\n+}\r\n+\r\n+@media (max-width: 600px) {\r\n+    .rorData-main-container {\r\n+        width: 90%;\r\n+    }\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1706803088424,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,44 +23,11 @@\n     width: 40%;\r\n     display: flex;\r\n     align-items: center;\r\n     justify-content: center;\r\n-}\r\n-\r\n-@media (max-width: 600px) {\r\n-    .rorData-main-container {\r\n-        width: 90%;\r\n-    }\r\n-}\n-.rorPractice-main-container {\r\n-    height: 100dvh;\r\n-    width: 100vw;\r\n-    padding-top: 60px;\r\n-    display: flex;\r\n-    flex-wrap: wrap;\r\n-    overflow: auto;\r\n-}\r\n-\r\n-.rorData-main-container {\r\n-    min-height: 225px;\r\n-    width: 45%;\r\n-    position: relative;\r\n-    margin: 10px;\r\n-    display: flex;\r\n-    justify-content: space-between;\r\n-    border-top: 1px solid;\r\n-    border-bottom: 1px solid;\r\n     background-color: red;\r\n }\r\n \r\n-.image-main-container {\r\n-    height: 100%;\r\n-    width: 40%;\r\n-    display: flex;\r\n-    align-items: center;\r\n-    justify-content: center;\r\n-}\r\n-\r\n @media (max-width: 600px) {\r\n     .rorData-main-container {\r\n         width: 90%;\r\n     }\r\n"
+                },
+                {
+                    "date": 1706803179045,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,8 @@\n     width: 40%;\r\n     display: flex;\r\n     align-items: center;\r\n     justify-content: center;\r\n-    background-color: red;\r\n }\r\n \r\n @media (max-width: 600px) {\r\n     .rorData-main-container {\r\n"
+                },
+                {
+                    "date": 1706803189847,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,8 +25,15 @@\n     align-items: center;\r\n     justify-content: center;\r\n }\r\n \r\n+.image-container {\r\n+    width: 80%;\r\n+    display: flex;\r\n+    align-items: center;\r\n+    justify-content: center;\r\n+}\r\n+\r\n @media (max-width: 600px) {\r\n     .rorData-main-container {\r\n         width: 90%;\r\n     }\r\n"
+                },
+                {
+                    "date": 1706803198195,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,8 +30,9 @@\n     width: 80%;\r\n     display: flex;\r\n     align-items: center;\r\n     justify-content: center;\r\n+    background-color: red;\r\n }\r\n \r\n @media (max-width: 600px) {\r\n     .rorData-main-container {\r\n"
+                },
+                {
+                    "date": 1706803303159,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,9 +30,8 @@\n     width: 80%;\r\n     display: flex;\r\n     align-items: center;\r\n     justify-content: center;\r\n-    background-color: red;\r\n }\r\n \r\n @media (max-width: 600px) {\r\n     .rorData-main-container {\r\n"
+                },
+                {
+                    "date": 1706803389554,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,8 +32,12 @@\n     align-items: center;\r\n     justify-content: center;\r\n }\r\n \r\n+.rorPractice-question-container[\r\n+    \r\n+]\r\n+\r\n @media (max-width: 600px) {\r\n     .rorData-main-container {\r\n         width: 90%;\r\n     }\r\n"
+                },
+                {
+                    "date": 1706803395014,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n     justify-content: center;\r\n }\r\n \r\n .rorPractice-question-container[\r\n-    \r\n+    heig\r\n ]\r\n \r\n @media (max-width: 600px) {\r\n     .rorData-main-container {\r\n"
+                },
+                {
+                    "date": 1706803401368,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,11 +32,9 @@\n     align-items: center;\r\n     justify-content: center;\r\n }\r\n \r\n-.rorPractice-question-container[\r\n-    heig\r\n-]\r\n+.rorPractice-question-container\r\n \r\n @media (max-width: 600px) {\r\n     .rorData-main-container {\r\n         width: 90%;\r\n"
+                },
+                {
+                    "date": 1706803407144,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,9 +32,11 @@\n     align-items: center;\r\n     justify-content: center;\r\n }\r\n \r\n-.rorPractice-question-container\r\n+.rorPractice-question-container{\r\n+    height: 20p;\r\n+}\r\n \r\n @media (max-width: 600px) {\r\n     .rorData-main-container {\r\n         width: 90%;\r\n"
+                },
+                {
+                    "date": 1706803413694,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,10 @@\n     justify-content: center;\r\n }\r\n \r\n .rorPractice-question-container{\r\n-    height: 20p;\r\n+    height: 20px;\r\n+    background-color: red;\r\n }\r\n \r\n @media (max-width: 600px) {\r\n     .rorData-main-container {\r\n"
+                },
+                {
+                    "date": 1706803421872,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,8 +35,9 @@\n \r\n .rorPractice-question-container{\r\n     height: 20px;\r\n     background-color: red;\r\n+    width: 100;\r\n }\r\n \r\n @media (max-width: 600px) {\r\n     .rorData-main-container {\r\n"
+                },
+                {
+                    "date": 1706803431207,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,11 +33,11 @@\n     justify-content: center;\r\n }\r\n \r\n .rorPractice-question-container{\r\n-    height: 20px;\r\n+    height: 50px;\r\n     background-color: red;\r\n-    width: 100;\r\n+    width: 100%;\r\n }\r\n \r\n @media (max-width: 600px) {\r\n     .rorData-main-container {\r\n"
+                },
+                {
+                    "date": 1706803443957,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n     justify-content: center;\r\n }\r\n \r\n .rorPractice-question-container{\r\n-    height: 50px;\r\n+    /* min-height: 50px; */\r\n     background-color: red;\r\n     width: 100%;\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1706803462798,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,10 @@\n     justify-content: center;\r\n }\r\n \r\n .rorPractice-question-container{\r\n-    /* min-height: 50px; */\r\n+    min-height: 50px;\r\n+    min-height: 50px;\r\n     background-color: red;\r\n     width: 100%;\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1706803467943,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,10 +33,10 @@\n     justify-content: center;\r\n }\r\n \r\n .rorPractice-question-container{\r\n-    min-height: 50px;\r\n-    min-height: 50px;\r\n+    height: 50px;\r\n+    /* min-height: 50px; */\r\n     background-color: red;\r\n     width: 100%;\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1706803800430,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n \r\n .rorPractice-question-container{\r\n     height: 50px;\r\n     /* min-height: 50px; */\r\n-    background-color: red;\r\n+    /* background-color: red; */\r\n     width: 100%;\r\n }\r\n \r\n @media (max-width: 600px) {\r\n"
+                },
+                {
+                    "date": 1706828837674,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,47 @@\n+.rorPractice-main-container {\r\n+    height: 100dvh;\r\n+    width: 100vw;\r\n+    padding-top: 60px;\r\n+    display: flex;\r\n+    flex-wrap: wrap;\r\n+    overflow: auto;\r\n+}\r\n+\r\n+.rorData-main-container {\r\n+    min-height: 225px;\r\n+    width: 45%;\r\n+    position: relative;\r\n+    margin: 10px;\r\n+    display: flex;\r\n+    justify-content: space-between;\r\n+    border-top: 1px solid;\r\n+    border-bottom: 1px solid;\r\n+}\r\n+\r\n+.image-main-container {\r\n+    height: 100%;\r\n+    width: 40%;\r\n+    display: flex;\r\n+    align-items: center;\r\n+    justify-content: center;\r\n+}\r\n+\r\n+.image-container {\r\n+    width: 80%;\r\n+    display: flex;\r\n+    align-items: center;\r\n+    justify-content: center;\r\n+}\r\n+\r\n+.rorPractice-question-container{\r\n+    /* height: 50px; */\r\n+    min-height: 50px;\r\n+    /* background-color: red; */\r\n+    width: 100%;\r\n+}\r\n+\r\n+@media (max-width: 600px) {\r\n+    .rorData-main-container {\r\n+        width: 90%;\r\n+    }\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1706829199990,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,62 +33,13 @@\n     justify-content: center;\r\n }\r\n \r\n .rorPractice-question-container{\r\n-    /* height: 50px; */\r\n     min-height: 50px;\r\n-    /* background-color: red; */\r\n     width: 100%;\r\n }\r\n \r\n @media (max-width: 600px) {\r\n     .rorData-main-container {\r\n         width: 90%;\r\n     }\r\n-}\n-.rorPractice-main-container {\r\n-    height: 100dvh;\r\n-    width: 100vw;\r\n-    padding-top: 60px;\r\n-    display: flex;\r\n-    flex-wrap: wrap;\r\n-    overflow: auto;\r\n-}\r\n-\r\n-.rorData-main-container {\r\n-    min-height: 225px;\r\n-    width: 45%;\r\n-    position: relative;\r\n-    margin: 10px;\r\n-    display: flex;\r\n-    justify-content: space-between;\r\n-    border-top: 1px solid;\r\n-    border-bottom: 1px solid;\r\n-}\r\n-\r\n-.image-main-container {\r\n-    height: 100%;\r\n-    width: 40%;\r\n-    display: flex;\r\n-    align-items: center;\r\n-    justify-content: center;\r\n-}\r\n-\r\n-.image-container {\r\n-    width: 80%;\r\n-    display: flex;\r\n-    align-items: center;\r\n-    justify-content: center;\r\n-}\r\n-\r\n-.rorPractice-question-container{\r\n-    height: 50px;\r\n-    /* min-height: 50px; */\r\n-    /* background-color: red; */\r\n-    width: 100%;\r\n-}\r\n-\r\n-@media (max-width: 600px) {\r\n-    .rorData-main-container {\r\n-        width: 90%;\r\n-    }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1706829205826,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,8 +35,9 @@\n \r\n .rorPractice-question-container{\r\n     min-height: 50px;\r\n     width: 100%;\r\n+    bo\r\n }\r\n \r\n @media (max-width: 600px) {\r\n     .rorData-main-container {\r\n"
+                },
+                {
+                    "date": 1706829212250,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n \r\n .rorPractice-question-container{\r\n     min-height: 50px;\r\n     width: 100%;\r\n-    bo\r\n+    background-color: ;\r\n }\r\n \r\n @media (max-width: 600px) {\r\n     .rorData-main-container {\r\n"
+                },
+                {
+                    "date": 1706829217846,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n \r\n .rorPractice-question-container{\r\n     min-height: 50px;\r\n     width: 100%;\r\n-    background-color: ;\r\n+    background-color: var(--gray-2);\r\n }\r\n \r\n @media (max-width: 600px) {\r\n     .rorData-main-container {\r\n"
+                },
+                {
+                    "date": 1706829225566,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,10 @@\n \r\n .rorPractice-question-container{\r\n     min-height: 50px;\r\n     width: 100%;\r\n-    background-color: var(--gray-2);\r\n+    background-color: var(--gray-1);\r\n+    \r\n }\r\n \r\n @media (max-width: 600px) {\r\n     .rorData-main-container {\r\n"
+                },
+                {
+                    "date": 1706829230956,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,9 +36,9 @@\n .rorPractice-question-container{\r\n     min-height: 50px;\r\n     width: 100%;\r\n     background-color: var(--gray-1);\r\n-    \r\n+    padding: ;\r\n }\r\n \r\n @media (max-width: 600px) {\r\n     .rorData-main-container {\r\n"
+                },
+                {
+                    "date": 1706829240244,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,9 +36,9 @@\n .rorPractice-question-container{\r\n     min-height: 50px;\r\n     width: 100%;\r\n     background-color: var(--gray-1);\r\n-    padding: ;\r\n+    padding: 5px;\r\n }\r\n \r\n @media (max-width: 600px) {\r\n     .rorData-main-container {\r\n"
+                },
+                {
+                    "date": 1706829246172,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,8 +37,9 @@\n     min-height: 50px;\r\n     width: 100%;\r\n     background-color: var(--gray-1);\r\n     padding: 5px;\r\n+    border-radius: ;\r\n }\r\n \r\n @media (max-width: 600px) {\r\n     .rorData-main-container {\r\n"
+                },
+                {
+                    "date": 1706829253970,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,9 +37,9 @@\n     min-height: 50px;\r\n     width: 100%;\r\n     background-color: var(--gray-1);\r\n     padding: 5px;\r\n-    border-radius: ;\r\n+    border-radius: 5px;\r\n }\r\n \r\n @media (max-width: 600px) {\r\n     .rorData-main-container {\r\n"
+                },
+                {
+                    "date": 1706829841473,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,6 @@\n-.rorPractice-main-container {\r\n-    height: 100dvh;\r\n-    width: 100vw;\r\n-    padding-top: 60px;\r\n-    display: flex;\r\n-    flex-wrap: wrap;\r\n-    overflow: auto;\r\n-}\r\n \r\n+\r\n .rorData-main-container {\r\n     min-height: 225px;\r\n     width: 45%;\r\n     position: relative;\r\n"
+                },
+                {
+                    "date": 1706829850400,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,13 @@\n+.rorPractice-main-container {\r\n+    height: 100dvh;\r\n+    width: 100vw;\r\n+    padding-top: 60px;\r\n+    display: flex;\r\n+    flex-wrap: wrap;\r\n+    overflow: auto;\r\n+}\r\n \r\n-\r\n .rorData-main-container {\r\n     min-height: 225px;\r\n     width: 45%;\r\n     position: relative;\r\n"
+                },
+                {
+                    "date": 1706829860901,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,41 @@\n+\r\n+\r\n+.rorData-main-container {\r\n+    min-height: 225px;\r\n+    width: 45%;\r\n+    position: relative;\r\n+    margin: 10px;\r\n+    display: flex;\r\n+    justify-content: space-between;\r\n+    border-top: 1px solid;\r\n+    border-bottom: 1px solid;\r\n+}\r\n+\r\n+.image-main-container {\r\n+    height: 100%;\r\n+    width: 40%;\r\n+    display: flex;\r\n+    align-items: center;\r\n+    justify-content: center;\r\n+}\r\n+\r\n+.image-container {\r\n+    width: 80%;\r\n+    display: flex;\r\n+    align-items: center;\r\n+    justify-content: center;\r\n+}\r\n+\r\n+.rorPractice-question-container{\r\n+    min-height: 50px;\r\n+    width: 100%;\r\n+    background-color: var(--gray-1);\r\n+    padding: 5px;\r\n+    border-radius: 5px;\r\n+}\r\n+\r\n+@media (max-width: 600px) {\r\n+    .rorData-main-container {\r\n+        width: 90%;\r\n+    }\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1706829870630,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,65 +1,8 @@\n \r\n \r\n-.rorData-main-container {\r\n-    min-height: 225px;\r\n-    width: 45%;\r\n-    position: relative;\r\n-    margin: 10px;\r\n-    display: flex;\r\n-    justify-content: space-between;\r\n-    border-top: 1px solid;\r\n-    border-bottom: 1px solid;\r\n-}\r\n \r\n-.image-main-container {\r\n-    height: 100%;\r\n-    width: 40%;\r\n-    display: flex;\r\n-    align-items: center;\r\n-    justify-content: center;\r\n-}\r\n \r\n-.image-container {\r\n-    width: 80%;\r\n-    display: flex;\r\n-    align-items: center;\r\n-    justify-content: center;\r\n-}\r\n-\r\n-.rorPractice-question-container{\r\n-    min-height: 50px;\r\n-    width: 100%;\r\n-    background-color: var(--gray-1);\r\n-    padding: 5px;\r\n-    border-radius: 5px;\r\n-}\r\n-\r\n-@media (max-width: 600px) {\r\n-    .rorData-main-container {\r\n-        width: 90%;\r\n-    }\r\n-}\n-.rorPractice-main-container {\r\n-    height: 100dvh;\r\n-    width: 100vw;\r\n-    padding-top: 60px;\r\n-    display: flex;\r\n-    flex-wrap: wrap;\r\n-    overflow: auto;\r\n-}\r\n-\r\n-.rorData-main-container {\r\n-    min-height: 225px;\r\n-    width: 45%;\r\n-    position: relative;\r\n-    margin: 10px;\r\n-    display: flex;\r\n-    justify-content: space-between;\r\n-    border-top: 1px solid;\r\n-    border-bottom: 1px solid;\r\n-}\r\n-\r\n .image-main-container {\r\n     height: 100%;\r\n     width: 40%;\r\n     display: flex;\r\n"
+                },
+                {
+                    "date": 1706829899576,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,24 +1,14 @@\n \r\n \r\n-\r\n-\r\n-.image-main-container {\r\n-    height: 100%;\r\n-    width: 40%;\r\n-    display: flex;\r\n-    align-items: center;\r\n-    justify-content: center;\r\n-}\r\n-\r\n .image-container {\r\n     width: 80%;\r\n     display: flex;\r\n     align-items: center;\r\n     justify-content: center;\r\n }\r\n \r\n-.rorPractice-question-container{\r\n+.rorPractice-question-container {\r\n     min-height: 50px;\r\n     width: 100%;\r\n     background-color: var(--gray-1);\r\n     padding: 5px;\r\n@@ -28,5 +18,5 @@\n @media (max-width: 600px) {\r\n     .rorData-main-container {\r\n         width: 90%;\r\n     }\r\n-}\n\\ No newline at end of file\n+}\r\n"
+                },
+                {
+                    "date": 1706829914461,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,6 @@\n \r\n \r\n-.image-container {\r\n-    width: 80%;\r\n-    display: flex;\r\n-    align-items: center;\r\n-    justify-content: center;\r\n-}\r\n-\r\n .rorPractice-question-container {\r\n     min-height: 50px;\r\n     width: 100%;\r\n     background-color: var(--gray-1);\r\n"
+                },
+                {
+                    "date": 1706829966281,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,10 +6,4 @@\n     background-color: var(--gray-1);\r\n     padding: 5px;\r\n     border-radius: 5px;\r\n }\r\n-\r\n-@media (max-width: 600px) {\r\n-    .rorData-main-container {\r\n-        width: 90%;\r\n-    }\r\n-}\r\n"
+                }
+            ],
+            "date": 1706757949339,
+            "name": "Commit-0",
+            "content": ".signPractice-main-container {\r\n    height: 100dvh;\r\n    width: 100vw;\r\n    padding-top: 60px;\r\n    display: flex;\r\n    flex-wrap: wrap;\r\n    overflow: auto;\r\n}\r\n"
+        }
+    ]
+}

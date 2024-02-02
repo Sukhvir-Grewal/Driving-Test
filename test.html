@@ -1,51 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <style>
-        :root {
-            --bg: black;
-        }
-        *{
-            transition: background-color .5s ease;
-
-        }
-        body {
-            background-color: var(--bg);
-        }
-        .container1,
-        .container2,
-        .container3 {
-            height: 100vh;
-            width: 50vw;
-            background-color: red;
-        }
-        .container2 {
-            background-color: green;
-        }
-        .container3 {
-            background-color: blue;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prevent Reload with Warning</title>
+<script>
+  window.onbeforeunload = function(){
+    var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    if(isMobile) {
+      return "Are you sure you want to leave? Your changes may not be saved.";
+    }
+  };
+</script>
 </head>
 <body>
-    <div class="container1"></div>
-    <div class="container2"></div>
-    <div class="container3"></div>
-    <script>
-        const c2 = document.querySelector(".container2");
-
-        // Listen for scroll events
-        window.addEventListener('scroll', function() {
-            const rect = c2.getBoundingClientRect();
-            if (rect.top >= 0 && rect.top <= window.innerHeight) {
-                document.documentElement.style.setProperty('--bg', 'white');
-            } else {
-                document.documentElement.style.setProperty('--bg', 'black');
-            }
-        });
-    </script>
+<!-- Your HTML content goes here -->
 </body>
 </html>

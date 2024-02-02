@@ -204,7 +204,7 @@ export default function Home() {
                             afterPracticeAnimation ? "slideToLeft" : ""
                         }`}
                     >
-                        Practice
+                        Revision
                     </div>
                 )}
                 {showPracticeMenu && (

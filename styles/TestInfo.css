@@ -1,6 +1,9 @@
-
-
-.practice-heading{
+.scrollable-container {
+    height: 100dvh;
+    width: 100vw;
+    overflow-x: hidden;
+}
+.practice-heading {
     width: 100%;
     display: grid;
     place-content: center;
@@ -9,7 +12,7 @@
     columns: red;
 }
 
-.driving-test-store-container{
+.driving-test-store-container {
     margin-top: 10px;
     height: 200px;
     width: 100vw;
@@ -17,11 +20,11 @@
     margin-top: 50px;
 }
 
-.driving-test-store{
+.driving-test-store {
     height: 100%;
 }
 
-.data-heading-container{
+.data-heading-container {
     width: 90vw;
     height: 50px;
     margin-left: 20px;
@@ -36,8 +39,7 @@
     color: var(--text-color);
 }
 
-
-.data-container{
+.data-container {
     width: 90vw;
     padding-left: 10px;
     margin-top: 10px;
@@ -46,12 +48,12 @@
     color: var(--text-color);
 }
 
-.data-container > li{
+.data-container > li {
     margin-left: 20px;
 }
 
 @media (max-width: 600px) {
-    .practice-heading{
+    .practice-heading {
         font-size: larger;
     }
 }

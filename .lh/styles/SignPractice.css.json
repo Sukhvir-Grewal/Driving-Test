@@ -1,0 +1,90 @@
+{
+    "sourceFile": "styles/SignPractice.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 18,
+            "patches": [
+                {
+                    "date": 1706669087305,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1706669095514,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,4 @@\n .signPractice-main-container{\r\n-    \r\n+    height: 100dvh;\r\n+    width: 100vw;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1706669182000,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,7 @@\n .signPractice-main-container{\r\n     height: 100dvh;\r\n     width: 100vw;\r\n-}\n\\ No newline at end of file\n+    background-color: red;\r\n+}\r\n+\r\n+.signData-main-container\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1706669190307,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,5 +3,7 @@\n     width: 100vw;\r\n     background-color: red;\r\n }\r\n \r\n-.signData-main-container\n\\ No newline at end of file\n+.signData-main-container{\r\n+    width: 100;\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1706669198511,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,6 +4,7 @@\n     background-color: red;\r\n }\r\n \r\n .signData-main-container{\r\n-    width: 100;\r\n+    width: 100vw;\r\n+    height: ;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1706669206965,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,6 +5,7 @@\n }\r\n \r\n .signData-main-container{\r\n     width: 100vw;\r\n-    height: ;\r\n+    height: 200px;\r\n+    background-color: green;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1706669212462,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n .signPractice-main-container{\r\n     height: 100dvh;\r\n     width: 100vw;\r\n     background-color: red;\r\n+    padding: ;\r\n }\r\n \r\n .signData-main-container{\r\n     width: 100vw;\r\n"
+                },
+                {
+                    "date": 1706669230208,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,10 @@\n .signPractice-main-container{\r\n     height: 100dvh;\r\n     width: 100vw;\r\n     background-color: red;\r\n-    padding: ;\r\n+    padding: 20px;\r\n+    margin-top: ;\r\n }\r\n \r\n .signData-main-container{\r\n     width: 100vw;\r\n"
+                },
+                {
+                    "date": 1706669378807,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,10 @@\n .signPractice-main-container{\r\n     height: 100dvh;\r\n     width: 100vw;\r\n     background-color: red;\r\n-    padding: 20px;\r\n-    margin-top: ;\r\n+    padding-: 20px;\r\n+    margin-top: 50px;\r\n }\r\n \r\n .signData-main-container{\r\n     width: 100vw;\r\n"
+                },
+                {
+                    "date": 1706669384871,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n .signPractice-main-container{\r\n     height: 100dvh;\r\n     width: 100vw;\r\n     background-color: red;\r\n-    padding-: 20px;\r\n+    /* padding-right: 20px; */\r\n     margin-top: 50px;\r\n }\r\n \r\n .signData-main-container{\r\n"
+                },
+                {
+                    "date": 1706669413846,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n .signPractice-main-container{\r\n-    height: 100dvh;\r\n-    width: 100vw;\r\n+    height: 100%;\r\n+    width: 100%;\r\n     background-color: red;\r\n     /* padding-right: 20px; */\r\n     margin-top: 50px;\r\n }\r\n"
+                },
+                {
+                    "date": 1706669446980,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n .signPractice-main-container{\r\n     height: 100%;\r\n     width: 100%;\r\n     background-color: red;\r\n-    /* padding-right: 20px; */\r\n+    padding-right: 20px;\r\n     margin-top: 50px;\r\n }\r\n \r\n .signData-main-container{\r\n"
+                },
+                {
+                    "date": 1706669454815,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n .signPractice-main-container{\r\n     height: 100%;\r\n     width: 100%;\r\n     background-color: red;\r\n-    padding-right: 20px;\r\n+    padding: 20px;\r\n     margin-top: 50px;\r\n }\r\n \r\n .signData-main-container{\r\n"
+                },
+                {
+                    "date": 1706711415012,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n .signPractice-main-container{\r\n-    height: 100%;\r\n-    width: 100%;\r\n+    height: 10;\r\n+    width: 10;\r\n     background-color: red;\r\n     padding: 20px;\r\n     margin-top: 50px;\r\n }\r\n"
+                },
+                {
+                    "date": 1706711420902,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n .signPractice-main-container{\r\n-    height: 10;\r\n-    width: 10;\r\n+    height: 100dvw;\r\n+    width: 100vw;\r\n     background-color: red;\r\n     padding: 20px;\r\n     margin-top: 50px;\r\n }\r\n"
+                },
+                {
+                    "date": 1706711441717,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,12 +2,10 @@\n     height: 100dvw;\r\n     width: 100vw;\r\n     background-color: red;\r\n     padding: 20px;\r\n-    margin-top: 50px;\r\n }\r\n \r\n .signData-main-container{\r\n-    width: 100vw;\r\n     height: 200px;\r\n     background-color: green;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1706711478905,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,6 +6,7 @@\n }\r\n \r\n .signData-main-container{\r\n     height: 200px;\r\n+    height: 200px;\r\n     background-color: green;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1706711487667,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n     width: 100vw;\r\n     background-color: red;\r\n     padding: 20px;\r\n     display: flex;\r\n-    \r\n+    j\r\n }\r\n \r\n .signData-main-container{\r\n     height: 200px;\r\n"
+                },
+                {
+                    "date": 1706711533927,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,14 @@\n+.signPractice-main-container{\r\n+    height: 100dvw;\r\n+    width: 100vw;\r\n+    background-color: red;\r\n+    /* padding: 20px; */\r\n+    display: flex;\r\n+    /* justify-content: flex-end; */\r\n+}\r\n+\r\n+.signData-main-container{\r\n+    height: 200px;\r\n+    width: 200px;\r\n+    background-color: green;\r\n+}\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1706669087305,
+            "name": "Commit-0",
+            "content": ".signPractice-main-container{\r\n    \r\n}"
+        }
+    ]
+}

@@ -1,0 +1,178 @@
+{
+    "sourceFile": "components/RorPractice.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 40,
+            "patches": [
+                {
+                    "date": 1706757534283,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1706757540528,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,1 @@\n+export default function RorPractice()\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1706757553287,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,7 @@\n+export default function RorPractice(){\r\n+    return (\r\n+        <>\r\n+            Hello World\r\n+        </>\r\n+    )\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1706757626181,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,8 @@\n export default function RorPractice(){\r\n     return (\r\n         <>\r\n             Hello World\r\n+            <br/>\r\n         </>\r\n     )\r\n-}\n-export default function RorPractice()\n\\ No newline at end of file\n-export default function \n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1706757632544,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,24 @@\n+export default function RorPractice(){\r\n+    return (\r\n+        <>\r\n+            Hello World\r\n+            <br/>\r\n+            Hello World\r\n+            <br/>\r\n+            Hello World\r\n+            <br/>\r\n+            Hello World\r\n+            <br/>\r\n+            Hello World\r\n+            <br/>\r\n+            Hello World\r\n+            <br/>\r\n+            Hello World\r\n+            <br/>\r\n+            Hello World\r\n+            <br/>\r\n+            Hello World\r\n+            <br/>\r\n+        </>\r\n+    )\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1706757703246,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,32 +1,7 @@\n export default function RorPractice(){\r\n     return (\r\n         <>\r\n-            Hello World\r\n-            <br/>\r\n-            Hello World\r\n-            <br/>\r\n-            Hello World\r\n-            <br/>\r\n-            Hello World\r\n-            <br/>\r\n-            Hello World\r\n-            <br/>\r\n-            Hello World\r\n-            <br/>\r\n-            Hello World\r\n-            <br/>\r\n-            Hello World\r\n-            <br/>\r\n-            Hello World\r\n-            <br/>\r\n+            \r\n         </>\r\n     )\r\n-}\n-export default function RorPractice(){\r\n-    return (\r\n-        <>\r\n-            Hello World\r\n-            <br/>\r\n-        </>\r\n-    )\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1706757939220,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n export default function RorPractice(){\r\n     return (\r\n         <>\r\n-            \r\n+            <div className=\"signData-main-container\"></div>\r\n         </>\r\n     )\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1706757955954,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,9 @@\n export default function RorPractice(){\r\n     return (\r\n         <>\r\n-            <div className=\"signData-main-container\"></div>\r\n+            <div className=\"rorData-main-container\">\r\n+\r\n+            </div>\r\n         </>\r\n     )\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1706757993094,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n export default function RorPractice(){\r\n     return (\r\n         <>\r\n             <div className=\"rorData-main-container\">\r\n-\r\n+                \r\n             </div>\r\n         </>\r\n     )\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1706758055018,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n export default function RorPractice(){\r\n     return (\r\n         <>\r\n-            <div className=\"rorData-main-container\">\r\n-                \r\n+            <div className=\"rorPractice-main-container\">\r\n+\r\n             </div>\r\n         </>\r\n     )\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1706758096993,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,7 @@\n-export default function RorPractice(){\r\n+export default function RorPractice() {\r\n     return (\r\n         <>\r\n-            <div className=\"rorPractice-main-container\">\r\n-\r\n-            </div>\r\n+            <div className=\"rorPractice-main-container\"></div>\r\n         </>\r\n\\ No newline at end of file\n-    )\r\n-}\n+    );\r\n+}\r\n"
+                },
+                {
+                    "date": 1706758102417,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,8 @@\n+export default function RorPractice() {\r\n+    return (\r\n+        <>\r\n+            <div className=\"rorPractice-main-container\"></div>\r\n+            <div className=\"signData-main-container\"></div>\r\n+        </>\r\n+    );\r\n+}\r\n"
+                },
+                {
+                    "date": 1706758109895,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,15 +1,9 @@\n export default function RorPractice() {\r\n     return (\r\n         <>\r\n-            <div className=\"rorPractice-main-container\"></div>\r\n-            <div className=\"signData-main-container\"></div>\r\n+            <div className=\"rorPractice-main-container\">\r\n+                <div className=\"signData-main-container\"></div>\r\n+            </div>\r\n         </>\r\n     );\r\n }\r\n-export default function RorPractice() {\r\n-    return (\r\n-        <>\r\n-            <div className=\"rorPractice-main-container\"></div>\r\n\\ No newline at end of file\n-        </>\r\n-    );\r\n-}\n"
+                },
+                {
+                    "date": 1706758124830,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n export default function RorPractice() {\r\n     return (\r\n         <>\r\n             <div className=\"rorPractice-main-container\">\r\n-                <div className=\"signData-main-container\"></div>\r\n+                <div className=\"Data-main-container\"></div>\r\n             </div>\r\n         </>\r\n     );\r\n }\r\n"
+                },
+                {
+                    "date": 1706758144814,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n export default function RorPractice() {\r\n     return (\r\n         <>\r\n             <div className=\"rorPractice-main-container\">\r\n-                <div className=\"Data-main-container\"></div>\r\n+                <div className=\"rorData-main-container\"></div>\r\n             </div>\r\n         </>\r\n     );\r\n }\r\n"
+                },
+                {
+                    "date": 1706758232170,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,10 @@\n export default function RorPractice() {\r\n     return (\r\n         <>\r\n-            <div className=\"rorPractice-main-container\">\r\n+            {/* <div className=\"rorPractice-main-container\">\r\n                 <div className=\"rorData-main-container\"></div>\r\n-            </div>\r\n+            </div> */}\r\n+            \r\n         </>\r\n     );\r\n }\r\n"
+                },
+                {
+                    "date": 1706758238335,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,11 @@\n+export default function RorPractice() {\r\n+    return (\r\n+        <>\r\n+            {/* <div className=\"rorPractice-main-container\">\r\n+                <div className=\"rorData-main-container\"></div>\r\n+            </div> */}\r\n+            heloo\r\n+            <br/>\r\n+        </>\r\n+    );\r\n+}\r\n"
+                },
+                {
+                    "date": 1706758331273,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,21 +1,9 @@\n export default function RorPractice() {\r\n     return (\r\n         <>\r\n-            {/* <div className=\"rorPractice-main-container\">\r\n+            <div className=\"rorPractice-main-container\">\r\n                 <div className=\"rorData-main-container\"></div>\r\n-            </div> */}\r\n-            heloo\r\n-            <br/>\r\n+            </div>\r\n         </>\r\n     );\r\n }\r\n-export default function RorPractice() {\r\n-    return (\r\n-        <>\r\n-            {/* <div className=\"rorPractice-main-container\">\r\n-                <div className=\"rorData-main-container\"></div>\r\n-            </div> */}\r\n-            \r\n-        </>\r\n-    );\r\n-}\r\n"
+                },
+                {
+                    "date": 1706758366273,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,7 +3,10 @@\n         <>\r\n             <div className=\"rorPractice-main-container\">\r\n                 <div className=\"rorData-main-container\"></div>\r\n             </div>\r\n+            <div className=\"rorPractice-main-container\">\r\n+                <div className=\"rorData-main-container\"></div>\r\n+            </div>\r\n         </>\r\n     );\r\n }\r\n"
+                },
+                {
+                    "date": 1706758372281,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,10 +3,7 @@\n         <>\r\n             <div className=\"rorPractice-main-container\">\r\n                 <div className=\"rorData-main-container\"></div>\r\n             </div>\r\n-            <div className=\"rorPractice-main-container\">\r\n-                <div className=\"rorData-main-container\"></div>\r\n-            </div>\r\n         </>\r\n     );\r\n }\r\n"
+                },
+                {
+                    "date": 1706758425685,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,11 @@\n export default function RorPractice() {\r\n     return (\r\n         <>\r\n             <div className=\"rorPractice-main-container\">\r\n-                <div className=\"rorData-main-container\"></div>\r\n+                <div className=\"rorData-main-container\">\r\n+                    \r\n+                </div>\r\n             </div>\r\n         </>\r\n     );\r\n }\r\n"
+                },
+                {
+                    "date": 1706758467474,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,15 @@\n     return (\r\n         <>\r\n             <div className=\"rorPractice-main-container\">\r\n                 <div className=\"rorData-main-container\">\r\n+\r\n+\r\n+\r\n+\r\n+\r\n+\r\n+\r\n                     \r\n                 </div>\r\n             </div>\r\n         </>\r\n"
+                },
+                {
+                    "date": 1706758532160,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n \r\n \r\n \r\n \r\n-                    \r\n+                    QW\r\n                 </div>\r\n             </div>\r\n         </>\r\n     );\r\n"
+                },
+                {
+                    "date": 1706802945888,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,16 +2,8 @@\n     return (\r\n         <>\r\n             <div className=\"rorPractice-main-container\">\r\n                 <div className=\"rorData-main-container\">\r\n-\r\n-\r\n-\r\n-\r\n-\r\n-\r\n-\r\n-                    QW\r\n                 </div>\r\n             </div>\r\n         </>\r\n     );\r\n"
+                },
+                {
+                    "date": 1706802994314,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,19 @@\n     return (\r\n         <>\r\n             <div className=\"rorPractice-main-container\">\r\n                 <div className=\"rorData-main-container\">\r\n+                    \r\n                 </div>\r\n+                <div className=\"rorData-main-container\">\r\n+\r\n+                </div>\r\n+                <div className=\"rorData-main-container\">\r\n+\r\n+                </div>\r\n+                <div className=\"rorData-main-container\">\r\n+\r\n+                </div>\r\n             </div>\r\n         </>\r\n     );\r\n }\r\n"
+                },
+                {
+                    "date": 1706803024118,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,17 +4,9 @@\n             <div className=\"rorPractice-main-container\">\r\n                 <div className=\"rorData-main-container\">\r\n                     \r\n                 </div>\r\n-                <div className=\"rorData-main-container\">\r\n-\r\n-                </div>\r\n-                <div className=\"rorData-main-container\">\r\n-\r\n-                </div>\r\n-                <div className=\"rorData-main-container\">\r\n-\r\n-                </div>\r\n+                \r\n             </div>\r\n         </>\r\n     );\r\n }\r\n"
+                },
+                {
+                    "date": 1706803029797,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,14 @@\n             <div className=\"rorPractice-main-container\">\r\n                 <div className=\"rorData-main-container\">\r\n                     \r\n                 </div>\r\n+\r\n                 \r\n+                <div className=\"rorData-main-container\">\r\n+                    \r\n+                </div>\r\n+                \r\n             </div>\r\n         </>\r\n     );\r\n }\r\n"
+                },
+                {
+                    "date": 1706803036316,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,17 +1,13 @@\n export default function RorPractice() {\r\n     return (\r\n         <>\r\n             <div className=\"rorPractice-main-container\">\r\n-                <div className=\"rorData-main-container\">\r\n-                    \r\n-                </div>\r\n+                <div className=\"rorData-main-container\"></div>\r\n \r\n-                \r\n-                <div className=\"rorData-main-container\">\r\n-                    \r\n-                </div>\r\n-                \r\n+                <div className=\"rorData-main-container\"></div>\r\n+                <div className=\"rorData-main-container\"></div>\r\n+                <div className=\"rorData-main-container\"></div>\r\n             </div>\r\n         </>\r\n     );\r\n }\r\n"
+                },
+                {
+                    "date": 1706803050804,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,11 @@\n export default function RorPractice() {\r\n     return (\r\n         <>\r\n             <div className=\"rorPractice-main-container\">\r\n-                <div className=\"rorData-main-container\"></div>\r\n+                <div className=\"rorData-main-container\">\r\n+                    <div\r\n+                </div>\r\n \r\n                 <div className=\"rorData-main-container\"></div>\r\n                 <div className=\"rorData-main-container\"></div>\r\n                 <div className=\"rorData-main-container\"></div>\r\n"
+                },
+                {
+                    "date": 1706803078402,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n     return (\r\n         <>\r\n             <div className=\"rorPractice-main-container\">\r\n                 <div className=\"rorData-main-container\">\r\n-                    <div\r\n+                    <div className=\"image-main-container\"></div>\r\n                 </div>\r\n \r\n                 <div className=\"rorData-main-container\"></div>\r\n                 <div className=\"rorData-main-container\"></div>\r\n"
+                },
+                {
+                    "date": 1706803121261,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,9 @@\n     return (\r\n         <>\r\n             <div className=\"rorPractice-main-container\">\r\n                 <div className=\"rorData-main-container\">\r\n+                <div className=\"counter-container\">{data.id}</div>\r\n                     <div className=\"image-main-container\"></div>\r\n                 </div>\r\n \r\n                 <div className=\"rorData-main-container\"></div>\r\n"
+                },
+                {
+                    "date": 1706803126909,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n     return (\r\n         <>\r\n             <div className=\"rorPractice-main-container\">\r\n                 <div className=\"rorData-main-container\">\r\n-                <div className=\"counter-container\">{data.id}</div>\r\n+                <div className=\"counter-container\">1</div>\r\n                     <div className=\"image-main-container\"></div>\r\n                 </div>\r\n \r\n                 <div className=\"rorData-main-container\"></div>\r\n"
+                },
+                {
+                    "date": 1706803172480,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,19 @@\n+export default function RorPractice() {\r\n+    return (\r\n+        <>\r\n+            <div className=\"rorPractice-main-container\">\r\n+                <div className=\"rorData-main-container\">\r\n+                <div className=\"counter-container\">1.</div>\r\n+                    <div className=\"image-main-container\">\r\n+                    <div className=\"image-main-container\"></div>\r\n+\r\n+                    </div>\r\n+                </div>\r\n+\r\n+                <div className=\"rorData-main-container\"></div>\r\n+                <div className=\"rorData-main-container\"></div>\r\n+                <div className=\"rorData-main-container\"></div>\r\n+            </div>\r\n+        </>\r\n+    );\r\n+}\r\n"
+                },
+                {
+                    "date": 1706803211647,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,10 +4,10 @@\n             <div className=\"rorPractice-main-container\">\r\n                 <div className=\"rorData-main-container\">\r\n                 <div className=\"counter-container\">1.</div>\r\n                     <div className=\"image-main-container\">\r\n-                    <div className=\"image-main-container\"></div>\r\n-\r\n+                    <div className=\"image-container\"></div>\r\n+                        <img />\r\n                     </div>\r\n                 </div>\r\n \r\n                 <div className=\"rorData-main-container\"></div>\r\n@@ -16,20 +16,4 @@\n             </div>\r\n         </>\r\n     );\r\n }\r\n-export default function RorPractice() {\r\n-    return (\r\n-        <>\r\n-            <div className=\"rorPractice-main-container\">\r\n-                <div className=\"rorData-main-container\">\r\n-                <div className=\"counter-container\">1</div>\r\n-                    <div className=\"image-main-container\"></div>\r\n-                </div>\r\n-\r\n-                <div className=\"rorData-main-container\"></div>\r\n-                <div className=\"rorData-main-container\"></div>\r\n-                <div className=\"rorData-main-container\"></div>\r\n-            </div>\r\n-        </>\r\n-    );\r\n-}\r\n"
+                },
+                {
+                    "date": 1706803216790,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n                 <div className=\"rorData-main-container\">\r\n                 <div className=\"counter-container\">1.</div>\r\n                     <div className=\"image-main-container\">\r\n                     <div className=\"image-container\"></div>\r\n-                        <img />\r\n+                        <img src={}/>\r\n                     </div>\r\n                 </div>\r\n \r\n                 <div className=\"rorData-main-container\"></div>\r\n"
+                },
+                {
+                    "date": 1706803224258,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,15 @@\n+import { rorData } from \"@/storage/rorData\";\r\n+\r\n export default function RorPractice() {\r\n     return (\r\n         <>\r\n             <div className=\"rorPractice-main-container\">\r\n                 <div className=\"rorData-main-container\">\r\n                 <div className=\"counter-container\">1.</div>\r\n                     <div className=\"image-main-container\">\r\n                     <div className=\"image-container\"></div>\r\n-                        <img src={}/>\r\n+                        <img src={rorData.}/>\r\n                     </div>\r\n                 </div>\r\n \r\n                 <div className=\"rorData-main-container\"></div>\r\n"
+                },
+                {
+                    "date": 1706803229608,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n                 <div className=\"rorData-main-container\">\r\n                 <div className=\"counter-container\">1.</div>\r\n                     <div className=\"image-main-container\">\r\n                     <div className=\"image-container\"></div>\r\n-                        <img src={rorData.}/>\r\n+                        <img src={rorData[0].}/>\r\n                     </div>\r\n                 </div>\r\n \r\n                 <div className=\"rorData-main-container\"></div>\r\n"
+                },
+                {
+                    "date": 1706803319538,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,12 +4,12 @@\n     return (\r\n         <>\r\n             <div className=\"rorPractice-main-container\">\r\n                 <div className=\"rorData-main-container\">\r\n-                <div className=\"counter-container\">1.</div>\r\n+                    <div className=\"counter-container\">1.</div>\r\n                     <div className=\"image-main-container\">\r\n-                    <div className=\"image-container\"></div>\r\n-                        <img src={rorData[0].}/>\r\n+                        <div className=\"image-container\"></div>\r\n+                        <img src={rorData[0].imageUrl} />\r\n                     </div>\r\n                 </div>\r\n \r\n                 <div className=\"rorData-main-container\"></div>\r\n"
+                },
+                {
+                    "date": 1706803357525,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,8 +9,9 @@\n                     <div className=\"image-main-container\">\r\n                         <div className=\"image-container\"></div>\r\n                         <img src={rorData[0].imageUrl} />\r\n                     </div>\r\n+                    <div className=\"\"></div>\r\n                 </div>\r\n \r\n                 <div className=\"rorData-main-container\"></div>\r\n                 <div className=\"rorData-main-container\"></div>\r\n"
+                },
+                {
+                    "date": 1706803373277,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n                     <div className=\"image-main-container\">\r\n                         <div className=\"image-container\"></div>\r\n                         <img src={rorData[0].imageUrl} />\r\n                     </div>\r\n-                    <div className=\"rorPractice\"></div>\r\n+                    <div className=\"rorPractice-\"></div>\r\n                 </div>\r\n \r\n                 <div className=\"rorData-main-container\"></div>\r\n                 <div className=\"rorData-main-container\"></div>\r\n"
+                },
+                {
+                    "date": 1706803474268,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,24 @@\n+import { rorData } from \"@/storage/rorData\";\r\n+\r\n+export default function RorPractice() {\r\n+    return (\r\n+        <>\r\n+            <div className=\"rorPractice-main-container\">\r\n+                <div className=\"rorData-main-container\">\r\n+                    <div className=\"counter-container\">1.</div>\r\n+                    <div className=\"image-main-container\">\r\n+                        <div className=\"image-container\"></div>\r\n+                        <img src={rorData[0].imageUrl} />\r\n+                    </div>\r\n+                    <div className=\"rorPractice-question-container\">\r\n+                        \r\n+                    </div>\r\n+                </div>\r\n+\r\n+                <div className=\"rorData-main-container\"></div>\r\n+                <div className=\"rorData-main-container\"></div>\r\n+                <div className=\"rorData-main-container\"></div>\r\n+            </div>\r\n+        </>\r\n+    );\r\n+}\r\n"
+                }
+            ],
+            "date": 1706757534283,
+            "name": "Commit-0",
+            "content": "export default function "
+        }
+    ]
+}
