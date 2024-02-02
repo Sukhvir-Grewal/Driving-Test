@@ -8,7 +8,7 @@ import { darkMode, lightMode } from "./colorModes";
 import { useAtom } from "jotai";
 import { userData } from "@/jotaiStorage";
 import Cookies from "js-cookie";
-export default function TrafficSignQuiz() {
+export default function Quiz() {
     const router = useRouter();
     const dataType = router.query.dataType;
     const MAX_QUESTIONS = dataType === "FullTest" ? 40 : 20;
@@ -81,7 +81,7 @@ export default function TrafficSignQuiz() {
                 rorData[currentOptionSet].question;
         }
         if (currentSignRef.current) {
-            currentSignRef.current.src = data[currentOptionSet].imageUrl;
+            currentSignRef.current.src = data[currentOptionSet]?.imageUrl;
         }
     }, [isSignDiv, currentQuestionRef, currentOptionSet]);
 
@@ -451,7 +451,7 @@ export default function TrafficSignQuiz() {
             }
         }
         if (currentSignRef.current) {
-            currentSignRef.current.src = data[randomOptionSet].imageUrl;
+            currentSignRef.current.src = data[randomOptionSet]?.imageUrl;
         }
         if (currentQuestionRef.current) {
             currentQuestionRef.current.innerHTML =

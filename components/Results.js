@@ -50,7 +50,7 @@ export default function Results({ resultData, data }) {
     const getBackgroundColor = (index, optionIndex) => {
         const storedWrongAnswer = resultData.storedWrongAnswers[index];
         const correctOptionIndex =
-            data[storedWrongAnswer.question].correctAns - 1;
+            data[storedWrongAnswer.question]?.correctAns - 1;
 
         if (storedWrongAnswer.wrongAnswerIndex === optionIndex)
             return RED_COLOR;
