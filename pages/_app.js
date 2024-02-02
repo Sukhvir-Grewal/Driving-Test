@@ -8,7 +8,6 @@ import "@/styles/Settings.css";
 import "@/styles/TestInfo.css";
 import "@/styles/Practice.css";
 
-import "@fortawesome/fontawesome-svg-core/styles.css";
 import Head from "next/head";
 export default function App({ Component, pageProps }) {
     return (
