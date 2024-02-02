@@ -1,7 +1,7 @@
 import User from "./User";
 import connectDB from "./mongo";
 
-const bcrypt = require("bcrypt");
+import bcrypt from "bcryptjs";
 
 connectDB();
 
