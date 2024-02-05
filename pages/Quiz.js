@@ -26,7 +26,9 @@ export default function Quiz() {
     const currentQuestionRef = useRef(null);
     let timeoutRef = useRef(null);
     let runningTimeoutRef = useRef(null);
-    const optionContainerRef = Array.from({ length: 4 }, () => useRef());
+    // const optionContainerRef = Array.from({ length: 4 }, () => useRef());
+    //    const optionContainerRef = useRef(Array.from({ length: 4 }).map(() => createRef()));
+    const optionContainerRef = [useRef(), useRef(), useRef(), useRef()];
 
     const [confirmDisplay, setConfirmDisplay] = useState(false);
     const [currentOptionSet, setCurrentOptionSet] = useState(0);
