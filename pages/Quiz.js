@@ -8,6 +8,8 @@ import { darkMode, lightMode } from "../colorModes";
 import { useAtom } from "jotai";
 import { userData } from "@/jotaiStorage";
 import Cookies from "js-cookie";
+
+const optionContainerRef = Array.from({ length: 4 }, () => useRef(null));
 export default function Quiz() {
     const router = useRouter();
     const dataType = router.query.dataType;
@@ -26,7 +28,6 @@ export default function Quiz() {
     const currentQuestionRef = useRef(null);
     let timeoutRef = useRef(null);
     let runningTimeoutRef = useRef(null);
-    const optionContainerRef = Array.from({ length: 4 }, () => useRef(null));
 
     
 
