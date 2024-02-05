@@ -168,10 +168,13 @@ export default function Settings() {
                     <div className="stat">
                         <div className="data-type">Pass Percentage</div>
                         <div className="data">
-                            {(
+                            {
+                                user.totalQuizTaken ? 
+                            (
                                 (user.totalQuizPassed / user.totalQuizTaken) *
                                 100
-                            ).toFixed(2)}
+                            ).toFixed(2):
+                            "0"}
                             %
                         </div>
                     </div>
