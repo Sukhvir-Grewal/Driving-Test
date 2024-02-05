@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 5,
+            "activePatchIndex": 6,
             "patches": [
                 {
                     "date": 1703962492143,
@@ -28,6 +28,10 @@
                 {
                     "date": 1707102993777,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,38 @@\n-npm install --save bcryptjs && npm uninstall --save bcrypt\n\\ No newline at end of file\n+{\r\n+    \"name\": \"driving\",\r\n+    \"version\": \"0.1.0\",\r\n+    \"private\": true,\r\n+    \"scripts\": {\r\n+        \"dev\": \"next dev\",\r\n+        \"build\": \"next build\",\r\n+        \"start\": \"next start\",\r\n+        \"lint\": \"next lint\"\r\n+    },\r\n+    \"dependencies\": {\r\n+        \"@fortawesome/fontawesome-free\": \"^6.5.1\",\r\n+        \"@cloudinary/react\": \"^1.12.0\",\r\n+        \"@cloudinary/url-gen\": \"^1.16.0\",\r\n+        \"axios\": \"^1.6.7\",\r\n+        \"bcryptjs\": \"^2.4.3\",\r\n+        \"body-parser\": \"^1.20.2\",\r\n+        \"cloudinary\": \"^2.0.0\",\r\n+        \"express\": \"^4.18.2\",\r\n+        \"jotai\": \"^2.6.4\",\r\n+        \"js-cookie\": \"^3.0.5\",\r\n+        \"js-cookies\": \"^1.0.4\",\r\n+        \"jsonwebtoken\": \"^9.0.2\",\r\n+        \"mongoose\": \"^8.1.1\",\r\n+        \"multer\": \"^1.4.5-lts.1\",\r\n+        \"next\": \"14.1.0\",\r\n+        \"node\": \"^21.6.1\",\r\n+        \"react\": \"^18\",\r\n+        \"react-dom\": \"^18\",\r\n+        \"react-hook-form\": \"^7.50.0\",\r\n+        \"sass\": \"^1.70.0\",\r\n+        \"streamifier\": \"^0.1.1\"\r\n+    },\r\n+    \"devDependencies\": {\r\n+        \"eslint\": \"^8\",\r\n+        \"eslint-config-next\": \"14.1.0\"\r\n+    }\r\n+}\r\n"
+                },
+                {
+                    "date": 1707115685619,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,18 +1,21 @@\n {\r\n     \"name\": \"driving\",\r\n     \"version\": \"0.1.0\",\r\n     \"private\": true,\r\n+    \"engines\": {\r\n+        \"node\": \">=20\"\r\n+    },\r\n     \"scripts\": {\r\n         \"dev\": \"next dev\",\r\n         \"build\": \"next build\",\r\n         \"start\": \"next start\",\r\n         \"lint\": \"next lint\"\r\n     },\r\n     \"dependencies\": {\r\n-        \"@fortawesome/fontawesome-free\": \"^6.5.1\",\r\n         \"@cloudinary/react\": \"^1.12.0\",\r\n         \"@cloudinary/url-gen\": \"^1.16.0\",\r\n+        \"@fortawesome/fontawesome-free\": \"^6.5.1\",\r\n         \"axios\": \"^1.6.7\",\r\n         \"bcryptjs\": \"^2.4.3\",\r\n         \"body-parser\": \"^1.20.2\",\r\n         \"cloudinary\": \"^2.0.0\",\r\n@@ -24,8 +27,9 @@\n         \"mongoose\": \"^8.1.1\",\r\n         \"multer\": \"^1.4.5-lts.1\",\r\n         \"next\": \"14.1.0\",\r\n         \"node\": \"^21.6.1\",\r\n+        \"npm\": \"^10.4.0\",\r\n         \"react\": \"^18\",\r\n         \"react-dom\": \"^18\",\r\n         \"react-hook-form\": \"^7.50.0\",\r\n         \"sass\": \"^1.70.0\",\r\n"
                 }
             ],
             "date": 1703962492143,
