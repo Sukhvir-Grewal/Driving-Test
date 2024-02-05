@@ -2,7 +2,7 @@ import { userData } from "@/jotaiStorage";
 import axios from "axios";
 import { useAtom } from "jotai";
 import { useRouter } from "next/router";
-import { useContext, useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import Cookies from "js-cookie";
 import Link from "next/link";
