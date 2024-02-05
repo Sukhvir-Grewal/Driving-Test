@@ -26,9 +26,7 @@ export default function Quiz() {
     const currentQuestionRef = useRef(null);
     let timeoutRef = useRef(null);
     let runningTimeoutRef = useRef(null);
-    const optionContainerRef = Array.from({ length: 4 }).map(() => createRef(null));
-
-    
+    const optionContainerRef = useRef([]);
 
     const [confirmDisplay, setConfirmDisplay] = useState(false);
     const [currentOptionSet, setCurrentOptionSet] = useState(0);
@@ -56,6 +54,12 @@ export default function Quiz() {
 
     const [resultDataType, setResultDataType] = useState(null);
     const [user, setUser] = useAtom(userData);
+
+    useEffect(() => {
+        optionContainerRef.current = Array.from({ length: 4 }).map(() =>
+            useRef(null)
+        );
+    }, []);
 
     useEffect(() => {
         if (!isSignDiv && currentQuestionRef.current) {
