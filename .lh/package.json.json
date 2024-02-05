@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 13,
+            "activePatchIndex": 14,
             "patches": [
                 {
                     "date": 1703962492143,
@@ -60,6 +60,10 @@
                 {
                     "date": 1707169950667,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,10 +8,8 @@\n         \"start\": \"next start\",\r\n         \"lint\": \"next lint\"\r\n     },\r\n     \"dependencies\": {\r\n-        \"@cloudinary/react\": \"^1.12.0\",\r\n-        \"@cloudinary/url-gen\": \"^1.16.0\",\r\n         \"axios\": \"^1.6.7\",\r\n         \"bcryptjs\": \"^2.4.3\",\r\n         \"cloudinary\": \"^2.0.0\",\r\n         \"express\": \"^4.18.2\",\r\n"
+                },
+                {
+                    "date": 1707170519573,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n         \"multer\": \"^1.4.5-lts.1\",\r\n         \"next\": \"14.1.0\",\r\n         \"node\": \"^21.6.1\",\r\n         \"npm\": \"^10.4.0\",\r\n-        \"react\": \"^18\",\r\n+        \"react\": \"^18\", \r\n         \"react-dom\": \"^18\",\r\n         \"react-hook-form\": \"^7.50.0\"\r\n     },\r\n     \"devDependencies\": {\r\n"
                 }
             ],
             "date": 1703962492143,
