@@ -57,7 +57,7 @@ export default function Quiz() {
 
     useEffect(() => {
         optionContainerRef.current = Array.from({ length: 4 }).map(() =>
-            useRef(null)
+            createRef(null)
         );
     }, []);
 
