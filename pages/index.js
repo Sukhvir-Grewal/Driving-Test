@@ -5,7 +5,7 @@ import { useEffect, useRef, useState } from "react";
 import Cookies from "js-cookie";
 import Settings from "@/components/Settings";
 import Style from "@/styles/Home.module.css";
-import { darkMode, lightMode } from "./colorModes";
+import { darkMode, lightMode } from "../colorModes";
 
 export default function Home() {
     const goBackContainerRef = useRef(null);

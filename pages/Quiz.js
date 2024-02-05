@@ -3,8 +3,8 @@ import Results from "@/components/Results";
 import { rorData } from "@/storage/rorData";
 import { signData } from "@/storage/signsData";
 import { useRouter } from "next/router";
-import { useEffect, useRef, useState } from "react";
-import { darkMode, lightMode } from "./colorModes";
+import { createRef, useEffect, useRef, useState } from "react";
+import { darkMode, lightMode } from "../colorModes";
 import { useAtom } from "jotai";
 import { userData } from "@/jotaiStorage";
 import Cookies from "js-cookie";
@@ -26,7 +26,8 @@ export default function Quiz() {
     const currentQuestionRef = useRef(null);
     let timeoutRef = useRef(null);
     let runningTimeoutRef = useRef(null);
-    const optionContainerRef = Array.from({ length: 4 }, () => useRef());
+    const optionContainerRef = Array.from({ length: 4 }, () => createRef());
+
     
 
     const [confirmDisplay, setConfirmDisplay] = useState(false);

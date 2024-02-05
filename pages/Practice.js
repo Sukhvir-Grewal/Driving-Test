@@ -3,7 +3,7 @@ import { rorData } from "@/storage/rorData";
 import { signData } from "@/storage/signsData";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-import { darkMode, lightMode } from "./colorModes";
+import { darkMode, lightMode } from "../colorModes";
 import { useAtom } from "jotai";
 import { userData } from "@/jotaiStorage";
 import Cookies from "js-cookie";
