@@ -11,6 +11,7 @@ export default function TestInfo() {
                     <img
                         className="driving-test-store"
                         src="/images/drivingTestStore.jpg"
+                        loading="eager"
                     />
                 </div>
 

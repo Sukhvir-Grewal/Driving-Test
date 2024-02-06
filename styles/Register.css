@@ -10,6 +10,7 @@
     width: 450px;
     border-radius: 10px;
     border: 1px solid;
+    position: relative;
 }
 
 .register-container {
@@ -115,8 +116,22 @@
     text-decoration: none;
 }
 
+.go-back-login-register{
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    cursor: pointer;
+    font-size:x-large;
+}
+
 @media (max-width: 600px) {
     .register-main-container {
         border-radius: 0%;
+    }
+}
+@media (max-width: 420px) {
+    .register-main-container {
+        border-radius: 0%;
+        width: 100vw;
     }
 }

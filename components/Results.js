@@ -80,6 +80,7 @@ export default function Results({ resultData, data }) {
                     className="sign-image"
                     src={getImageURL(index)}
                     alt="Sign Image"
+                    loading="eager"
                 />
             </div>
         </div>

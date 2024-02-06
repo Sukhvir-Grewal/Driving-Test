@@ -152,6 +152,7 @@ export default function Quiz() {
                                 ref={currentSignRef}
                                 className="sign-image"
                                 src=""
+                                loading="eager"
                             ></img>
                         </div>
                     </div>
@@ -166,6 +167,7 @@ export default function Quiz() {
                                 ref={currentSignRef}
                                 className="sign-image"
                                 src=""
+                                loading="eager"
                             ></img>
                         </div>
                         <div
@@ -265,7 +267,7 @@ export default function Quiz() {
             currentQuestionRef.current.classList.add("slideLeft");
 
         timeoutRef.current = setTimeout(() => {
-            // confirmContainerRef.current.style.backgroundColor = "transparent";
+            confirmContainerRef.current.style.backgroundColor = "";
             currentSignRef.current.classList.remove("slideLeft");
             optionContainerRef.forEach((option) => {
                 option.current.classList.remove("slideLeft");

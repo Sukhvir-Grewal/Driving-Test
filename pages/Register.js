@@ -90,6 +90,7 @@ export default function Register() {
         </>
     );
 
+
     return (
         <>
             <div className="outer-register-main-container">
@@ -97,6 +98,9 @@ export default function Register() {
                     onSubmit={handleSubmit(submitForm)}
                     className="register-main-container"
                 >
+                    <div onClick={() => router.push("/")}>
+                        <i class="fa-solid fa-xmark go-back-login-register"></i>
+                    </div>
                     <div className="register-container">Register New User</div>
                     <div
                         ref={warningRef}

@@ -76,6 +76,7 @@ export default function Home() {
                         ref={cartoonCarRef}
                         className={Style.cartoonCar}
                         src="/images/design/cartoonCar.gif"
+                        loading="eager"
                     />
                 </div>
                 <div className="login-register-container">
@@ -93,6 +94,7 @@ export default function Home() {
                                     onClick={() =>
                                         setShowDropDown(!showDropDown)
                                     }
+                                    loading="eager"
                                 ></img>
                             </div>
                         </div>
@@ -276,6 +278,7 @@ export default function Home() {
                                 : `${Style.designTire}`
                         }
                         src="/images/design/tire.png"
+                        loading="eager"
                     />
                     {!showSetting ? renderMenu() : <Settings />}
                 </div>

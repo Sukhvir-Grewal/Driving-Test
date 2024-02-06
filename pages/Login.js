@@ -102,6 +102,9 @@ export default function Login() {
                     onSubmit={handleSubmit(submitForm)}
                     className="register-main-container"
                 >
+                    <div onClick={() => router.push("/")}>
+                        <i class="fa-solid fa-xmark go-back-login-register"></i>
+                    </div>
                     <div className="register-container">WelcomeBack</div>
                     <div
                         ref={warningRef}

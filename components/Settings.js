@@ -122,6 +122,7 @@ export default function Settings() {
                                     ? user.profileImage.imageUrl
                                     : "/images/defaultImage.webp"
                             }
+                            loading="eager"
                         ></img>
                     </label>
                 </div>

@@ -78,6 +78,7 @@ export default function Practice() {
                                     objectFit: "cover",
                                 }}
                                 src={data.imageUrl}
+                                loading="eager"
                             />
                         </div>
                     </div>
