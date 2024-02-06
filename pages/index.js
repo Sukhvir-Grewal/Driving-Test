@@ -24,6 +24,8 @@ export default function Home() {
     useEffect(() => {
         const userCookie = Cookies.get("user");
         console.log(process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME)
+        console.log(process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME)
+        console.log(process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME)
         if (userCookie) {
             const userData = JSON.parse(userCookie);
             setUser(userData);
