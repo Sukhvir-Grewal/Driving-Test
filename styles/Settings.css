@@ -101,6 +101,7 @@
     height: 100%;
     width: 100%;
     position: absolute;
+    z-index: 12;
 }
 .edit-name-main-container {
     background-color: var(--edit-name-container);
