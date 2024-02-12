@@ -23,7 +23,8 @@
         "npm": "^10.4.0",
         "react": "^18",
         "react-dom": "^18",
-        "react-hook-form": "^7.50.0"
+        "react-hook-form": "^7.50.0",
+        "stream": "^0.0.2"
     },
     "devDependencies": {
         "eslint": "^8",
