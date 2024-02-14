@@ -34,7 +34,6 @@ export default function Practice() {
             const userData = JSON.parse(userCookie);
             setUser(userData);
         }
-        console.log(user?.isDarkMode);
         user?.isDarkMode ? darkMode() : lightMode();
     }, [user?.isDarkMode]);
 
@@ -64,9 +63,9 @@ export default function Practice() {
     };
 
     const renderSignData = () => {
-        return dataType.map((data, _) => (
+        return dataType.map((data, index) => (
             <>
-                <div className="practice-main-container">
+                <div key={index} className="practice-main-container">
                     <div className="practice-counter-container">{data.id}</div>
 
                     <div className="practice-image-main-container">

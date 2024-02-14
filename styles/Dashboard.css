@@ -41,8 +41,6 @@
 
 .user-image-container {
     background-color: gray;
-    display: grid;
-    place-content: center;
     height: 40px;
     width: 40px;
     border-radius: 50%;
@@ -51,6 +49,7 @@
 .user-image {
     height: 100%;
     width: 100%;
+    object-fit:cover;
     cursor: pointer;
 }
 

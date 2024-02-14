@@ -6,7 +6,7 @@
     place-content: center;
 }
 .setting-image-container {
-    height: 100%;
+    height: 100px;
     width: 100px;
     border-radius: 50%;
     overflow: hidden;
@@ -26,10 +26,11 @@
     margin-top: 5px;
 }
 .setting-user-image {
-    height: inherit;
+    height: 100%;
     width: 100%;
     transition: transform 0.2s ease;
     cursor: pointer;
+    object-fit: cover;
 }
 
 .setting-user-name-main-container {

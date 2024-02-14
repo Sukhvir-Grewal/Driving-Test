@@ -103,7 +103,7 @@ export default function Login() {
                     className="register-main-container"
                 >
                     <div onClick={() => router.push("/")}>
-                        <i class="fa-solid fa-xmark go-back-login-register"></i>
+                        <i className="fa-solid fa-xmark go-back-login-register"></i>
                     </div>
                     <div className="register-container">WelcomeBack</div>
                     <div

@@ -3,7 +3,7 @@ import User from "./auth/User";
 import { Readable } from "stream";
 import { v2 as cloudinaryV2 } from "cloudinary";
 import connectDB from "./auth/mongo";
-import bodyParser from "body-parser"; // Import bodyParser
+import bodyParser from "body-parser"; 
 
 connectDB();
 
@@ -28,10 +28,8 @@ export default async function handler(req, res) {
         try {
             const multerUpload = upload.single("file");
 
-            // Use bodyParser.json() middleware to handle larger payloads
             const jsonBodyParser = bodyParser.json({ limit: "50mb" }); // Adjust the limit as needed
 
-            // Pass `req` and `res` to the bodyParser middleware
             await jsonBodyParser(req, res, async function (err) {
                 if (err) {
                     return res
@@ -39,7 +37,6 @@ export default async function handler(req, res) {
                         .json({ error: "Internal Server Error" });
                 }
 
-                // Continue with multer upload
                 multerUpload(req, res, async function (err) {
                     if (err) {
                         return res

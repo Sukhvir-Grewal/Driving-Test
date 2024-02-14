@@ -114,7 +114,6 @@ export default function Quiz() {
             const userData = JSON.parse(userCookie);
             setUser(userData);
         }
-        console.log(user?.isDarkMode);
         user?.isDarkMode ? darkMode() : lightMode();
     }, [user?.isDarkMode]);
 

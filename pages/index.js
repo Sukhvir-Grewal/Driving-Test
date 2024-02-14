@@ -23,13 +23,18 @@ export default function Home() {
 
     useEffect(() => {
         const userCookie = Cookies.get("user");
-        // console.log(process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME)
-        // console.log(process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME)
-        // console.log(process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME)
         if (userCookie) {
             const userData = JSON.parse(userCookie);
             setUser(userData);
         }
+
+        document
+            .querySelector(".outer-main-container")
+            .addEventListener("click", () => {
+                setTimeout(() => {
+                    setShowDropDown(false);
+                }, 10);
+            });
     }, []);
 
     useEffect(() => {
@@ -129,7 +134,7 @@ export default function Home() {
                 }}
                 className="dropDown-option"
             >
-                <span>Dark Mode</span>
+                {!colorMode ? <span>Dark Mode</span> : <span>Light Mode</span>}
             </div>
             {!showSetting && (
                 <div
