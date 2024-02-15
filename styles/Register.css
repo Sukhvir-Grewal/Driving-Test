@@ -79,6 +79,7 @@
     border-radius: 5px;
     padding: 5px;
     border: 1px solid;
+    font-size: large;
 }
 .input-username:focus,
 .input-password:focus,
