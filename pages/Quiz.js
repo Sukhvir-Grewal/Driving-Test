@@ -58,6 +58,7 @@ export default function Quiz() {
     const [user, setUser] = useAtom(userData);
 
     useEffect(() => {
+
         setTimeout(() => {
             optionContainerRef.forEach((option) => {
                 if (option.current) option.current.style.pointerEvents = "all";
@@ -90,9 +91,9 @@ export default function Quiz() {
             currentQuestionRef.current.innerHTML =
                 rorData[currentOptionSet].question;
         }
-        // if (currentSignRef.current) {
-        //     currentSignRef.current.src = data[currentOptionSet]?.imageUrl;
-        // }
+        if (currentSignRef.current) {
+            currentSignRef.current.src = data[currentOptionSet]?.imageUrl;
+        }
     }, [isSignDiv, currentQuestionRef, currentOptionSet]);
 
     useEffect(() => {
@@ -106,9 +107,6 @@ export default function Quiz() {
         if (!initialized) {
             getRandomQuestion();
             doInitialAnimation();
-            if (currentSignRef.current) {
-                currentSignRef.current.src = data[currentOptionSet]?.imageUrl;
-            }
         }
         setInitialized(true);
     }, [initialized]);
@@ -277,9 +275,6 @@ export default function Quiz() {
             currentQuestionRef.current.classList.add("slideLeft");
 
         timeoutRef.current = setTimeout(() => {
-            if (currentSignRef.current) {
-                currentSignRef.current.src = data[currentOptionSet]?.imageUrl;
-            }
             confirmContainerRef.current.style.backgroundColor = "";
             currentSignRef.current.classList.remove("slideLeft");
             optionContainerRef.forEach((option) => {
@@ -311,10 +306,8 @@ export default function Quiz() {
         });
 
         timeoutRef.current = setTimeout(() => {
-            if (currentSignRef.current) {
-                currentSignRef.current.src = data[currentOptionSet]?.imageUrl;
+            if (currentSignRef.current)
                 currentSignRef.current.classList.remove("slideRight");
-            }
             optionContainerRef.forEach((option) => {
                 if (option.current)
                     option.current.classList.remove("slideRight");
@@ -469,9 +462,9 @@ export default function Quiz() {
                 setData(newData);
             }
         }
-        // if (currentSignRef.current) {
-        //     currentSignRef.current.src = data[randomOptionSet]?.imageUrl;
-        // }
+        if (currentSignRef.current) {
+            currentSignRef.current.src = data[randomOptionSet]?.imageUrl;
+        }
         if (currentQuestionRef.current) {
             currentQuestionRef.current.innerHTML =
                 data[randomOptionSet].question;
