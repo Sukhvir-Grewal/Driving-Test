@@ -49,6 +49,7 @@
     margin: 10px;
     transition: background-color 0.2s ease;
     cursor: pointer;
+    pointer-events: none;
 }
 
 .option-count {

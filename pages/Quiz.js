@@ -58,6 +58,17 @@ export default function Quiz() {
     const [user, setUser] = useAtom(userData);
 
     useEffect(() => {
+        // optionContainerRef.forEach((option) => {
+        //     if (option.current) option.current.style.pointerEvents = "none";
+        // });
+        setTimeout(() => {
+            optionContainerRef.forEach((option) => {
+                if (option.current) option.current.style.pointerEvents = "all";
+            });
+        }, 1000);
+    }, []);
+
+    useEffect(() => {
         if (!isSignDiv && currentQuestionRef.current) {
             // Set the ror question when isSignDiv becomes false
             if (currentQuestionRef.current) {
@@ -82,9 +93,9 @@ export default function Quiz() {
             currentQuestionRef.current.innerHTML =
                 rorData[currentOptionSet].question;
         }
-        if (currentSignRef.current) {
-            currentSignRef.current.src = data[currentOptionSet]?.imageUrl;
-        }
+        // if (currentSignRef.current) {
+        //     currentSignRef.current.src = data[currentOptionSet]?.imageUrl;
+        // }
     }, [isSignDiv, currentQuestionRef, currentOptionSet]);
 
     useEffect(() => {
@@ -150,7 +161,7 @@ export default function Quiz() {
                             <img
                                 ref={currentSignRef}
                                 className="sign-image"
-                                src=""
+                                src={data[currentOptionSet]?.imageUrl}
                                 loading="eager"
                             ></img>
                         </div>
@@ -165,7 +176,7 @@ export default function Quiz() {
                             <img
                                 ref={currentSignRef}
                                 className="sign-image"
-                                src=""
+                                src={data[currentOptionSet]?.imageUrl}
                                 loading="eager"
                             ></img>
                         </div>

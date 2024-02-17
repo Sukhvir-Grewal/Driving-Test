@@ -3,7 +3,7 @@ import User from "./auth/User";
 import { Readable } from "stream";
 import { v2 as cloudinaryV2 } from "cloudinary";
 import connectDB from "./auth/mongo";
-import bodyParser from "body-parser"; 
+import bodyParser from "body-parser";
 
 connectDB();
 
@@ -53,25 +53,31 @@ export default async function handler(req, res) {
                             },
                             async (error, result) => {
                                 if (error) {
-                                    console.error("Error uploading to Cloudinary:", error);
-                                    res.status(500).json({ error: "Internal Server Error" });
+                                    console.error(
+                                        "Error uploading to Cloudinary:",
+                                        error
+                                    );
+                                    res.status(500).json({
+                                        error: "Internal Server Error",
+                                    });
                                     return;
                                 }
 
-                                console.log(result)
-                                
-                                const updateUserProfileImage = await User.findOneAndUpdate(
-                                    { username: req.body.username },
-                                    {
-                                        $set: {
-                                            profileImage: {
-                                                publicID: result.public_id,
-                                                imageUrl: result.secure_url,
+                                console.log(result);
+
+                                const updateUserProfileImage =
+                                    await User.findOneAndUpdate(
+                                        { username: req.body.username },
+                                        {
+                                            $set: {
+                                                profileImage: {
+                                                    publicID: result.public_id,
+                                                    imageUrl: result.secure_url,
+                                                },
                                             },
                                         },
-                                    },
-                                    { new: true }
-                                );
+                                        { new: true }
+                                    );
 
                                 res.status(200).json({
                                     publicID: result.public_id,
@@ -87,7 +93,9 @@ export default async function handler(req, res) {
                         readableStream.pipe(stream);
                     } catch (error) {
                         console.error("Error:", error);
-                        res.status(500).json({ error: "Internal Server Error" });
+                        res.status(500).json({
+                            error: "Internal Server Error",
+                        });
                     }
                 });
             });
