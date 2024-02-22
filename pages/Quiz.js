@@ -10,14 +10,13 @@ import { userData } from "@/jotaiStorage";
 import Cookies from "js-cookie";
 export default function Quiz() {
     const router = useRouter();
-    const dataType = router.query.dataType;
+    // const dataType = router.query.dataType;
+    const [dataType, setDataType] = useState(null);
     const MAX_QUESTIONS = dataType === "FullTest" ? 40 : 20;
     const RED_COLOR = "rgb(255, 0, 0)";
     const GREEN_COLOR = "rgb(27, 148, 27)";
 
-    const [data, setData] = useState(
-        dataType === "signData" ? [...signData] : [...rorData]
-    );
+    const [data, setData] = useState([]);
 
     const confirmContainerRef = useRef(null);
     const signContainerRef = useRef(null);
@@ -43,9 +42,7 @@ export default function Quiz() {
     const [trackIndexForRorQuiz, setTrackIndexForRorQuiz] = useState([]);
     const [isTryingToGoBack, setIsTryingToGoBack] = useState(false);
 
-    const [isSignDiv, setIsSignDiv] = useState(
-        dataType === "signData" ? true : false
-    );
+    const [isSignDiv, setIsSignDiv] = useState(null);
 
     const [resultData, setResultData] = useState({
         resultDataType: [],
@@ -58,13 +55,30 @@ export default function Quiz() {
     const [user, setUser] = useAtom(userData);
 
     useEffect(() => {
-
         setTimeout(() => {
             optionContainerRef.forEach((option) => {
                 if (option.current) option.current.style.pointerEvents = "all";
             });
         }, 1000);
     }, []);
+
+    useEffect(() => {
+        if (router.isReady && router.query.dataType) {
+            setDataType(router.query.dataType);
+            setData(router.query.dataType === "signData" ? [...signData] : [...rorData]);
+        }
+    }, [router.isReady, router.query.dataType]);
+
+    useEffect(() => {
+        if (dataType) {
+            setInitialized(true);
+            setIsSignDiv(dataType === "signData" ? true : false);
+            if (!initialized) {
+                getRandomQuestion();
+                doInitialAnimation();
+            }
+        }
+    }, [dataType]);
 
     useEffect(() => {
         if (!isSignDiv && currentQuestionRef.current) {
@@ -103,18 +117,20 @@ export default function Quiz() {
         };
     }, []);
 
-    useEffect(() => {
-        if (!initialized) {
-            getRandomQuestion();
-            doInitialAnimation();
-        }
-        setInitialized(true);
-    }, [initialized]);
+    // useEffect(() => {
+    //     if (!initialized) {
+            
+    //         getRandomQuestion();
+    //         doInitialAnimation();
+    //     }
+    //     setInitialized(true);
+    // }, [initialized]);
 
     useEffect(() => {
-        confirmContainerRef.current.style.visibility = confirmDisplay
-            ? "visible"
-            : "hidden";
+        if (confirmContainerRef.current)
+            confirmContainerRef.current.style.visibility = confirmDisplay
+                ? "visible"
+                : "hidden";
     }, [confirmDisplay]);
 
     useEffect(() => {
@@ -198,7 +214,7 @@ export default function Quiz() {
             >
                 <div className="option-count">{index + 1}</div>
                 <div className="option">
-                    {data[currentOptionSet].options[index]}
+                    {data[currentOptionSet]?.options[index]}
                 </div>
             </div>
         ));
@@ -402,7 +418,11 @@ export default function Quiz() {
         const getUniqueNumber = (tracker, setTracker, limit) => {
             var randomNumber;
             while (true) {
+                console.log("while loop ran")
+                console.log("Limit",limit)
                 randomNumber = Math.floor(Math.random() * limit);
+                console.log("Random number: ",randomNumber)
+                
                 if (tracker.includes(randomNumber)) continue;
                 else {
                     const newData = [...tracker, randomNumber];
@@ -415,11 +435,13 @@ export default function Quiz() {
 
         if (dataType !== "FullTest") {
             setResultDataType(dataType);
+            console.log(data)
             randomOptionSet = getUniqueNumber(
                 trackIndexForBoth,
                 setTrackIndexForBoth,
                 data.length
             );
+
         } else {
             const randomDataType = getZeroOne();
 
@@ -467,7 +489,7 @@ export default function Quiz() {
         }
         if (currentQuestionRef.current) {
             currentQuestionRef.current.innerHTML =
-                data[randomOptionSet].question;
+                data[randomOptionSet]?.question;
         }
         setCurrentOptionSet(randomOptionSet);
     };
@@ -514,8 +536,10 @@ export default function Quiz() {
                         trackIndexForSignQuiz={trackIndexForRorQuiz}
                     />
                 </>
-            ) : (
+            ) : dataType ? (
                 continueQuiz()
+            ) : (
+                <div>Loading...</div>
             )}
         </>
     );
