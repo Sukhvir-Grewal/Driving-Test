@@ -65,7 +65,11 @@ export default function Quiz() {
     useEffect(() => {
         if (router.isReady && router.query.dataType) {
             setDataType(router.query.dataType);
-            setData(router.query.dataType === "signData" ? [...signData] : [...rorData]);
+            setData(
+                router.query.dataType === "signData"
+                    ? [...signData]
+                    : [...rorData]
+            );
         }
     }, [router.isReady, router.query.dataType]);
 
@@ -116,15 +120,6 @@ export default function Quiz() {
             clearInterval(runningTimeoutRef.current);
         };
     }, []);
-
-    // useEffect(() => {
-    //     if (!initialized) {
-            
-    //         getRandomQuestion();
-    //         doInitialAnimation();
-    //     }
-    //     setInitialized(true);
-    // }, [initialized]);
 
     useEffect(() => {
         if (confirmContainerRef.current)
@@ -418,11 +413,11 @@ export default function Quiz() {
         const getUniqueNumber = (tracker, setTracker, limit) => {
             var randomNumber;
             while (true) {
-                console.log("while loop ran")
-                console.log("Limit",limit)
+                console.log("while loop ran");
+                console.log("Limit", limit);
                 randomNumber = Math.floor(Math.random() * limit);
-                console.log("Random number: ",randomNumber)
-                
+                console.log("Random number: ", randomNumber);
+
                 if (tracker.includes(randomNumber)) continue;
                 else {
                     const newData = [...tracker, randomNumber];
@@ -435,13 +430,12 @@ export default function Quiz() {
 
         if (dataType !== "FullTest") {
             setResultDataType(dataType);
-            console.log(data)
+            console.log(data);
             randomOptionSet = getUniqueNumber(
                 trackIndexForBoth,
                 setTrackIndexForBoth,
                 data.length
             );
-
         } else {
             const randomDataType = getZeroOne();
 
